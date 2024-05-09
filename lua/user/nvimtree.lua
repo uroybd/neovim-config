@@ -12,6 +12,14 @@ function M.config()
   local icons = require "user.icons"
 
   require("nvim-tree").setup {
+    on_attach = function(bufnr)
+            local function opts(desc)
+                return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+            end
+            local ok, api = pcall(require, "nvim-tree.api")
+            assert(ok, "api module is not found")
+            vim.keymap.set("n", "<CR>", api.node.open.tab_drop, opts("Tab drop"))
+        end,
     hijack_netrw = false,
     sync_root_with_cwd = true,
     view = {
