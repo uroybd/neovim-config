@@ -14,14 +14,14 @@ M.config = function()
     ["<leader>dq"] = { "<cmd>TroubleToggle quickfix<CR>", "Quickfix" },
   }
 
-  require("trouble").setup {
+  require("trouble").setup ({
     position = "bottom",
     height = 15,
     icons = true,
     mode = "workspace_diagnostics",
     group = true,
     padding = true,
-  }
+  })
 end
 
 return M
