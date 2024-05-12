@@ -14,11 +14,11 @@ function M.config()
     },
     sections = {
       lualine_a = {"mode"},
-      lualine_b = { "branch", "diff" },
-      lualine_c = { "diagnostics" },
+      lualine_b = { "branch", "diff", "diagnostics" },
+      lualine_c = { {"filename", path = 4} },
       lualine_x = { "copilot", "filetype" },
-      lualine_y = { "location" },
-      lualine_z = { "progress" },
+      lualine_y = { "searchcount" },
+      lualine_z = { "selectioncount", "location", "progress" },
     },
     extensions = { "quickfix", "man", "fugitive" },
   }

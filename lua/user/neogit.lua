@@ -8,7 +8,7 @@ function M.config()
   local wk = require "which-key"
   wk.register {
     ["<leader>gg"] = { "<cmd>Neogit<CR>", "Neogit" }, 
-    ["<leader>gc"] = { "<cmd>Telescope conventional_commits<cr>", "Conventional Commit"}
+    -- ["<leader>gc"] = { "<cmd>Telescope conventional_commits<cr>", "Conventional Commit"}
   }
 
   require("neogit").setup {

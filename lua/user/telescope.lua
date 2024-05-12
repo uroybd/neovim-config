@@ -12,6 +12,11 @@ function M.config()
     ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find files" },
     ["<leader>fp"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
     ["<leader>ft"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+    ["<leader>fs"] = { function ()
+      require("telescope.builtin").lsp_workspace_symbols {
+        query = vim.fn.input "Symbol > ",
+      }
+    end, "Find Symbol"},
     ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "Help" },
     ["<leader>fl"] = { "<cmd>Telescope resume<cr>", "Last Search" },
     ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
@@ -123,7 +128,7 @@ function M.config()
         case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
       },
       conventional_commits = {
-        include_body_and_footer = true,        
+        
       }
     },
   }
