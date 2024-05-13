@@ -25,6 +25,7 @@ function M.config()
       h = { "<cmd>-tabmove<cr>", "Move Left" },
       l = { "<cmd>+tabmove<cr>", "Move Right" },
     },
+    r = { name = "Run" },
     T = { name = "Treesitter" },
   }
 
@@ -40,7 +41,7 @@ function M.config()
       presets = {
         operators = false,
         motions = false,
-        text_objects = false,
+        text_objects = false,  
         windows = false,
         nav = false,
         z = false,
