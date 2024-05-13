@@ -5,6 +5,15 @@ local M = {
 }
 
 function M.config()
+  require("onedarkpro").setup({
+    theme = "onedark", -- or "deep", "darker"
+    styles = {
+      comments = "italic",
+      keywords = "bold,italic",
+      functions = "italic",
+      parameters = "italic",
+    },
+  })
   vim.cmd.colorscheme "onedark"
 end
 
