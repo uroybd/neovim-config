@@ -25,13 +25,13 @@ function M.config()
       sh = formatters.shfmt,
       typescript = formatters.prettierd,
       yaml = formatters.lsp,
-      python = formatters.lsp
-      -- python = {
-      --     formatters.remove_trailing_whitespace,
-      --     -- formatters.shell({ cmd = "tidy-imports" }),
-      --     formatters.black,
-      --     formatters.ruff,
-      -- }
+      -- python = formatters.lsp
+      python = {
+          formatters.remove_trailing_whitespace,
+          -- formatters.shell({ cmd = "tidy-imports" }),
+          formatters.black,
+          formatters.ruff,
+      }
     },
     error_notifier = vim_notify
   })

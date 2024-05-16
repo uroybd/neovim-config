@@ -54,3 +54,4 @@ vim.g.netrw_mouse = 2
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
 vim.opt.scrolloff = 10
+vim.opt.termguicolors = true
