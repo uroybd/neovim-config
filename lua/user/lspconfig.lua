@@ -73,7 +73,8 @@ function M.config()
     "bashls",
     "jsonls",
     "yamlls",
-    "volar"
+    "volar",
+    "nushell"
   }
 
   local default_diagnostic_config = {
