@@ -12,6 +12,13 @@ function M.config()
         italic = false,
       },
     },
+    init = function()
+      -- These are required for Modicator to work
+      vim.o.cursorline = true
+      vim.o.number = true
+      vim.o.termguicolors = true
+      vim.o.relativenumber = true
+    end,
   }
 
   vim.api.nvim_create_autocmd({ "Colorscheme" }, {
