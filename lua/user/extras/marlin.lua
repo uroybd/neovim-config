@@ -26,7 +26,7 @@ function M.config()
                   lnum = entry.row,
                   col = entry.col + 1,
                   filename = entry.filename,
-                  display = mindex .. ":" .. entry.filename .. ":" .. entry.row .. ":" .. entry.col,
+                  display = mindex .. ":" .. entry.filename .. ":" .. entry.row .. ":" .. entry.col .. " | " .. vim.fn.readfile(entry.filename)[entry.row]
               }
           end,
       })
