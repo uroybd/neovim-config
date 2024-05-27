@@ -4,17 +4,13 @@ local M = {
   dependencies = {
     {
       "folke/neodev.nvim",
+      "nvimdev/lspsaga.nvim"
     },
   },
 }
 
 local function lsp_keymaps(bufnr)
   local opts = { noremap = true, silent = true }
-  local keymap = vim.api.nvim_buf_set_keymap
-  keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-  keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 end
 
 M.on_attach = function(client, bufnr)
@@ -39,24 +35,15 @@ end
 function M.config()
   local wk = require "which-key"
   wk.register {
-    ["<leader>la"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     ["<leader>lf"] = {
       "<cmd>lua vim.lsp.buf.format({async = true, filter = function(client) return client.name ~= 'typescript-tools' end})<cr>",
       "Format",
     },
     ["<leader>li"] = { "<cmd>LspInfo<cr>", "Info" },
     ["<leader>lh"] = { "<cmd>lua require('user.lspconfig').toggle_inlay_hints()<cr>", "Hints" },
-    ["<leader>ll"] = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     ["<leader>lq"] = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
-    ["<leader>lr"] = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
   }
 
-  wk.register {
-    ["<leader>la"] = {
-      name = "LSP",
-      a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action", mode = "v" },
-    },
-  }
 
   local lspconfig = require "lspconfig"
   local icons = require "user.icons"
@@ -127,6 +114,39 @@ function M.config()
     end
 
     lspconfig[server].setup(opts)
+
+
+  require("lspsaga").setup({
+    diagonostic = {
+      jump_num_shortcut = true
+    },
+    code_action = {
+      extend_gitsigns = true
+    }
+  })
+  wk.register({
+    ["<leader>lc"] = {
+      name = "Call Hierarchy",
+      i = { "<cmd>Lspsaga incoming_calls<cr>", "Incoming Calls" },
+      o = { "<cmd>Lspsaga outgoing_calls<cr>", "Outgoing Calls" },
+    },
+    ["<leader>lp"] = {
+      name = "Peek",
+      d = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition" },
+      t = { "<cmd>Lspsaga peek_type_definition<cr>", "Peek Type" },
+    },
+    ["<leader>ll"] = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
+    ["<leader>lo"] = {"<cmd>Lspsaga outline<cr>", "Outline"},
+    ["<leader>lf"] = {"<cmd>Lspsaga finder<cr>", "Finder"},
+    ["<leader>lr"] = {"<cmd>Lspsaga rename<cr>", "Rename Symbol"},
+    ["<leader>;"] = {"<cmd>Lspsaga term_toggle<cr>", "Terminal"}
+  })
+
+
+  vim.keymap.set('n', '[e', '<cmd>Lspsaga diagnostic_jump_next<CR>')
+  vim.keymap.set('n', ']e', '<cmd>Lspsaga diagnostic_jump_prev<CR>')
+  vim.keymap.set('n', 'gd', '<cmd>Lspsaga goto_definition<CR>')
+  vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>')
   end
 end
 
