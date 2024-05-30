@@ -73,7 +73,11 @@ function M.config()
       update_root = true,
       ignore_list = {},
     },
-
+    filters = {
+      enable = true,
+      git_ignored = true,
+      dotfiles = true,
+    },
     diagnostics = {
       enable = true,
       show_on_dirs = false,
@@ -91,6 +95,7 @@ function M.config()
       },
     },
   }
+
 end
 
 return M

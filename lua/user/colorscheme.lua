@@ -22,6 +22,18 @@ function M.config()
     },
     integrations = {
       notify = true,
+      nvimtree = true,
+      cmp = true,
+      mason = true,
+      markdown = true,
+      neotest = true,
+      treesitter_context = true,
+      treesitter = true,
+      telescope = {
+          enabled = true,
+          -- style = "nvchad"
+      },
+      which_key = true,
     }
   })
   vim.cmd.colorscheme "catppuccin"

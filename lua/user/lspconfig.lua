@@ -117,6 +117,9 @@ function M.config()
 
 
   require("lspsaga").setup({
+    ui = {
+        kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
+    },
     diagonostic = {
       jump_num_shortcut = true
     },
