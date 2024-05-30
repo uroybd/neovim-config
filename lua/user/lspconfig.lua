@@ -142,9 +142,8 @@ function M.config()
     ["<leader>lo"] = {"<cmd>Lspsaga outline<cr>", "Outline"},
     ["<leader>lf"] = {"<cmd>Lspsaga finder<cr>", "Finder"},
     ["<leader>lr"] = {"<cmd>Lspsaga rename<cr>", "Rename Symbol"},
-    ["<leader>;"] = {"<cmd>Lspsaga term_toggle<cr>", "Terminal"}
+    -- ["<leader>;"] = {"<cmd>Lspsaga term_toggle<cr>", "Terminal"}
   })
-
 
   vim.keymap.set('n', '[e', '<cmd>Lspsaga diagnostic_jump_next<CR>')
   vim.keymap.set('n', ']e', '<cmd>Lspsaga diagnostic_jump_prev<CR>')
