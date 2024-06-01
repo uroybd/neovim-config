@@ -120,6 +120,9 @@ function M.config()
     ui = {
         kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
     },
+    beacon = {
+        enabled = true,
+    },
     diagonostic = {
       jump_num_shortcut = true,
       diagnostic_only_current = true,

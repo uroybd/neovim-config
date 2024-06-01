@@ -32,6 +32,7 @@ local M = {
       dependencies = {
         "rafamadriz/friendly-snippets",
       },
+      run = "make install_jsregexp",
     },
     {
       "hrsh7th/cmp-nvim-lua",
