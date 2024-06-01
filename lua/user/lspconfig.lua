@@ -121,7 +121,8 @@ function M.config()
         kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
     },
     diagonostic = {
-      jump_num_shortcut = true
+      jump_num_shortcut = true,
+      diagnostic_only_current = true,
     },
     code_action = {
       extend_gitsigns = true
@@ -142,7 +143,8 @@ function M.config()
     ["<leader>lo"] = {"<cmd>Lspsaga outline<cr>", "Outline"},
     ["<leader>lf"] = {"<cmd>Lspsaga finder<cr>", "Finder"},
     ["<leader>lr"] = {"<cmd>Lspsaga rename<cr>", "Rename Symbol"},
-    -- ["<leader>;"] = {"<cmd>Lspsaga term_toggle<cr>", "Terminal"}
+    ["<leader>dd"] = {"<cmd>Lspsaga show_buf_diagnostics ++normal<cr>", "Document Diagonostics"},
+    ["<leader>dw"] = {"<cmd>Lspsaga show_workspace_diagnostics ++normal<cr>", "Workspace Diagonostics"},
   })
 
   vim.keymap.set('n', '[e', '<cmd>Lspsaga diagnostic_jump_next<CR>')
