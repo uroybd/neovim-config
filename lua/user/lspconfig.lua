@@ -4,7 +4,7 @@ local M = {
   dependencies = {
     {
       "folke/neodev.nvim",
-      "nvimdev/lspsaga.nvim"
+      "nvimdev/lspsaga.nvim",
     },
   },
 }
@@ -17,7 +17,7 @@ M.on_attach = function(client, bufnr)
   lsp_keymaps(bufnr)
 
   if client.supports_method "textDocument/inlayHint" then
-    vim.lsp.inlay_hint.enable(true, {bufnr = bufnr})
+    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
   end
 end
 
@@ -44,7 +44,6 @@ function M.config()
     ["<leader>lq"] = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
   }
 
-
   local lspconfig = require "lspconfig"
   local icons = require "user.icons"
 
@@ -61,7 +60,7 @@ function M.config()
     "jsonls",
     "yamlls",
     "volar",
-    "nushell"
+    "nushell",
   }
 
   local default_diagnostic_config = {
@@ -69,9 +68,9 @@ function M.config()
       active = true,
       values = {
         { name = "DiagnosticSignError", text = icons.diagnostics.Error },
-        { name = "DiagnosticSignWarn",  text = icons.diagnostics.Warning },
-        { name = "DiagnosticSignHint",  text = icons.diagnostics.Hint },
-        { name = "DiagnosticSignInfo",  text = icons.diagnostics.Information },
+        { name = "DiagnosticSignWarn", text = icons.diagnostics.Warning },
+        { name = "DiagnosticSignHint", text = icons.diagnostics.Hint },
+        { name = "DiagnosticSignInfo", text = icons.diagnostics.Information },
       },
     },
     virtual_text = false,
@@ -115,45 +114,47 @@ function M.config()
 
     lspconfig[server].setup(opts)
 
-
-  require("lspsaga").setup({
-    ui = {
+    require("lspsaga").setup {
+      ui = {
         kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
-    },
-    beacon = {
+      },
+      beacon = {
         enabled = true,
-    },
-    diagonostic = {
-      jump_num_shortcut = true,
-      diagnostic_only_current = true,
-    },
-    code_action = {
-      extend_gitsigns = true
+      },
+      breadcrumbs = {
+        hide_keyword = true,
+      },
+      diagonostic = {
+        jump_num_shortcut = true,
+        diagnostic_only_current = true,
+      },
+      code_action = {
+        extend_gitsigns = true,
+      },
     }
-  })
-  wk.register({
-    ["<leader>lc"] = {
-      name = "Call Hierarchy",
-      i = { "<cmd>Lspsaga incoming_calls<cr>", "Incoming Calls" },
-      o = { "<cmd>Lspsaga outgoing_calls<cr>", "Outgoing Calls" },
-    },
-    ["<leader>lp"] = {
-      name = "Peek",
-      d = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition" },
-      t = { "<cmd>Lspsaga peek_type_definition<cr>", "Peek Type" },
-    },
-    ["<leader>ll"] = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
-    ["<leader>lo"] = {"<cmd>Lspsaga outline<cr>", "Outline"},
-    ["<leader>lf"] = {"<cmd>Lspsaga finder<cr>", "Finder"},
-    ["<leader>lr"] = {"<cmd>Lspsaga rename<cr>", "Rename Symbol"},
-    ["<leader>dd"] = {"<cmd>Lspsaga show_buf_diagnostics ++normal<cr>", "Document Diagonostics"},
-    ["<leader>dw"] = {"<cmd>Lspsaga show_workspace_diagnostics ++normal<cr>", "Workspace Diagonostics"},
-  })
+    wk.register {
+      ["<leader>lc"] = {
+        name = "Call Hierarchy",
+        i = { "<cmd>Lspsaga incoming_calls<cr>", "Incoming Calls" },
+        o = { "<cmd>Lspsaga outgoing_calls<cr>", "Outgoing Calls" },
+      },
+      ["<leader>lp"] = {
+        name = "Peek",
+        d = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition" },
+        t = { "<cmd>Lspsaga peek_type_definition<cr>", "Peek Type" },
+      },
+      ["<leader>ll"] = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
+      ["<leader>lo"] = { "<cmd>Lspsaga outline<cr>", "Outline" },
+      ["<leader>lf"] = { "<cmd>Lspsaga finder<cr>", "Finder" },
+      ["<leader>lr"] = { "<cmd>Lspsaga rename<cr>", "Rename Symbol" },
+      ["<leader>dd"] = { "<cmd>Lspsaga show_buf_diagnostics ++normal<cr>", "Document Diagonostics" },
+      ["<leader>dw"] = { "<cmd>Lspsaga show_workspace_diagnostics ++normal<cr>", "Workspace Diagonostics" },
+    }
 
-  vim.keymap.set('n', '[e', '<cmd>Lspsaga diagnostic_jump_next<CR>')
-  vim.keymap.set('n', ']e', '<cmd>Lspsaga diagnostic_jump_prev<CR>')
-  vim.keymap.set('n', 'gd', '<cmd>Lspsaga goto_definition<CR>')
-  vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>')
+    vim.keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+    vim.keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+    vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
+    vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
   end
 end
 

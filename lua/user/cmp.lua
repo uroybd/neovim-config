@@ -37,6 +37,12 @@ local M = {
     {
       "hrsh7th/cmp-nvim-lua",
     },
+    {
+      "dcampos/cmp-emmet-vim",
+      dependencies = {
+        "mattn/emmet-vim",
+      },
+    },
   },
 }
 
@@ -46,7 +52,6 @@ function M.config()
   require("luasnip/loaders/from_vscode").lazy_load()
 
   vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
-  vim.api.nvim_set_hl(0, "CmpItemKindTabnine", { fg = "#CA42F0" })
   vim.api.nvim_set_hl(0, "CmpItemKindEmoji", { fg = "#FDE030" })
 
   local check_backspace = function()
@@ -126,9 +131,8 @@ function M.config()
           vim_item.kind_hl_group = "CmpItemKindEmoji"
         end
 
-        if entry.source.name == "cmp_tabnine" then
-          vim_item.kind = icons.misc.Robot
-          vim_item.kind_hl_group = "CmpItemKindTabnine"
+        if entry.source.name == "emmet_vim" then
+          vim_item.kind = icons.ui.DoubleChevronRight
         end
 
         return vim_item
@@ -138,7 +142,33 @@ function M.config()
       { name = "copilot" },
       { name = "nvim_lsp" },
       { name = "luasnip" },
-      { name = "cmp_tabnine" },
+      {
+        name = "emmet_vim",
+        option = {
+          filetypes = {
+            "html",
+            "htmldjango",
+            "css",
+            "javascript",
+            "typescript",
+            "javascriptreact",
+            "typescriptreact",
+            "vue",
+            "svelte",
+            "php",
+            "blade",
+            "twig",
+            "markdown",
+            "yaml",
+            "json",
+            "scss",
+            "less",
+            "stylus",
+            "javascript.jsx",
+            "typescript.tsx",
+          },
+        },
+      },
       { name = "nvim_lua" },
       { name = "buffer" },
       { name = "path" },
