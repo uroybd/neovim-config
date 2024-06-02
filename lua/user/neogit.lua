@@ -9,13 +9,13 @@ function M.config()
   local wk = require "which-key"
   wk.register {
     ["<leader>gg"] = { "<cmd>Neogit<CR>", "Neogit" },
-    -- ["<leader>gc"] = { "<cmd>Telescope conventional_commits<cr>", "Conventional Commit"}
   }
 
   require("neogit").setup {
     auto_refresh = true,
     disable_builtin_notifications = false,
     use_magit_keybindings = false,
+    graph_style = "unicode",
     -- Change the default way of opening neogit
     kind = "tab",
     -- Change the default way of opening the commit popup
