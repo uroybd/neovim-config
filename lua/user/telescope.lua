@@ -1,6 +1,9 @@
 local M = {
   "nvim-telescope/telescope.nvim",
-  dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true }, { "olacin/telescope-cc.nvim" } },
+  dependencies = {
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
+    { "olacin/telescope-cc.nvim" },
+  },
 }
 
 function M.config()
@@ -12,11 +15,14 @@ function M.config()
     ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find files" },
     ["<leader>fp"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
     ["<leader>ft"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-    ["<leader>fs"] = { function ()
-      require("telescope.builtin").lsp_workspace_symbols {
-        query = vim.fn.input "Symbol > ",
-      }
-    end, "Find Symbol"},
+    ["<leader>fs"] = {
+      function()
+        require("telescope.builtin").lsp_workspace_symbols {
+          query = vim.fn.input "Symbol > ",
+        }
+      end,
+      "Find Symbol",
+    },
     ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "Help" },
     ["<leader>fl"] = { "<cmd>Telescope resume<cr>", "Last Search" },
     ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
@@ -24,7 +30,6 @@ function M.config()
 
   local icons = require "user.icons"
   local actions = require "telescope.actions"
-
 
   require("telescope").setup {
     defaults = {
@@ -122,14 +127,12 @@ function M.config()
     },
     extensions = {
       fzf = {
-        fuzzy = true,                   -- false will only do exact matching
+        fuzzy = true, -- false will only do exact matching
         override_generic_sorter = true, -- override the generic sorter
-        override_file_sorter = true,    -- override the file sorter
-        case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
+        override_file_sorter = true, -- override the file sorter
+        case_mode = "smart_case", -- or "ignore_case" or "respect_case"
       },
-      conventional_commits = {
-        
-      }
+      conventional_commits = {},
     },
   }
 end

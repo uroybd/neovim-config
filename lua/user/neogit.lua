@@ -1,14 +1,14 @@
 local M = {
   "neogitorg/neogit",
   event = "VeryLazy",
-  branch = "nightly"
+  branch = "master",
 }
 
 function M.config()
   local icons = require "user.icons"
   local wk = require "which-key"
   wk.register {
-    ["<leader>gg"] = { "<cmd>Neogit<CR>", "Neogit" }, 
+    ["<leader>gg"] = { "<cmd>Neogit<CR>", "Neogit" },
     -- ["<leader>gc"] = { "<cmd>Telescope conventional_commits<cr>", "Conventional Commit"}
   }
 
