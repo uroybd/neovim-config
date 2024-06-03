@@ -18,6 +18,36 @@ function M.config()
         ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
       },
     },
+    views = {
+      cmdline_popup = {
+        position = {
+          row = 40,
+          col = "50%",
+        },
+        size = {
+          width = 60,
+          height = "auto",
+        },
+      },
+      popupmenu = {
+        relative = "editor",
+        position = {
+          row = 43,
+          col = "50%",
+        },
+        size = {
+          width = 60,
+          height = 10,
+        },
+        border = {
+          style = "rounded",
+          padding = { 0, 1 },
+        },
+        win_options = {
+          winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+        },
+      },
+    },
     -- you can enable a preset for easier configuration
     presets = {
       bottom_search = false, -- use a classic bottom cmdline for search
