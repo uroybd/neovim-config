@@ -62,6 +62,12 @@ function M.config()
     "volar",
     "nushell",
     "rust_analyzer",
+    "sqls",
+    "yamlls",
+    "docker_compose_language_service",
+    "dockerls",
+    "nginx_language_server",
+    "graphql",
   }
 
   local default_diagnostic_config = {

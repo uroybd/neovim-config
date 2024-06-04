@@ -35,6 +35,8 @@ function M.config()
       "ssh_config",
       "tmux",
       "xml",
+      "dockerfile",
+      "graphql",
     },
     highlight = { enable = true },
     indent = { enable = true },

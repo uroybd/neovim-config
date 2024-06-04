@@ -1,0 +1,19 @@
+local M = {
+  "yorickpeterse/nvim-window",
+}
+
+function M.config()
+  local nvim_window = require "nvim-window"
+  nvim_window.setup { normal_hl = "@comment.warning", border = "shadow" }
+  local wk = require "which-key"
+  wk.register {
+    ["<leader>,"] = {
+      function()
+        require("nvim-window").pick()
+      end,
+      "Window Jump",
+    },
+  }
+end
+
+return M
