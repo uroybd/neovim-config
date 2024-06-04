@@ -4,7 +4,7 @@ local M = {
 }
 
 function M.config()
-  require("hardtime").setup()
+  require("hardtime").setup { disable_mouse = false }
 end
 
 return M
