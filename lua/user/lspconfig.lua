@@ -29,7 +29,7 @@ end
 
 M.toggle_inlay_hints = function()
   local bufnr = vim.api.nvim_get_current_buf()
-  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(bufnr), { bufnr = bufnr })
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = bufnr }, { bufnr = bufnr })
 end
 
 function M.config()
@@ -61,6 +61,7 @@ function M.config()
     "yamlls",
     "volar",
     "nushell",
+    "rust_analyzer",
   }
 
   local default_diagnostic_config = {
@@ -101,6 +102,7 @@ function M.config()
     local opts = {
       on_attach = M.on_attach,
       capabilities = M.common_capabilities(),
+      inlay_hints = { enabled = true },
     }
 
     local require_ok, settings = pcall(require, "user.lspsettings." .. server)
