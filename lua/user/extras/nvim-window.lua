@@ -4,7 +4,7 @@ local M = {
 
 function M.config()
   local nvim_window = require "nvim-window"
-  nvim_window.setup { normal_hl = "@comment.warning", border = "shadow" }
+  nvim_window.setup { normal_hl = "@comment.warning", border = "none" }
   local wk = require "which-key"
   wk.register {
     ["<leader>,"] = {
