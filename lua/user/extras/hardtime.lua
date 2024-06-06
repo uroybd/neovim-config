@@ -4,7 +4,22 @@ local M = {
 }
 
 function M.config()
-  require("hardtime").setup { disable_mouse = false }
+  require("hardtime").setup {
+    disable_mouse = false,
+    disabled_filetypes = {
+      "qf",
+      "netrw",
+      "NvimTree",
+      "lazy",
+      "mason",
+      "oil",
+      "sagadiagnostic",
+      "sagafinder",
+      "sagatypehierarchy",
+      "sagarename",
+      "saga_unitest",
+    },
+  }
 end
 
 return M

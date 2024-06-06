@@ -35,7 +35,6 @@ function M.config()
       "ssh_config",
       "tmux",
       "xml",
-      "dockerfile",
       "graphql",
     },
     highlight = { enable = true },

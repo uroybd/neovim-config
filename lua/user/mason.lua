@@ -5,7 +5,6 @@ local M = {
   },
 }
 
-
 function M.config()
   local servers = {
     "lua_ls",
@@ -15,6 +14,13 @@ function M.config()
     "pyright",
     "bashls",
     "jsonls",
+    "yamlls",
+    "volar",
+    "rust_analyzer",
+    "sqls",
+    "docker_compose_language_service",
+    "dockerls",
+    "graphql",
   }
 
   require("mason").setup {
