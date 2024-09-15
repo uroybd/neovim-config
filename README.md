@@ -8,7 +8,7 @@ This configuration is based on [Launch.nvim](https://github.com/LunarVim/Launch.
 
 ## Plugins and LSPs
 
-A comprehensive and visually pleasing list of plugins and LSPs used in this config can be viewed at[dotfyle](https://dotfyle.com/uroybd/neovim-config)
+A comprehensive and visually pleasing list of plugins and LSPs used in this config can be viewed at [dotfyle](https://dotfyle.com/uroybd/neovim-config)
 
 ## Install Instructions
 
