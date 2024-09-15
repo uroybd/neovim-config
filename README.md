@@ -25,3 +25,10 @@ Open Neovim with this config:
 ```sh
 NVIM_APPNAME=uroybd/neovim-config/ nvim
 ```
+
+Or, if you want to use this as your default config:
+
+```sh
+git clone git@github.com:uroybd/neovim-config ~/.config/nvim
+nvim
+```
