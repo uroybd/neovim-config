@@ -10,7 +10,7 @@ local M = {
     "marilari88/neotest-vitest",
     "nvim-neotest/neotest-python",
     "nvim-neotest/neotest-plenary",
-  {"rouge8/neotest-rust", branch="main"},
+    { "rouge8/neotest-rust", branch = "main" },
     "rcasia/neotest-bash",
   },
 }
@@ -34,9 +34,9 @@ function M.config()
       },
       require "neotest-rust",
       require "neotest-vitest" {
-          filter_dir = function(name, rel_path, root)
-            return name ~= "node_modules"
-          end,
+        filter_dir = function(name, rel_path, root)
+          return name ~= "node_modules"
+        end,
 
         ignore_file_types = { "python", "vim", "lua", "rust" },
       },
