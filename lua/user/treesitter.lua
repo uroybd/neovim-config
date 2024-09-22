@@ -15,6 +15,7 @@ function M.config()
       "dockerfile",
       "gitcommit",
       "gitignore",
+      "go",
       "graphql",
       "html",
       "htmldjango",
