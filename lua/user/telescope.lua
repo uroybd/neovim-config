@@ -2,12 +2,12 @@ local M = {
   "nvim-telescope/telescope.nvim",
   dependencies = {
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
-    { "olacin/telescope-cc.nvim" },
     { "scottmckendry/telescope-resession.nvim" },
   },
 }
 
 function M.config()
+  require("telescope").load_extension "fzf"
   local wk = require "which-key"
   wk.add {
     { "<leader>bb", "<cmd>Telescope buffers previewer=false<cr>", desc = "Buffers", icon = "" },
@@ -146,7 +146,6 @@ function M.config()
         override_file_sorter = true, -- override the file sorter
         case_mode = "smart_case", -- or "ignore_case" or "respect_case"
       },
-      conventional_commits = {},
       resession = {
         prompt_title = "Find Sessions", -- telescope prompt title
         dir = "session", -- directory where resession stores sessions
