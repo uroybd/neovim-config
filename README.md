@@ -1,8 +1,7 @@
 # Neovim Configuration
-
-<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugins?style=flat" /></a>
-<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/leaderkey?style=flat" /></a>
-<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugin-manager?style=flat" /></a>
+<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugins?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/leaderkey?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugin-manager?style=for-the-badge" /></a>
 
 This configuration is based on [Launch.nvim](https://github.com/LunarVim/Launch.nvim) and is part of my [public dotfiles](https://github.com/uroybd/dots).
 
