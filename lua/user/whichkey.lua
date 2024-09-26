@@ -5,7 +5,7 @@ local M = {
 function M.config()
   local which_key = require "which-key"
   which_key.setup {
-    preset = "classic",
+    preset = "helix",
     plugins = {
       marks = true,
       registers = true,
