@@ -56,3 +56,4 @@ vim.opt.spell = true
 vim.opt.scrolloff = 10
 vim.opt.termguicolors = true
 vim.opt.shell = "/bin/bash"
+vim.opt.confirm = true
