@@ -6,7 +6,7 @@ local M = {
 
 function M.config()
   require("overseer").setup {
-    templates = { "builtin", "user.cz_bump" },
+    templates = { "builtin", "user.cz_bump", "user.cz_bump_server" },
   }
   local wk = require "which-key"
   wk.add {
