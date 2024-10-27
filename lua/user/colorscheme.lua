@@ -21,8 +21,8 @@ function M.config()
     },
     custom_highlights = function(colors)
       return {
-        LineNrAbove = { fg = colors.maroon },
-        LineNrBelow = { fg = colors.green },
+        LineNrAbove = { fg = colors.flamingo },
+        LineNrBelow = { fg = colors.sapphire },
       }
     end,
     integrations = {
