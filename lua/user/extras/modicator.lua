@@ -11,6 +11,7 @@ function M.config()
         bold = true,
         italic = false,
       },
+      use_cursorline_background = true,
     },
     init = function()
       -- These are required for Modicator to work
