@@ -9,7 +9,7 @@ function M.config()
     highlights = {
       defaults = {
         bold = true,
-        italic = false,
+        italic = true,
       },
       use_cursorline_background = true,
     },
