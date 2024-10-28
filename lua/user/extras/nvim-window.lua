@@ -8,11 +8,15 @@ function M.config()
   local wk = require "which-key"
   wk.add {
     {
-      "<leader>,",
+      "\\",
       function()
         require("nvim-window").pick()
       end,
       desc = "Window Jump",
+      mode = {
+        "n",
+        "v",
+      },
     },
   }
 end

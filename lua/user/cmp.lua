@@ -6,10 +6,10 @@ local M = {
       "hrsh7th/cmp-nvim-lsp",
       event = "InsertEnter",
     },
-    {
-      "hrsh7th/cmp-emoji",
-      event = "InsertEnter",
-    },
+    -- {
+    --   "hrsh7th/cmp-emoji",
+    --   event = "InsertEnter",
+    -- },
     {
       "hrsh7th/cmp-buffer",
       event = "InsertEnter",
@@ -124,13 +124,13 @@ function M.config()
           luasnip = "",
           buffer = "",
           path = "",
-          emoji = "",
+          -- emoji = "",
         })[entry.source.name]
 
-        if entry.source.name == "emoji" then
-          vim_item.kind = icons.misc.Smiley
-          vim_item.kind_hl_group = "CmpItemKindEmoji"
-        end
+        -- if entry.source.name == "emoji" then
+        --   vim_item.kind = icons.misc.Smiley
+        --   vim_item.kind_hl_group = "CmpItemKindEmoji"
+        -- end
 
         if entry.source.name == "emmet_vim" then
           vim_item.kind = icons.ui.DoubleChevronRight
@@ -168,7 +168,7 @@ function M.config()
       { name = "buffer" },
       { name = "path" },
       { name = "calc" },
-      { name = "emoji" },
+      -- { name = "emoji" },
       {
         name = "lazydev",
         group_index = 0, -- set group index to 0 to skip loading LuaLS completions
