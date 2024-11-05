@@ -2,6 +2,7 @@ local M = {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
+    "saghen/blink.cmp",
     { { "folke/lazydev.nvim", ft = "lua" }, "nvimdev/lspsaga.nvim" },
   },
 }
@@ -108,7 +109,7 @@ function M.config()
   for _, server in pairs(servers) do
     local opts = {
       on_attach = M.on_attach,
-      capabilities = M.common_capabilities(),
+      capabilities = require("blink.cmp").get_lsp_capabilities(M.common_capabilities()),
       inlay_hints = { enabled = true },
     }
 
