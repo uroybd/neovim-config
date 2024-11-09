@@ -3,6 +3,26 @@ local M = {
   dependencies = {},
 }
 
+local mode_icons = {
+  NORMAL = "",
+  INSERT = "󰗧",
+  VISUAL = "󰒅",
+  ["V-LINE"] = "󰿚",
+  ["V-BLOCK"] = "󰾂",
+  ["O-PENDING"] = "",
+  SELECT = "󰲏",
+  ["S-LINE"] = "󰿚",
+  ["S-BLOCK"] = "󰾂",
+  REPLACE = "",
+  ["V-REPLACE"] = "",
+  TERMINAL = "",
+  COMMAND = "",
+  EX = "",
+  SHELL = "",
+  MORE = "",
+  CONFIRM = "",
+}
+
 function M.config()
   require("lualine").setup {
     options = {
@@ -13,7 +33,15 @@ function M.config()
       theme = "catppuccin",
     },
     sections = {
-      lualine_a = { "mode" },
+      lualine_a = {
+        {
+          "mode",
+          fmt = function(str)
+            local icon = mode_icons[str] or ""
+            return icon .. " " .. str
+          end,
+        },
+      },
       lualine_b = {
         "branch",
         {
