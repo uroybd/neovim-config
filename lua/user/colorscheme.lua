@@ -13,11 +13,11 @@ function M.config()
       keywords = { "bold", "italic" },
       functions = { "italic" },
       parameters = { "italic" },
-      strings = { "bold" },
-      numbers = { "bold" },
-      operators = { "bold" },
+      -- strings = { "bold" },
+      -- numbers = { "bold" },
+      -- operators = { "bold" },
       properties = { "italic" },
-      booleans = { "bold" },
+      -- booleans = { "bold" },
     },
     custom_highlights = function(colors)
       return {
