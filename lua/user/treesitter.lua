@@ -2,7 +2,7 @@ local M = {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPost", "BufNewFile" },
   build = ":TSUpdate",
-  branch = "master",
+  -- branch = "master",
   dependencies = { "nvim-treesitter/nvim-treesitter-textobjects", { "nushell/tree-sitter-nu" } },
 }
 

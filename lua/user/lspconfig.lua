@@ -65,7 +65,7 @@ function M.config()
     "prismals",
     "pyright",
     "rust_analyzer",
-    "sqls",
+    -- "sqls",
     "svelte",
     "ts_ls",
     "volar",
