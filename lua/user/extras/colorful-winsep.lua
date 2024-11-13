@@ -5,9 +5,9 @@ local M = {
 
 function M.config()
 require("colorful-winsep").setup({
-    hi = {
-      fg = "#7287fd"
-    }
+    -- hi = {
+    --   fg = "#7287fd"
+    -- }
   })
 end
 

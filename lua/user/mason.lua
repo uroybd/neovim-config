@@ -17,7 +17,7 @@ function M.config()
     "yamlls",
     "volar",
     "rust_analyzer",
-    "sqls",
+    -- "sqls",
     "docker_compose_language_service",
     "dockerls",
     "graphql",

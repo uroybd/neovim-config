@@ -26,18 +26,35 @@ function M.config()
       }
     end,
     integrations = {
+      beacon = true,
+      colorful_winsep = true,
+      dap = true,
+      dap_ui = true,
+      flash = true,
+      gitsigns = true,
+      grug_far = true,
+      indent_blankline = {
+          enabled = true,
+          scope_color = "teal", -- catppuccin color (eg. `lavender`) Default: text
+          colored_indent_levels = true,
+      },
+      lsp_saga = true,
       notify = true,
       nvimtree = true,
+      nvim_surround = true,
       cmp = true,
       mason = true,
       markdown = true,
       neotest = true,
+      noice = true,
+      overseer = true,
       treesitter_context = true,
       treesitter = true,
       telescope = {
         enabled = true,
         -- style = "nvchad"
       },
+      ufo = true,
       which_key = true,
     },
   }
