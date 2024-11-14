@@ -28,11 +28,6 @@ function M.config()
         enabled = true,
       },
     },
-    trigger = {
-      signature_help = {
-        enabled = true,
-      },
-    },
     windows = {
       documentation = {
         auto_show = true,
