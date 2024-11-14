@@ -23,16 +23,16 @@ function M.config()
     -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
     -- adjusts spacing to ensure icons are aligned
     nerd_font_variant = "mono",
-    -- accept = {
-    --   auto_brackets = {
-    --     enabled = true,
-    --   },
-    -- },
-    -- trigger = {
-    --   signature_help = {
-    --     enabled = true,
-    --   },
-    -- },
+    accept = {
+      auto_brackets = {
+        enabled = true,
+      },
+    },
+    trigger = {
+      signature_help = {
+        enabled = true,
+      },
+    },
     windows = {
       documentation = {
         auto_show = true,
