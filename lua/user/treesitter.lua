@@ -40,7 +40,7 @@ function M.config()
       "sql",
       "ssh_config",
       "svelte",
-      "tmux",
+      "terraform",
       "toml",
       "typescript",
       "vue",

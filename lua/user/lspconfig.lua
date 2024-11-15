@@ -67,6 +67,7 @@ function M.config()
     "rust_analyzer",
     -- "sqls",
     "svelte",
+    "terraformls",
     "ts_ls",
     "volar",
     "yamlls",
