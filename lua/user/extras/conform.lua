@@ -11,6 +11,7 @@ function M.config()
       -- Use a sub-list to run only the first available formatter
       javascript = { { "prettierd", "prettier" } },
       go = { "goimports", "gofmt" },
+      sql = { "sqlfmt" },
       terraform = { "terraform_fmt" },
     },
     default_format_opts = {
