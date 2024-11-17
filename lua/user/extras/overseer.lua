@@ -1,7 +1,11 @@
 local M = {
   "stevearc/overseer.nvim",
   event = "VeryLazy",
-  dependencies = { "stevearc/dressing.nvim", "nvim-telescope/telescope.nvim", "rcarriga/nvim-notify" },
+  dependencies = {
+    "stevearc/dressing.nvim",
+    "nvim-telescope/telescope.nvim",
+    "rcarriga/nvim-notify",
+  },
 }
 
 function M.config()
