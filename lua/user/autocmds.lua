@@ -65,16 +65,56 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "http",
   callback = function()
-    local wk = require("which-key");
-    local buf = vim.api.nvim_get_current_buf();
-    wk.add({
-      {"<cr>", function() require('kulala').run() end, noremap = true, buffer = buf},
-      {"[", function() require('kulala').jump_prev() end, noremap = true, buffer = buf},
-      {"]", function() require('kulala').jump_next() end, noremap = true, buffer = buf},
-      {"<leader>i", function() require('kulala').inspect() end, noremap = true, buffer = buf},
-      {"t", function() require('kulala').toggle_view() end, noremap = true, buffer = buf},
-    })
+    local wk = require "which-key"
+    local buf = vim.api.nvim_get_current_buf()
+    wk.add {
+      {
+        "<cr>",
+        function()
+          require("kulala").run()
+        end,
+        noremap = true,
+        buffer = buf,
+      },
+      {
+        "[",
+        function()
+          require("kulala").jump_prev()
+        end,
+        noremap = true,
+        buffer = buf,
+      },
+      {
+        "]",
+        function()
+          require("kulala").jump_next()
+        end,
+        noremap = true,
+        buffer = buf,
+      },
+      {
+        "<leader>i",
+        function()
+          require("kulala").inspect()
+        end,
+        noremap = true,
+        buffer = buf,
+      },
+      {
+        "t",
+        function()
+          require("kulala").toggle_view()
+        end,
+        noremap = true,
+        buffer = buf,
+      },
+    }
   end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "kdl",
+  command = "silent! setlocal commentstring=//%s",
 })
 
 vim.api.nvim_create_autocmd({ "CursorHold" }, {
@@ -91,12 +131,11 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
   end,
 })
 
-
 vim.api.nvim_create_augroup("neogit-additions", {})
 vim.api.nvim_create_autocmd("FileType", {
-		group = "neogit-additions",
-		pattern = "NeogitCommitMessage";
-		command = "silent! set filetype=gitcommit",
+  group = "neogit-additions",
+  pattern = "NeogitCommitMessage",
+  command = "silent! set filetype=gitcommit",
 })
 
 -- vim.api.nvim_create_autocmd("LspAttach", {
