@@ -1,5 +1,6 @@
 local M = {
   "shellRaining/hlchunk.nvim",
+  branch = "main",
   event = { "BufReadPre", "BufNewFile" },
 }
 
