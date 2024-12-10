@@ -135,11 +135,12 @@ function M.config()
       breadcrumbs = {
         hide_keyword = true,
       },
-      diagonostic = {
+      diagnostic = {
         jump_num_shortcut = true,
         diagnostic_only_current = true,
       },
       code_action = {
+        num_shortcut = true,
         extend_gitsigns = true,
       },
     }
