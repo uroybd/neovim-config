@@ -22,7 +22,6 @@ function M.config()
     "dockerls",
     "graphql",
     "gopls",
-    "goimports"
   }
 
   require("mason").setup {
