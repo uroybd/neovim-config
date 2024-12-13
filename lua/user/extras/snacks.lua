@@ -32,6 +32,14 @@ local M = {
     quickfile = {
       enabled = true
     },
+    statuscolumn = {
+      enabled = true,
+      left = {"git", "fold"},
+      right = {"sign", "mark"},
+      folds = {
+        git_hl = true
+      }
+    },
     words = {
       enabled = true
     }
