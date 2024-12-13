@@ -11,7 +11,6 @@ local M = {
     "nvim-neotest/neotest-python",
     "nvim-neotest/neotest-plenary",
     { "rouge8/neotest-rust", branch = "main" },
-    "rcasia/neotest-bash",
   },
 }
 

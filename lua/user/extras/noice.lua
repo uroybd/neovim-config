@@ -47,6 +47,9 @@ function M.config()
           winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
         },
       },
+      messages = {
+        enabled = false,
+      }
     },
     -- you can enable a preset for easier configuration
     presets = {

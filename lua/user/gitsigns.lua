@@ -9,7 +9,6 @@ M.config = function()
   local wk = require "which-key"
   wk.add {
     { "<leader>gR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer", icon = "󰣜" },
-    { "<leader>gb", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc = "Blame", icon = "󰯆" },
     { "<leader>gd", "<cmd>Gitsigns diffthis HEAD<cr>", desc = "Git Diff", icon = "" },
     {
       "<leader>gj",

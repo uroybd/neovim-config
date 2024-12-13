@@ -57,11 +57,11 @@ function M.config()
       },
       lualine_c = { { "filename", path = 4 } },
       lualine_x = {
-        {
-          require("noice").api.statusline.mode.get,
-          cond = require("noice").api.statusline.mode.has,
-          color = { fg = "#DC8A78" },
-        },
+        -- {
+        --   require("noice").api.statusline.mode.get,
+        --   cond = require("noice").api.statusline.mode.has,
+        --   color = { fg = "#DC8A78" },
+        -- },
         { -- NeoCodeium Status
           function()
             local status, serverstatus = require("neocodeium").get_status()
