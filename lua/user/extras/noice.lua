@@ -3,19 +3,19 @@ local M = {
   event = "VeryLazy",
   dependencies = {
     "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
   },
 }
 
 function M.config()
   require("noice").setup {
     lsp = {
-      -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
       override = {
         ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
         ["vim.lsp.util.stylize_markdown"] = true,
-        -- ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
       },
+    },
+    messages = {
+      enabled = false,
     },
     views = {
       cmdline_popup = {
@@ -46,9 +46,6 @@ function M.config()
           winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
         },
       },
-      messages = {
-        enabled = false,
-      }
     },
     -- you can enable a preset for easier configuration
     presets = {
