@@ -15,7 +15,8 @@ function M.config()
       },
     },
     messages = {
-      enabled = false,
+      enabled = true,
+
     },
     views = {
       cmdline_popup = {
