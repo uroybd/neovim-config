@@ -21,7 +21,7 @@ local M = {
       }
     },
     notifier = {
-      enabled = false,
+      enabled = true,
     },
     git = {
       enabled = true,
