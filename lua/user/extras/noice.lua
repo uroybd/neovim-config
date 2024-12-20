@@ -14,10 +14,6 @@ function M.config()
         ["vim.lsp.util.stylize_markdown"] = true,
       },
     },
-    messages = {
-      enabled = true,
-
-    },
     views = {
       cmdline_popup = {
         position = {
