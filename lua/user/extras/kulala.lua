@@ -7,7 +7,7 @@ function M.config()
   kl.setup {
     winbar = true,
     default_winbar_panes = { "body", "headers", "headers_body", "script_output" },
-    split_direction = "horizontal",
+    split_direction = "vertical",
   }
 
   vim.filetype.add {

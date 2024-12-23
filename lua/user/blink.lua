@@ -30,9 +30,8 @@ function M.config()
       end,
     },
     sources = {
-      completion = {
-        enabled_providers = { "lsp", "path", "luasnip", "buffer" },
-      },
+      default = { "lsp", "path", "luasnip", "buffer" },
+      cmdline = {},
     },
     keymap = { preset = "enter" },
 
@@ -48,9 +47,9 @@ function M.config()
           enabled = true,
         },
       },
-    },
-    documentation = {
-      auto_show = true,
+      documentation = {
+        auto_show = true,
+      },
     },
   }
 end
