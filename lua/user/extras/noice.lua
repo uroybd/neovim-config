@@ -4,6 +4,7 @@ local M = {
   dependencies = {
     "MunifTanjim/nui.nvim",
   },
+  branch = "main"
 }
 
 function M.config()
