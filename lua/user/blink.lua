@@ -33,7 +33,12 @@ function M.config()
       default = { "lsp", "path", "luasnip", "buffer" },
       -- cmdline = {},
     },
-    keymap = { preset = "enter" },
+    keymap = {
+      preset = "enter",
+      cmdline = {
+        preset = "super-tab"
+      }
+    },
 
     appearance = {
       -- sets the fallback highlight groups to nvim-cmp's highlight groups
