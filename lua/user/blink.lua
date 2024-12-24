@@ -31,6 +31,7 @@ function M.config()
     },
     sources = {
       default = { "lsp", "path", "luasnip", "buffer" },
+      -- cmdline = {},
     },
     keymap = { preset = "enter" },
 
