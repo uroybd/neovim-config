@@ -35,9 +35,9 @@ function M.config()
     },
     keymap = {
       preset = "enter",
-    --   cmdline = {
-    --     preset = "super-tab"
-    --   }
+      cmdline = {
+        preset = "super-tab"
+      }
     },
 
     appearance = {
@@ -47,11 +47,11 @@ function M.config()
       use_nvim_cmp_as_default = true,
     },
     completion = {
-      list = {
-        selection = function(ctx)
-          return ctx.mode == 'cmdline' and 'auto_insert' or 'preselect'
-        end
-      },
+      -- list = {
+      --   selection = function(ctx)
+      --     return ctx.mode == 'cmdline' and 'auto_insert' or 'preselect'
+      --   end
+      -- },
       menu = {
         auto_show = function(ctx) return ctx.mode ~= 'cmdline' end,
       },
