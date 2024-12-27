@@ -1,6 +1,8 @@
 local M = {
   "sphamba/smear-cursor.nvim",
-  opts = {},
+  opts = {
+    smear_between_neighbor_lines = false
+  },
 }
 
 return M
