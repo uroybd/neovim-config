@@ -3,10 +3,7 @@ local M = {
   lazy = true,
   ft = "markdown",
   dependencies = {
-    -- Required.
     "nvim-lua/plenary.nvim",
-
-    -- see below for full list of optional dependencies 👇
   },
 }
 
@@ -19,7 +16,6 @@ function M.config()
   require("obsidian").setup {
     ui = { enable = false },
     workspaces = {
-
       {
         name = "The Codex",
         path = "~/Documents/The Codex/",
@@ -27,6 +23,7 @@ function M.config()
     },
     notes = "Scratchpad",
     wiki_link_func = "prepend_note_path",
+    disable_frontmatter = true,
     note_frontmatter_func = function(note)
       -- Add the title of the note as an alias.
       if note.title then
