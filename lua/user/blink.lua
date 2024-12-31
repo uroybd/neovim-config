@@ -12,7 +12,6 @@ local M = {
 }
 
 function M.config()
-  -- require("luasnip").setup {}
   require("luasnip.loaders.from_vscode").lazy_load()
   require("blink.cmp").setup {
     snippets = {
@@ -31,29 +30,24 @@ function M.config()
     },
     sources = {
       default = { "lsp", "path", "luasnip", "buffer" },
-      -- cmdline = {},
     },
     keymap = {
       preset = "enter",
-      cmdline = {
-        preset = "super-tab"
-      }
     },
 
     appearance = {
-      -- sets the fallback highlight groups to nvim-cmp's highlight groups
-      -- useful for when your theme doesn't support blink.cmp
-      -- will be removed in a future release, assuming themes add support
       use_nvim_cmp_as_default = true,
     },
     completion = {
-      -- list = {
-      --   selection = function(ctx)
-      --     return ctx.mode == 'cmdline' and 'auto_insert' or 'preselect'
-      --   end
-      -- },
+      list = {
+        selection = function(ctx)
+          return ctx.mode == 'cmdline' and 'auto_insert' or 'preselect'
+        end
+      },
       menu = {
-        auto_show = function(ctx) return ctx.mode ~= 'cmdline' end,
+        auto_show = function(ctx)
+          return ctx.mode ~= "cmdline" or not vim.tbl_contains({ '/', '?' }, vim.fn.getcmdtype())
+        end,
       },
       accept = {
         auto_brackets = {

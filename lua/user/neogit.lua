@@ -15,7 +15,7 @@ function M.config()
     auto_refresh = true,
     disable_builtin_notifications = false,
     use_magit_keybindings = false,
-    graph_style = "unicode",
+    graph_style = "kitty",
     -- Change the default way of opening neogit
     kind = "tab",
     -- Change the default way of opening the commit popup
