@@ -3,7 +3,6 @@ local M = {
   event = "VeryLazy",
   dependencies = {
     "stevearc/dressing.nvim",
-    "nvim-telescope/telescope.nvim",
   },
 }
 
