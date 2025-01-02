@@ -10,7 +10,7 @@ function M.config()
       python = { "isort", "black" },
       -- Use a sub-list to run only the first available formatter
       javascript = { { "prettierd", "prettier" } },
-      go = { "goimports", "gofmt", "golines"},
+      go = { "goimports-reviser", "gofumpt", "golines" },
       sql = { "sqlfmt" },
       terraform = { "terraform_fmt" },
     },

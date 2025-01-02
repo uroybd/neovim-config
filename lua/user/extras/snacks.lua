@@ -4,21 +4,21 @@ local M = {
   lazy = false,
   version = "v2.*",
   dependencies = {
-    "nvim-tree/nvim-web-devicons"
+    "nvim-tree/nvim-web-devicons",
   },
   opts = {
     bigfile = {
-      enabled = true
+      enabled = true,
     },
     input = {
-      enabled = true
+      enabled = true,
     },
     indent = {
       enabled = true,
       chunk = {
         enabled = true,
-        only_current = true
-      }
+        only_current = true,
+      },
     },
     notifier = {
       enabled = true,
@@ -30,22 +30,32 @@ local M = {
       enabled = true,
     },
     quickfile = {
-      enabled = true
+      enabled = true,
     },
     statuscolumn = {
       enabled = true,
     },
     words = {
-      enabled = true
+      enabled = true,
     },
     dashboard = {
+      preset = {
+        header = [[
+
+███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
+      },
       sections = {
-        { section = "header"},
+        { section = "header" },
         {
           section = "terminal",
-          cmd = "gh skyline -o ~/.github-skyline/ | tail -n +14 | head -n 10",
+          cmd = "gh skyline -o ~/.github-skyline/ | tail -n +16 | head -n 7 | sed -r 's/\\./ /g'",
           pane = 2,
-          height = 10,
+          height = 7,
           padding = 1,
         },
         { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
@@ -68,7 +78,7 @@ local M = {
               title = "Notifications",
               cmd = "gh notify -s -a -n5",
               action = function()
-                vim.ui.open("https://github.com/notifications")
+                vim.ui.open "https://github.com/notifications"
               end,
               key = "n",
               icon = " ",
@@ -94,7 +104,7 @@ local M = {
               end,
               icon = " ",
               height = 7,
-            }, 
+            },
           }
           return vim.tbl_map(function(cmd)
             return vim.tbl_extend("force", {
@@ -109,14 +119,31 @@ local M = {
         end,
         { section = "startup" },
       },
-    }
+    },
   },
   keys = {
-    { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse" },
-    { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },
-    { "<leader>nh", function() Snack.notifier.show_history() end, desc = "Notifications" },
-  }
+    {
+      "<leader>gB",
+      function()
+        Snacks.gitbrowse()
+      end,
+      desc = "Git Browse",
+    },
+    {
+      "<leader>gb",
+      function()
+        Snacks.git.blame_line()
+      end,
+      desc = "Git Blame Line",
+    },
+    {
+      "<leader>nh",
+      function()
+        Snack.notifier.show_history()
+      end,
+      desc = "Notifications",
+    },
+  },
 }
-
 
 return M
