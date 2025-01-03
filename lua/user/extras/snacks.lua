@@ -53,7 +53,7 @@ local M = {
         { section = "header" },
         {
           section = "terminal",
-          cmd = "gh skyline -o ~/.github-skyline/ | tail -n +16 | head -n 7 | sed -r 's/\\./ /g'",
+          cmd = "gh skyline -a | sed -r 's/\\./∙/g' | sed -e 's/^/   /'",
           pane = 2,
           height = 7,
           padding = 1,
