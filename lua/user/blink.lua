@@ -3,7 +3,7 @@ local M = {
   lazy = false, -- lazy loading handled internally
   -- optional: provides snippets for the snippet source
   dependencies = {
-    { "L3MON4D3/LuaSnip", dependencies = { "rafamadriz/friendly-snippets" } },
+    { "L3MON4D3/LuaSnip", version = "v2.*", dependencies = { "rafamadriz/friendly-snippets" } },
   },
 
   -- use a release tag to download pre-built binaries
@@ -14,22 +14,9 @@ local M = {
 function M.config()
   require("luasnip.loaders.from_vscode").lazy_load()
   require("blink.cmp").setup {
-    snippets = {
-      expand = function(snippet)
-        require("luasnip").lsp_expand(snippet)
-      end,
-      active = function(filter)
-        if filter and filter.direction then
-          return require("luasnip").jumpable(filter.direction)
-        end
-        return require("luasnip").in_snippet()
-      end,
-      jump = function(direction)
-        require("luasnip").jump(direction)
-      end,
-    },
+    snippets = { preset = "luasnip" },
     sources = {
-      default = { "lsp", "path", "luasnip", "buffer" },
+      default = { "lsp", "path", "snippets", "buffer" },
     },
     keymap = {
       preset = "enter",
@@ -40,13 +27,18 @@ function M.config()
     },
     completion = {
       list = {
-        selection = function(ctx)
-          return ctx.mode == 'cmdline' and 'auto_insert' or 'preselect'
-        end
+        selection = {
+          preselect = function(ctx)
+            return ctx.mode ~= "cmdline"
+          end,
+          auto_insert = function(ctx)
+            return ctx.mode ~= "cmdline"
+          end,
+        },
       },
       menu = {
         auto_show = function(ctx)
-          return ctx.mode ~= "cmdline" or not vim.tbl_contains({ '/', '?' }, vim.fn.getcmdtype())
+          return ctx.mode ~= "cmdline" or not vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
         end,
       },
       accept = {
