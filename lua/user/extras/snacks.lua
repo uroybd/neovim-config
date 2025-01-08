@@ -18,6 +18,14 @@ local M = {
       chunk = {
         enabled = true,
         only_current = true,
+        char = {
+          corner_top = "╭",
+          corner_bottom = "╰",
+          horizontal = "─",
+          vertical = "│",
+          arrow = "󰅂",
+          -- arrow = ">",
+        },
       },
     },
     notifier = {
