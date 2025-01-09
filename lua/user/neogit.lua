@@ -3,6 +3,7 @@ local M = {
   event = "VeryLazy",
   branch = "master",
   dependencies = {
+    "nvim-lua/plenary.nvim",
     "sindrets/diffview.nvim",
     "ibhagwan/fzf-lua",
   },
