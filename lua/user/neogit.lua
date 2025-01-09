@@ -2,6 +2,10 @@ local M = {
   "neogitorg/neogit",
   event = "VeryLazy",
   branch = "master",
+  dependencies = {
+    "sindrets/diffview.nvim",
+    "ibhagwan/fzf-lua",
+  },
 }
 
 function M.config()
@@ -32,6 +36,10 @@ function M.config()
       section = { icons.ui.ChevronRight, icons.ui.ChevronShortDown },
       item = { icons.ui.ChevronRight, icons.ui.ChevronShortDown },
       hunk = { "", "" },
+    },
+    integrations = {
+      diffview = true,
+      fzf_lua = true,
     },
   }
 end
