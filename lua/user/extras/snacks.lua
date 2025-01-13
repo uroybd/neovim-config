@@ -61,7 +61,7 @@ local M = {
         { section = "header" },
         {
           section = "terminal",
-          cmd = "gh skyline -a | sed -r 's/\\./∙/g' | sed -e 's/^/   /'",
+          cmd = "gh skyline -a | sed -e 's/^/   /'",
           pane = 2,
           height = 7,
           padding = 1,
