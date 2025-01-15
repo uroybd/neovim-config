@@ -58,73 +58,73 @@ local M = {
 ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
       },
       sections = {
-        { section = "header" },
         {
           section = "terminal",
-          cmd = "gh skyline -a | sed -e 's/^/   /'",
-          pane = 2,
+          cmd = "gh skyline -a | sed -r 's/\\.//g' | sed -e 's/^/   /'",
+          -- pane = 2,
           height = 7,
           padding = 1,
         },
+        { section = "header" },
         { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
         { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-        { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
-        {
-          pane = 2,
-          icon = " ",
-          desc = "Browse Repo",
-          padding = 1,
-          key = "b",
-          action = function()
-            Snacks.gitbrowse()
-          end,
-        },
-        function()
-          local in_git = Snacks.git.get_root() ~= nil
-          local cmds = {
-            {
-              title = "Notifications",
-              cmd = "gh notify -s -a -n5",
-              action = function()
-                vim.ui.open "https://github.com/notifications"
-              end,
-              key = "n",
-              icon = " ",
-              height = 5,
-              enabled = true,
-            },
-            {
-              icon = " ",
-              title = "Open PRs",
-              cmd = "gh pr list -L 3",
-              key = "p",
-              action = function()
-                vim.fn.jobstart("gh pr list --web", { detach = true })
-              end,
-              height = 7,
-            },
-            {
-              title = "Open Issues",
-              cmd = "gh issue list -L 3",
-              key = "i",
-              action = function()
-                vim.fn.jobstart("gh issue list --web", { detach = true })
-              end,
-              icon = " ",
-              height = 7,
-            },
-          }
-          return vim.tbl_map(function(cmd)
-            return vim.tbl_extend("force", {
-              pane = 2,
-              section = "terminal",
-              enabled = in_git,
-              padding = 1,
-              ttl = 5 * 60,
-              indent = 3,
-            }, cmd)
-          end, cmds)
-        end,
+        -- { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+        -- {
+        --   pane = 2,
+        --   icon = " ",
+        --   desc = "Browse Repo",
+        --   padding = 1,
+        --   key = "b",
+        --   action = function()
+        --     Snacks.gitbrowse()
+        --   end,
+        -- },
+        -- function()
+        --   local in_git = Snacks.git.get_root() ~= nil
+        --   local cmds = {
+        --     {
+        --       title = "Notifications",
+        --       cmd = "gh notify -s -a -n5",
+        --       action = function()
+        --         vim.ui.open "https://github.com/notifications"
+        --       end,
+        --       key = "n",
+        --       icon = " ",
+        --       height = 5,
+        --       enabled = true,
+        --     },
+        --     {
+        --       icon = " ",
+        --       title = "Open PRs",
+        --       cmd = "gh pr list -L 3",
+        --       key = "p",
+        --       action = function()
+        --         vim.fn.jobstart("gh pr list --web", { detach = true })
+        --       end,
+        --       height = 7,
+        --     },
+        --     {
+        --       title = "Open Issues",
+        --       cmd = "gh issue list -L 3",
+        --       key = "i",
+        --       action = function()
+        --         vim.fn.jobstart("gh issue list --web", { detach = true })
+        --       end,
+        --       icon = " ",
+        --       height = 7,
+        --     },
+        --   }
+        --   return vim.tbl_map(function(cmd)
+        --     return vim.tbl_extend("force", {
+        --       pane = 2,
+        --       section = "terminal",
+        --       enabled = in_git,
+        --       padding = 1,
+        --       ttl = 5 * 60,
+        --       indent = 3,
+        --     }, cmd)
+        --   end, cmds)
+        -- end,
         { section = "startup" },
       },
     },
