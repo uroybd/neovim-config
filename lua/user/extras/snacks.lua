@@ -35,6 +35,20 @@ local M = {
       matcher = {
         frecency = true,
       },
+      sources = {
+        files = {
+          layout = {
+            preview = false,
+            preset = "dropdown",
+          },
+        },
+        buffers = {
+          layout = {
+            preview = false,
+            preset = "dropdown",
+          },
+        },
+      },
     },
     git = {
       enabled = true,
@@ -103,14 +117,14 @@ local M = {
     {
       "<leader>bb",
       function()
-        Snacks.picker.buffers { layout = { preset = "select" } }
+        Snacks.picker.buffers()
       end,
       desc = "Buffers",
     },
     {
       "<leader>ff",
       function()
-        Snacks.picker.files { layout = { preset = "select" } }
+        Snacks.picker.files()
       end,
       desc = "Find files",
     },
