@@ -31,6 +31,11 @@ local M = {
     notifier = {
       enabled = true,
     },
+    picker = {
+      matcher = {
+        frecency = true,
+      },
+    },
     git = {
       enabled = true,
     },
@@ -68,63 +73,6 @@ local M = {
         { section = "header" },
         { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
         { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-        -- { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
-        -- {
-        --   pane = 2,
-        --   icon = " ",
-        --   desc = "Browse Repo",
-        --   padding = 1,
-        --   key = "b",
-        --   action = function()
-        --     Snacks.gitbrowse()
-        --   end,
-        -- },
-        -- function()
-        --   local in_git = Snacks.git.get_root() ~= nil
-        --   local cmds = {
-        --     {
-        --       title = "Notifications",
-        --       cmd = "gh notify -s -a -n5",
-        --       action = function()
-        --         vim.ui.open "https://github.com/notifications"
-        --       end,
-        --       key = "n",
-        --       icon = " ",
-        --       height = 5,
-        --       enabled = true,
-        --     },
-        --     {
-        --       icon = " ",
-        --       title = "Open PRs",
-        --       cmd = "gh pr list -L 3",
-        --       key = "p",
-        --       action = function()
-        --         vim.fn.jobstart("gh pr list --web", { detach = true })
-        --       end,
-        --       height = 7,
-        --     },
-        --     {
-        --       title = "Open Issues",
-        --       cmd = "gh issue list -L 3",
-        --       key = "i",
-        --       action = function()
-        --         vim.fn.jobstart("gh issue list --web", { detach = true })
-        --       end,
-        --       icon = " ",
-        --       height = 7,
-        --     },
-        --   }
-        --   return vim.tbl_map(function(cmd)
-        --     return vim.tbl_extend("force", {
-        --       pane = 2,
-        --       section = "terminal",
-        --       enabled = in_git,
-        --       padding = 1,
-        --       ttl = 5 * 60,
-        --       indent = 3,
-        --     }, cmd)
-        --   end, cmds)
-        -- end,
         { section = "startup" },
       },
     },
@@ -147,9 +95,66 @@ local M = {
     {
       "<leader>nh",
       function()
-        Snack.notifier.show_history()
+        Snacks.notifier.show_history()
       end,
       desc = "Notifications",
+    },
+    -- Pickers
+    {
+      "<leader>bb",
+      function()
+        Snacks.picker.buffers { layout = { preset = "select" } }
+      end,
+      desc = "Buffers",
+    },
+    {
+      "<leader>ff",
+      function()
+        Snacks.picker.files { layout = { preset = "select" } }
+      end,
+      desc = "Find files",
+    },
+    {
+      "<leader>fl",
+      function()
+        Snacks.picker.resume()
+      end,
+      desc = "Last Search",
+    },
+    {
+      "<leader>fr",
+      function()
+        Snacks.picker.recent()
+      end,
+      desc = "Recent File",
+    },
+    {
+      "<leader>ft",
+      function()
+        Snacks.picker.grep { layout = { preset = "dropdown" } }
+      end,
+      desc = "Find Text",
+    },
+    {
+      "<leader>fs",
+      function()
+        Snacks.picker.lsp_workspace_symbols()
+      end,
+      desc = "Find Symbol",
+    },
+    {
+      "<leader>gC",
+      function()
+        Snacks.picker.git_branches()
+      end,
+      desc = "Checkout branch",
+    },
+    {
+      "<leader>fh",
+      function()
+        Snacks.picker.help()
+      end,
+      desc = "Help",
     },
   },
 }

@@ -5,7 +5,6 @@ local M = {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "sindrets/diffview.nvim",
-    "ibhagwan/fzf-lua",
   },
 }
 
@@ -40,7 +39,6 @@ function M.config()
     },
     integrations = {
       diffview = true,
-      fzf_lua = true,
     },
   }
 end
