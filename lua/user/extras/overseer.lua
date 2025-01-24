@@ -1,9 +1,6 @@
 local M = {
   "stevearc/overseer.nvim",
   event = "VeryLazy",
-  dependencies = {
-    "stevearc/dressing.nvim",
-  },
 }
 
 function M.config()
