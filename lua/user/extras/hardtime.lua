@@ -1,6 +1,8 @@
 local M = {
   "m4xshen/hardtime.nvim",
-  dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
 }
 
 function M.config()
