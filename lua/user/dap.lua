@@ -5,6 +5,7 @@ local M = {
     "leoluz/nvim-dap-go",
     "nvim-neotest/nvim-nio",
   },
+  lazy = true,
 }
 
 function M.config()

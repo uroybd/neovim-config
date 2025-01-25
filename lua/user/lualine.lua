@@ -53,15 +53,9 @@ function M.config()
           },
         },
         "diagnostics",
-        "overseer",
       },
       lualine_c = { { "filename", path = 4 } },
       lualine_x = {
-        -- {
-        --   require("noice").api.statusline.mode.get,
-        --   cond = require("noice").api.statusline.mode.has,
-        --   color = { fg = "#DC8A78" },
-        -- },
         { -- NeoCodeium Status
           function()
             local status, serverstatus = require("neocodeium").get_status()
@@ -94,10 +88,6 @@ function M.config()
       lualine_y = { "searchcount" },
       lualine_z = {
         "selectioncount",
-        -- {
-        --   require("arrow.statusline").text_for_statusline_with_icons,
-        --   cond = require("arrow.statusline").is_on_arrow_file,
-        -- },
         "location",
         "progress",
       },

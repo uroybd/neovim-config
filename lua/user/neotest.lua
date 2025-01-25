@@ -12,6 +12,7 @@ local M = {
     "nvim-neotest/neotest-plenary",
     { "rouge8/neotest-rust", branch = "main" },
   },
+  lazy = true,
 }
 
 function M.config()

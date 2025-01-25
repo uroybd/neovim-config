@@ -1,6 +1,6 @@
 local M = {
   "stevearc/overseer.nvim",
-  event = "VeryLazy",
+  cmd = { "OverseerToggle", "OverseerRun" },
 }
 
 function M.config()
