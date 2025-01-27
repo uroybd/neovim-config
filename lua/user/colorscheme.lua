@@ -24,6 +24,7 @@ function M.config()
       return {
         LineNrAbove = { fg = colors.flamingo },
         LineNrBelow = { fg = colors.teal },
+        NormalFloat = { bg = colors.base, fg = colors.text },
       }
     end,
     integrations = {
