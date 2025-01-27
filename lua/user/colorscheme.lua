@@ -43,6 +43,7 @@ function M.config()
       mason = true,
       markdown = true,
       neotest = true,
+      neogit = true,
       overseer = true,
       treesitter_context = true,
       treesitter = true,
