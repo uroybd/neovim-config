@@ -29,6 +29,7 @@ function M.config()
     end,
     integrations = {
       beacon = true,
+      blink_cmp = true,
       colorful_winsep = true,
       dap = true,
       dap_ui = true,
@@ -42,7 +43,6 @@ function M.config()
       mason = true,
       markdown = true,
       neotest = true,
-      noice = true,
       overseer = true,
       treesitter_context = true,
       treesitter = true,
