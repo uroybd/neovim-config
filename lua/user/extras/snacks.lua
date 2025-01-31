@@ -10,6 +10,10 @@ local M = {
     bigfile = {
       enabled = true,
     },
+    explorer = {
+      enabled = true,
+      replace_netrw = true,
+    },
     input = {
       enabled = true,
     },
@@ -24,7 +28,6 @@ local M = {
           horizontal = "─",
           vertical = "│",
           arrow = "󰅂",
-          -- arrow = ">",
         },
       },
     },
@@ -114,6 +117,13 @@ local M = {
       desc = "Notifications",
     },
     -- Pickers
+    {
+      "<leader>e",
+      function()
+        Snacks.picker.explorer()
+      end,
+      desc = "Buffers",
+    },
     {
       "<leader>bb",
       function()
