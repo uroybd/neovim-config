@@ -1,5 +1,6 @@
 local M = {
-  "yorickpeterse/nvim-window",
+  "uroybd/nvim-window",
+  branch = "main",
 }
 
 function M.config()
