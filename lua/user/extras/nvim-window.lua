@@ -1,5 +1,5 @@
 local M = {
-  "uroybd/nvim-window",
+  "yorickpeterse/nvim-window",
   branch = "main",
 }
 
