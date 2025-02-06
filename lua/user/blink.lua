@@ -19,7 +19,7 @@ function M.config()
       default = { "lsp", "path", "snippets", "buffer" },
     },
     keymap = {
-      preset = "enter",
+      preset = "super-tab",
     },
 
     appearance = {
@@ -28,9 +28,9 @@ function M.config()
     completion = {
       list = {
         selection = {
-          preselect = function(ctx)
-            return ctx.mode ~= "cmdline"
-          end,
+          -- preselect = function(ctx)
+          --   return ctx.mode ~= "cmdline"
+          -- end,
           auto_insert = function(ctx)
             return ctx.mode ~= "cmdline"
           end,
@@ -40,6 +40,7 @@ function M.config()
         auto_show = function(ctx)
           return ctx.mode ~= "cmdline" or not vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
         end,
+        border = "single",
       },
       accept = {
         auto_brackets = {
