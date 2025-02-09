@@ -167,16 +167,17 @@ vim.api.nvim_create_autocmd("DiagnosticChanged", {
       end
     end
 
-    local cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom0" .. ".txt"
+    local imgnum = 0
     if errors > 5 then
-      cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom3" .. ".txt"
+      imgnum = 3
     elseif errors > 3 then
-      cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom2" .. ".txt"
+      imgnum = 2
     elseif errors > 0 then
-      cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom1" .. ".txt"
-    else
-      cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom0" .. ".txt"
+      imgnum = 1
     end
+
+    local cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom" .. imgnum .. ".txt"
+
     if IN_YOUR_FACE_TERM ~= nil then
       IN_YOUR_FACE_TERM:close()
       IN_YOUR_FACE_TERM:destroy()
