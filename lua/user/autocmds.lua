@@ -152,3 +152,47 @@ vim.api.nvim_create_autocmd("FileType", {
 --     })
 --   end
 -- })
+
+local IN_YOUR_FACE_PATH = vim.fn.stdpath "config" .. "/assets/inyourface"
+local IN_YOUR_FACE_TERM = nil
+-- Autocmd for DiagnosticChanged to echo numbers of errors
+vim.api.nvim_create_autocmd("DiagnosticChanged", {
+  callback = function(args)
+    local diagnostics = args.data.diagnostics
+    -- get count of errors
+    local errors = 0
+    for _, diagnostic in ipairs(diagnostics) do
+      if diagnostic.severity == vim.diagnostic.severity.ERROR then
+        errors = errors + 1
+      end
+    end
+
+    local cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom0" .. ".txt"
+    if errors > 5 then
+      cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom3" .. ".txt"
+    elseif errors > 3 then
+      cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom2" .. ".txt"
+    elseif errors > 0 then
+      cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom1" .. ".txt"
+    else
+      cmd = "cat " .. IN_YOUR_FACE_PATH .. "/doom0" .. ".txt"
+    end
+    if IN_YOUR_FACE_TERM ~= nil then
+      IN_YOUR_FACE_TERM:close()
+      IN_YOUR_FACE_TERM:destroy()
+      IN_YOUR_FACE_TERM = nil
+    end
+    IN_YOUR_FACE_TERM = require("snacks").terminal.open(cmd, {
+      interactive = false,
+      win = {
+        style = "terminal",
+        row = -3,
+        col = -1,
+        enter = false,
+        backdrop = false,
+        width = 16,
+        height = 16,
+      },
+    })
+  end,
+})
