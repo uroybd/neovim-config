@@ -191,7 +191,7 @@ vim.api.nvim_create_autocmd("DiagnosticChanged", {
         col = -1,
         enter = false,
         backdrop = false,
-        width = 16,
+        width = 24,
         height = 16,
       },
     })
