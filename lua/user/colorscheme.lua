@@ -25,6 +25,7 @@ function M.config()
         LineNrAbove = { fg = colors.flamingo },
         LineNrBelow = { fg = colors.teal },
         NormalFloat = { bg = colors.base, fg = colors.text },
+        ["@attribute.diff"] = { fg = colors.peach, style = { "underline", "bold" } },
       }
     end,
     integrations = {
@@ -33,6 +34,7 @@ function M.config()
       colorful_winsep = true,
       dap = true,
       dap_ui = true,
+      diffview = true,
       flash = true,
       gitsigns = true,
       grug_far = true,

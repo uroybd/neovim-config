@@ -12,6 +12,7 @@ function M.config()
       "bash",
       "comment",
       "css",
+      "diff",
       "dockerfile",
       "gitcommit",
       "gitignore",
