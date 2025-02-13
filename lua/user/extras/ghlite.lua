@@ -6,7 +6,9 @@ local M = {
 }
 
 function M.config()
-  require("ghlite").setup {}
+  require("ghlite").setup {
+    view_split = "",
+  }
   local wk = require "which-key"
   wk.add {
     { "<leader>us", ":GHLitePRSelect<cr>", silent = true, desc = "PR Select" },
