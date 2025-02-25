@@ -131,9 +131,6 @@ function M.config()
         devicon = true,
         code_action = "",
       },
-      beacon = {
-        enabled = true,
-      },
       breadcrumbs = {
         hide_keyword = true,
       },
