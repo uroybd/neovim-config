@@ -101,6 +101,20 @@ local M = {
         Snacks.gitbrowse()
       end,
       desc = "Git Browse",
+      mode = { "n", "v" },
+    },
+    {
+      "<leader>gl",
+      function()
+        Snacks.gitbrowse.open {
+          open = function(url)
+            vim.fn.setreg("+", url)
+            vim.notify "Yanked url to clipboard"
+          end,
+        }
+      end,
+      desc = "Copy Git URL",
+      mode = { "n", "v" },
     },
     {
       "<leader>gb",
