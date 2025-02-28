@@ -18,42 +18,32 @@ function M.config()
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
     },
-    keymap = {
-      preset = "super-tab",
-    },
-
-    appearance = {
-      use_nvim_cmp_as_default = true,
-    },
     completion = {
+      menu = {
+        draw = {
+          columns = { { "kind_icon" }, { "label", "source_name", "label_description", gap = 1 } },
+          treesitter = { "lsp" },
+        },
+      },
       list = {
         selection = {
-          -- preselect = function(ctx)
-          --   return ctx.mode ~= "cmdline"
-          -- end,
-          auto_insert = function(ctx)
-            return ctx.mode ~= "cmdline"
+          auto_insert = true,
+          preselect = function(ctx)
+            return not require("blink.cmp").snippet_active { direction = 1 }
           end,
         },
       },
-      menu = {
-        auto_show = function(ctx)
-          return ctx.mode ~= "cmdline" or not vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
-        end,
-        border = "single",
-      },
-      accept = {
-        auto_brackets = {
-          enabled = true,
-        },
-      },
-      documentation = {
-        auto_show = true,
-        window = {
-          border = "single",
-        },
-      },
     },
+    keymap = {
+      preset = "super-tab",
+    },
+    cmdline = {
+      keymap = {
+        preset = "cmdline",
+      },
+      completion = { menu = { auto_show = true } },
+    },
+    signature = { enabled = true },
   }
 end
 
