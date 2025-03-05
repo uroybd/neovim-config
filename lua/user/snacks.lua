@@ -136,7 +136,7 @@ local M = {
       function()
         Snacks.picker.explorer()
       end,
-      desc = "Buffers",
+      desc = "Explorer",
     },
     {
       "<leader>bb",

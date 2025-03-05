@@ -64,6 +64,7 @@ function M.config()
     { "<leader>p", group = "Plugins" },
     { "<leader>q", "<cmd>confirm q<CR>", desc = "Quit" },
     { "<leader>r", group = "Run", icon = "󱤵" },
+    { "<leader>s", group = "Todo Comments" },
     { "<leader>t", group = "Test", icon = "" },
     { "<leader>v", "<cmd>vsplit<CR>", desc = "Split", icon = "" },
     { "<leader>w", "<cmd>lua vim.wo.wrap = not vim.wo.wrap<CR>", desc = "Toggle Wrap" },

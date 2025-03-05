@@ -1,8 +1,6 @@
 local M = {
   "daliusd/ghlite.nvim",
-  dependencies = {
-    "sindrets/diffview.nvim",
-  },
+  event = "VeryLazy",
 }
 
 function M.config()
@@ -17,7 +15,6 @@ function M.config()
     { "<leader>uv", ":GHLitePRView<cr>", desc = "PR View" },
     { "<leader>uu", ":GHLitePRLoadComments<cr>", desc = "PR Load Comments" },
     { "<leader>up", ":GHLitePRDiff<cr>", desc = "PR Diff" },
-    { "<leader>ul", ":GHLitePRDiffview<cr>", desc = "PR Diffview" },
     { "<leader>ua", ":GHLitePRAddComment<cr>", desc = "PR Add comment" },
     { "<leader>ua", ":GHLitePRAddComment<cr>", mode = "x", desc = "PR Add comment" },
     { "<leader>uc", ":GHLitePRUpdateComment<cr>", desc = "PR Update comment" },

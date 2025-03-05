@@ -2,8 +2,9 @@ local M = {
   "folke/todo-comments.nvim",
   branch = "main",
   dependencies = { "nvim-lua/plenary.nvim" },
-  lazy = false,
+  event = "BufEnter",
   keys = {
+    { "<leader>s", group = "Todo Comments" },
     {
       "<leader>st",
       function()

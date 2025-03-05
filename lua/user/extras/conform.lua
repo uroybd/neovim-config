@@ -1,5 +1,6 @@
 local M = {
   "stevearc/conform.nvim",
+  event = { "BufWritePre" },
 }
 
 function M.config()

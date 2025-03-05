@@ -1,10 +1,9 @@
 local M = {
   "neogitorg/neogit",
-  event = "VeryLazy",
+  cmd = "Neogit",
   branch = "master",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "sindrets/diffview.nvim",
   },
 }
 
@@ -36,9 +35,6 @@ function M.config()
       section = { icons.ui.ChevronRight, icons.ui.ChevronShortDown },
       item = { icons.ui.ChevronRight, icons.ui.ChevronShortDown },
       hunk = { "", "" },
-    },
-    integrations = {
-      diffview = true,
     },
   }
 end
