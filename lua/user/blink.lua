@@ -18,12 +18,17 @@ function M.config()
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
     },
+    signature = { enabled = true, window = { border = "single" } },
     completion = {
       menu = {
         draw = {
-          columns = { { "kind_icon" }, { "label", "source_name", "label_description", gap = 1 } },
-          treesitter = { "lsp" },
+          columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
         },
+        border = "single",
+      },
+      documentation = {
+        auto_show = true,
+        window = { border = "single" },
       },
       list = {
         selection = {
@@ -43,7 +48,6 @@ function M.config()
       },
       completion = { menu = { auto_show = true } },
     },
-    signature = { enabled = true },
   }
 end
 

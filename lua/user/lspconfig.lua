@@ -124,32 +124,31 @@ function M.config()
     end
 
     lspconfig[server].setup(opts)
-
-    require("lspsaga").setup {
-      ui = {
-        kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
-        devicon = true,
-        code_action = "",
-      },
-      breadcrumbs = {
-        hide_keyword = true,
-      },
-      diagnostic = {
-        jump_num_shortcut = true,
-        diagnostic_only_current = true,
-      },
-      code_action = {
-        num_shortcut = true,
-        extend_gitsigns = true,
-      },
-    }
-
-    vim.keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
-    vim.keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
-    vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
-    vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
   end
 
+  require("lspsaga").setup {
+    ui = {
+      kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
+      devicon = true,
+      code_action = "",
+    },
+    breadcrumbs = {
+      hide_keyword = true,
+    },
+    diagnostic = {
+      jump_num_shortcut = true,
+      diagnostic_only_current = true,
+    },
+    code_action = {
+      num_shortcut = true,
+      extend_gitsigns = true,
+    },
+  }
+
+  vim.keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+  vim.keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+  vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
+  vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
   wk.add {
     { "<leader>dd", "<cmd>Lspsaga show_buf_diagnostics ++normal<cr>", desc = "Document Diagonostics", icon = "󱪗" },
     {
