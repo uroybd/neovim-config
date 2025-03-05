@@ -42,7 +42,6 @@ function M.config()
       nvim_surround = true,
       mason = true,
       markdown = true,
-      neotest = true,
       neogit = true,
       overseer = true,
       treesitter_context = true,
