@@ -32,8 +32,6 @@ function M.config()
       beacon = true,
       blink_cmp = true,
       colorful_winsep = true,
-      dap = true,
-      dap_ui = true,
       diffview = true,
       flash = true,
       gitsigns = true,
