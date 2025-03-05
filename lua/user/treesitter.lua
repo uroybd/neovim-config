@@ -3,7 +3,7 @@ local M = {
   event = { "BufReadPost", "BufNewFile" },
   build = ":TSUpdate",
   branch = "master",
-  dependencies = { "nvim-treesitter/nvim-treesitter-textobjects", { "nushell/tree-sitter-nu" } },
+  dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
 }
 
 function M.config()
@@ -33,6 +33,7 @@ function M.config()
       "markdown",
       "markdown_inline",
       "nginx",
+      "nu",
       "prisma",
       "python",
       "regex",
