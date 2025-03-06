@@ -194,6 +194,13 @@ local M = {
       end,
       desc = "Help",
     },
+    {
+      "<tab>",
+      function()
+        Snacks.picker.marks()
+      end,
+      desc = "Dashboard",
+    },
   },
 }
 
