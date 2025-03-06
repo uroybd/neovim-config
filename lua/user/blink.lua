@@ -2,9 +2,7 @@ local M = {
   "saghen/blink.cmp",
   lazy = false, -- lazy loading handled internally
   -- optional: provides snippets for the snippet source
-  dependencies = {
-    { "L3MON4D3/LuaSnip", version = "v2.*", dependencies = { "rafamadriz/friendly-snippets" } },
-  },
+  dependencies = { "rafamadriz/friendly-snippets" },
 
   -- use a release tag to download pre-built binaries
   version = "v0.*",
@@ -12,9 +10,7 @@ local M = {
 }
 
 function M.config()
-  require("luasnip.loaders.from_vscode").lazy_load()
   require("blink.cmp").setup {
-    snippets = { preset = "luasnip" },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
     },
