@@ -1,6 +1,7 @@
 local M = {
   "neogitorg/neogit",
-  cmd = "Neogit",
+  keys = { { "<leader>gg", desc = "Neogit" } },
+  cmd = { "Neogit" },
   branch = "master",
   dependencies = {
     "nvim-lua/plenary.nvim",

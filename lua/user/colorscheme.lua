@@ -8,7 +8,7 @@ local M = {
 
 function M.config()
   require("catppuccin").setup {
-    flavour = "frappe", -- or "deep", "darker"
+    flavour = "frappe",
     styles = {
       comments = { "italic" },
       keywords = { "bold", "italic" },
