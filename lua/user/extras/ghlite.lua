@@ -2,13 +2,14 @@ local M = {
   "daliusd/ghlite.nvim",
   event = "VeryLazy",
   dependencies = {
-    "sindrets/diffview.nvim",
+    { "sindrets/diffview.nvim" },
   },
 }
 
 function M.config()
   require("ghlite").setup {
     view_split = "",
+    debug = true,
   }
   local wk = require "which-key"
   wk.add {

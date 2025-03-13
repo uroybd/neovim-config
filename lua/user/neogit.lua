@@ -5,6 +5,7 @@ local M = {
   branch = "master",
   dependencies = {
     "nvim-lua/plenary.nvim",
+    "sindrets/diffview.nvim",
   },
 }
 
@@ -29,6 +30,9 @@ function M.config()
     -- Change the default way of opening popups
     popup = {
       kind = "split",
+    },
+    integrations = {
+      diffview = true,
     },
     -- customize displayed signs
     signs = {
