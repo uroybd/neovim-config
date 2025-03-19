@@ -1,6 +1,6 @@
 local M = {
   "mistweaverco/kulala.nvim",
-  lazy = true,
+  event = "VeryLazy",
 }
 
 function M.config()
