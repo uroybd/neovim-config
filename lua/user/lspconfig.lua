@@ -84,9 +84,7 @@ function M.config()
         { name = "DiagnosticSignInfo", text = icons.diagnostics.Information },
       },
     },
-    virtual_text = {
-      current_line = true,
-    },
+    virtual_text = false,
     update_in_insert = false,
     underline = true,
     severity_sort = true,
