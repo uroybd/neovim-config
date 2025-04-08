@@ -18,8 +18,6 @@ function M.config()
     "html",
     "jsonls",
     "lua_ls",
-    "nginx_language_server",
-    "nushell",
     "prismals",
     "pyright",
     "rust_analyzer",
