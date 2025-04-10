@@ -34,6 +34,7 @@ local M = {
       enabled = true,
     },
     picker = {
+      ui_select = true,
       enabled = true,
       matcher = {
         frecency = true,
