@@ -48,6 +48,7 @@ function M.config()
       ufo = true,
       which_key = true,
       snacks = true,
+      copilot_vim = true,
     },
   }
   vim.cmd.colorscheme "catppuccin"
