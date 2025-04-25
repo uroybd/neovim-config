@@ -1,38 +1,11 @@
 local M = {
   "neovim/nvim-lspconfig",
+  branch = "master",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    "saghen/blink.cmp",
     { { "folke/lazydev.nvim", ft = "lua" }, "nvimdev/lspsaga.nvim" },
   },
 }
-
-local function lsp_keymaps(bufnr)
-  local opts = { noremap = true, silent = true }
-end
-
-M.on_attach = function(client, bufnr)
-  lsp_keymaps(bufnr)
-
-  if client.supports_method "textDocument/inlayHint" then
-    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-  end
-end
-
-function M.common_capabilities()
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities.textDocument.completion.completionItem.snippetSupport = true
-  capabilities.textDocument.foldingRange = {
-    dynamicRegistration = false,
-    lineFoldingOnly = true,
-  }
-  return capabilities
-end
-
-M.toggle_inlay_hints = function()
-  local bufnr = vim.api.nvim_get_current_buf()
-  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = bufnr }, { bufnr = bufnr })
-end
 
 function M.config()
   local wk = require "which-key"
@@ -46,8 +19,6 @@ function M.config()
     { "<leader>li", "<cmd>LspInfo<cr>", desc = "Info" },
     { "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<cr>", desc = "Quickfix" },
   }
-  local lspconfig = require "lspconfig"
-  local icons = require "user.icons"
 
   local servers = {
     "bashls",
@@ -74,51 +45,17 @@ function M.config()
     "yamlls",
   }
 
-  local default_diagnostic_config = {
-    signs = {
-      active = true,
-      values = {
-        { name = "DiagnosticSignError", text = icons.diagnostics.Error },
-        { name = "DiagnosticSignWarn", text = icons.diagnostics.Warning },
-        { name = "DiagnosticSignHint", text = icons.diagnostics.Hint },
-        { name = "DiagnosticSignInfo", text = icons.diagnostics.Information },
-      },
-    },
-    virtual_text = false,
-    update_in_insert = false,
-    underline = true,
-    severity_sort = true,
-    float = {
-      focusable = true,
-      style = "minimal",
-      border = "rounded",
-      source = "always",
-      header = "",
-      prefix = "",
-    },
-  }
-
-  vim.diagnostic.config(default_diagnostic_config)
-
-  require("lspconfig.ui.windows").default_options.border = "rounded"
+  vim.lsp.enable(servers, true)
 
   for _, server in pairs(servers) do
-    local opts = {
-      on_attach = M.on_attach,
-      capabilities = require("blink.cmp").get_lsp_capabilities(M.common_capabilities()),
-      inlay_hints = { enabled = true },
-    }
-
     local require_ok, settings = pcall(require, "user.lspsettings." .. server)
     if require_ok then
-      opts = vim.tbl_deep_extend("force", settings, opts)
+      vim.lsp.config(server, settings)
     end
 
     if server == "lua_ls" then
       require("lazydev").setup {}
     end
-
-    lspconfig[server].setup(opts)
   end
 
   require("lspsaga").setup {
