@@ -219,7 +219,6 @@ local M = {
               },
             },
           },
-          preset = "sidebar",
           dirs = { apidocs_dir },
           ft = { "markdown", "md" },
           confirm = function(picker, item)

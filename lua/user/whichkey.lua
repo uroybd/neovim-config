@@ -56,6 +56,8 @@ function M.config()
     { "<leader>b", group = "Buffers" },
     { "<leader>c", group = "Multiple Cursors" },
     { "<leader>d", group = "Debug" },
+    { "<leader>D", group = "Docs" },
+    { "<leader>Dc", group = "Apidocs for current filetype" },
     { "<leader>f", group = "Find" },
     { "<leader>g", group = "Git" },
     { "<leader>gc", group = "Conflict", icon = "" },
