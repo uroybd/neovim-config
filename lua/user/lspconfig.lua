@@ -58,6 +58,25 @@ function M.config()
     end
   end
 
+  local signs = {
+    [vim.diagnostic.severity.ERROR] = "󰅙",
+    [vim.diagnostic.severity.WARN] = "",
+    [vim.diagnostic.severity.INFO] = "",
+    [vim.diagnostic.severity.HINT] = "󰌵",
+  }
+
+  vim.diagnostic.config {
+
+    signs = {
+      text = signs,
+    },
+  }
+
+  for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+  end
+
   require("lspsaga").setup {
     ui = {
       kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),

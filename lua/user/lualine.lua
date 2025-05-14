@@ -59,32 +59,6 @@ function M.config()
       lualine_c = { { "filename", path = 4 } },
       lualine_x = {
         "copilot",
-        -- { -- NeoCodeium Status
-        --   function()
-        --     local status, serverstatus = require("neocodeium").get_status()
-        --
-        --     -- Tables to map serverstatus and status to corresponding symbols
-        --     local server_status_symbols = {
-        --       [0] = "󰣺 ", -- Connected
-        --       [1] = "󰣻 ", -- Connection Error
-        --       [2] = "󰣽 ", -- Disconnected
-        --     }
-        --     local status_symbols = {
-        --       [0] = "󰚩 ", -- Enabled
-        --       [1] = "󱚧 ", -- Disabled Globally
-        --       [3] = "󱚢 ", -- Disabled for Buffer filetype
-        --       [5] = "󱚠 ", -- Disabled for Buffer encoding
-        --       [2] = "󱙻 ", -- Disabled for Buffer (catch-all)
-        --     }
-        --
-        --     -- Handle serverstatus and status fallback (safeguard against any unexpected value)
-        --     local luacodeium = server_status_symbols[serverstatus] or "󰣼 "
-        --     luacodeium = luacodeium .. (status_symbols[status] or "󱚧 ")
-        --
-        --     return luacodeium
-        --   end,
-        --   cond = require("neocodeium").is_enabled,
-        -- },
         "filetype",
       },
       lualine_y = { "searchcount" },
