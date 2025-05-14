@@ -52,6 +52,7 @@ function M.config()
     { "<leader>ah", "<cmd>-tabmove<cr>", desc = "Move Left" },
     { "<leader>al", "<cmd>+tabmove<cr>", desc = "Move Right" },
     { "<leader>an", "<cmd>$tabnew<cr>", desc = "New Empty Tab" },
+    { "<leader>ac", "<cmd>tabclose<cr>", desc = "Close Tab" },
     { "<leader>ao", "<cmd>tabonly<cr>", desc = "Only" },
     { "<leader>b", group = "Buffers" },
     { "<leader>c", group = "Multiple Cursors" },
