@@ -26,6 +26,7 @@ function M.config()
         LineNrBelow = { fg = colors.teal },
         NormalFloat = { bg = colors.base, fg = colors.text },
         ["@attribute.diff"] = { fg = colors.peach, style = { "underline", "bold" } },
+        ["@module"] = { fg = colors.sapphire },
       }
     end,
     integrations = {

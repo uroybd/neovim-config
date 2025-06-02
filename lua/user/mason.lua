@@ -25,7 +25,6 @@ function M.config()
     "svelte",
     "terraformls",
     "ts_ls",
-    "volar",
     "yamlls",
   }
 
