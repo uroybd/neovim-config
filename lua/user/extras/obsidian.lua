@@ -1,6 +1,6 @@
 local M = {
   "obsidian-nvim/obsidian.nvim",
-  version = "*",
+  branch = "main",
   lazy = true,
   ft = "markdown",
   dependencies = {
@@ -54,29 +54,30 @@ function M.config()
       },
     },
     wiki_link_func = "prepend_note_path",
-    note_frontmatter_func = function(note)
-      -- Add the title of the note as an alias.
-      if note.title then
-        note:add_alias(note.title)
-      end
-      local timestamp = get_timestamp()
-      note:add_field("updated", timestamp)
-      if note.get_field "created" == nil then
-        note:add_field("created", timestamp)
-      end
-
-      local out = { aliases = note.aliases, tags = note.tags }
-
-      -- `note.metadata` contains any manually added fields in the frontmatter.
-      -- So here we just make sure those fields are kept in the frontmatter.
-      if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
-        for k, v in pairs(note.metadata) do
-          out[k] = v
-        end
-      end
-
-      return out
-    end,
+    disable_frontmatter = true,
+    -- note_frontmatter_func = function(note)
+    --   -- Add the title of the note as an alias.
+    --   if note.title then
+    --     note:add_alias(note.title)
+    --   end
+    --   local timestamp = get_timestamp()
+    --   note:add_field("updated", timestamp)
+    --   if note.get_field "created" == nil then
+    --     note:add_field("created", timestamp)
+    --   end
+    --
+    --   local out = { aliases = note.aliases, tags = note.tags }
+    --
+    --   -- `note.metadata` contains any manually added fields in the frontmatter.
+    --   -- So here we just make sure those fields are kept in the frontmatter.
+    --   if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+    --     for k, v in pairs(note.metadata) do
+    --       out[k] = v
+    --     end
+    --   end
+    --
+    --   return out
+    -- end,
   }
 end
 
