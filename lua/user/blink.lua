@@ -38,12 +38,12 @@ function M.config()
     keymap = {
       preset = "super-tab",
     },
-    cmdline = {
-      keymap = {
-        preset = "cmdline",
-      },
-      completion = { menu = { auto_show = true } },
-    },
+    -- cmdline = {
+    --   keymap = {
+    --     preset = "cmdline",
+    --   },
+    --   completion = { menu = { auto_show = true } },
+    -- },
   }
 end
 
