@@ -31,12 +31,13 @@ function M.config()
     end,
     integrations = {
       beacon = true,
-      blink_cmp = true,
       colorful_winsep = true,
+      copilot_vim = true,
       flash = true,
       gitsigns = true,
       grug_far = true,
       lsp_saga = true,
+      noice = true,
       notify = true,
       nvimtree = true,
       nvim_surround = true,
@@ -44,12 +45,14 @@ function M.config()
       markdown = true,
       neogit = true,
       overseer = true,
+      render_markdown = true,
+      snacks = {
+        enabled = true,
+      },
       treesitter_context = true,
       treesitter = true,
       ufo = true,
       which_key = true,
-      snacks = true,
-      copilot_vim = true,
     },
   }
   vim.cmd.colorscheme "catppuccin"
