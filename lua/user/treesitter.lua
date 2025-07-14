@@ -44,6 +44,7 @@ function M.config()
       "terraform",
       "toml",
       "typescript",
+      "tsx",
       "vue",
       "xml",
       "yaml",

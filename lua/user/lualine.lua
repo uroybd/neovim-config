@@ -25,6 +25,18 @@ local mode_icons = {
   CONFIRM = "",
 }
 
+local custom_catppuccin = require "lualine.themes.catppuccin"
+custom_catppuccin.normal.c.bg = "#2f3446"
+custom_catppuccin.normal.b.bg = "#414559"
+custom_catppuccin.insert.b.bg = "#414559"
+custom_catppuccin.visual.b.bg = "#414559"
+custom_catppuccin.replace.b.bg = "#414559"
+custom_catppuccin.command.b.bg = "#414559"
+custom_catppuccin.terminal.b.bg = "#414559"
+custom_catppuccin.inactive.a.bg = "#2f3446"
+custom_catppuccin.inactive.b.bg = "#2f3446"
+custom_catppuccin.inactive.c.bg = "#2f3446"
+
 function M.config()
   require("lualine").setup {
     options = {
@@ -33,7 +45,8 @@ function M.config()
       section_separators = { left = "", right = "" },
 
       ignore_focus = { "NvimTree" },
-      theme = "catppuccin",
+      -- theme = "catppuccin",
+      theme = custom_catppuccin,
     },
     sections = {
       lualine_a = {
@@ -56,13 +69,15 @@ function M.config()
           },
         },
         "diagnostics",
+        { "filename", path = 4 },
       },
-      lualine_c = { { "filename", path = 4 } },
-      lualine_x = {
+      lualine_c = {},
+      lualine_x = {},
+      lualine_y = {
         "copilot",
         "filetype",
+        "searchcount",
       },
-      lualine_y = { "searchcount" },
       lualine_z = {
         "selectioncount",
         "location",
