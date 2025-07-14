@@ -94,14 +94,15 @@ function M.config()
         { "filename", path = 4 },
       },
       lualine_c = {},
-      lualine_x = {},
+      lualine_x = {
+        "selectioncount",
+        "searchcount",
+      },
       lualine_y = {
         "copilot",
         "filetype",
-        "searchcount",
       },
       lualine_z = {
-        "selectioncount",
         "location",
         "progress",
       },
