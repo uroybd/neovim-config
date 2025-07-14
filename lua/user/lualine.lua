@@ -35,7 +35,9 @@ custom_catppuccin.command.b.bg = "#414559"
 custom_catppuccin.terminal.b.bg = "#414559"
 custom_catppuccin.inactive.a.bg = "#2f3446"
 custom_catppuccin.inactive.b.bg = "#2f3446"
-custom_catppuccin.inactive.c.bg = "#2f3446"
+custom_catppuccin.inactive.a.bg = "#2f3446"
+
+local blue = "#89b5f9"
 
 function M.config()
   require("lualine").setup {
@@ -47,6 +49,26 @@ function M.config()
       ignore_focus = { "NvimTree" },
       -- theme = "catppuccin",
       theme = custom_catppuccin,
+    },
+    tabline = {
+      lualine_a = {
+        {
+          function()
+            return "󰓩"
+          end,
+          color = { bg = blue },
+        },
+        { "tabs", mode = 2, symbols = { modified = "●" } },
+      },
+      lualine_z = {
+        "buffers",
+        {
+          function()
+            return ""
+          end,
+          color = { bg = blue },
+        },
+      },
     },
     sections = {
       lualine_a = {
