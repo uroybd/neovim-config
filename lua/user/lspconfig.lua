@@ -84,8 +84,6 @@ function M.config()
     },
     symbol_in_winbar = {
       hide_keyword = true,
-      folder_level = 0,
-      enable = true,
     },
     diagnostic = {
       jump_num_shortcut = true,
