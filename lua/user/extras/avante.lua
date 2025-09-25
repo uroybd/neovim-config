@@ -18,14 +18,16 @@ local M = {
       ft = { "markdown", "Avante" },
     },
   },
-  opts = {
-    provider = "copilot",
-  },
 }
 
 function M.config()
   require("avante").setup {
     provider = "copilot", -- or "snacks" or "none"
+    -- providers = {
+    --   copilot = {
+    --     model = "claude-3.7-sonnet",
+    --   },
+    -- },
   }
   local wk = require "which-key"
   wk.add {

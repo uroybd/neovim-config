@@ -13,7 +13,7 @@ local M = {
       enabled = true,
     },
     explorer = {
-      enabled = true,
+      enabled = false,
     },
     input = {
       enabled = true,
@@ -134,13 +134,13 @@ local M = {
       desc = "Notifications",
     },
     -- Pickers
-    {
-      "<leader>e",
-      function()
-        Snacks.picker.explorer()
-      end,
-      desc = "Explorer",
-    },
+    -- {
+    --   "<leader>e",
+    --   function()
+    --     Snacks.picker.explorer()
+    --   end,
+    --   desc = "Explorer",
+    -- },
     {
       "<leader>bb",
       function()

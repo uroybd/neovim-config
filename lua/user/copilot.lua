@@ -20,6 +20,7 @@ function M.config()
     filetypes = {
       snacks_picker_input = false,
     },
+    copilot_model = "claude-3.5-sonnet",
   }
 end
 
