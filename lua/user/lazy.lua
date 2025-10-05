@@ -18,6 +18,11 @@ require("lazy").setup {
   },
   ui = {
     border = "rounded",
+    backdrop = 100,
+    size = {
+      width = 0.5,
+      height = 0.8,
+    },
   },
   change_detection = {
     enabled = true,

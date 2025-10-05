@@ -25,6 +25,7 @@ function M.config()
         LineNrAbove = { fg = colors.flamingo },
         LineNrBelow = { fg = colors.teal },
         NormalFloat = { bg = colors.base, fg = colors.text },
+        FloatBorder = { bg = "NONE" },
         TablineFill = { bg = colors.base },
         ["@attribute.diff"] = { fg = colors.peach, style = { "underline", "bold" } },
         ["@module"] = { fg = colors.sapphire },
