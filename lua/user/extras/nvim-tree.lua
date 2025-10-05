@@ -8,7 +8,7 @@ local M = {
   keys = {
     {
       "<leader>e",
-      "<cmd>NvimTreeFocus<CR>",
+      "<cmd>NvimTreeToggle<CR>",
       desc = "Explorer",
     },
   },
@@ -22,7 +22,6 @@ function M.config()
     view = {
       width = 35,
       relativenumber = true,
-      signcolumn = true,
     },
     renderer = {
       group_empty = true,
@@ -43,7 +42,7 @@ function M.config()
       highlight_hidden = "all",
       icons = {
         git_placement = "signcolumn",
-        diagonsitcs_placement = "signcolumn",
+        diagnostics_placement = "signcolumn",
       },
     },
     filters = {
@@ -54,7 +53,7 @@ function M.config()
       always_show_folders = false, -- Turn into false from true by default
     },
     diagnostics = {
-      enabled = true,
+      enable = true,
     },
   }
 end

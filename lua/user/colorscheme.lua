@@ -35,6 +35,7 @@ function M.config()
       beacon = true,
       colorful_winsep = true,
       copilot_vim = true,
+      diffview = true,
       flash = true,
       gitsigns = true,
       grug_far = true,

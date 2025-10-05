@@ -12,9 +12,6 @@ local M = {
     bigfile = {
       enabled = true,
     },
-    explorer = {
-      enabled = false,
-    },
     input = {
       enabled = true,
     },
