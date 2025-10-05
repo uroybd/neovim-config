@@ -50,6 +50,7 @@ function M.config()
       render_markdown = true,
       snacks = {
         enabled = true,
+        indent_scope_color = "sapphire",
       },
       treesitter_context = true,
       treesitter = true,
