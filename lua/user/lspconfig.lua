@@ -23,6 +23,7 @@ function M.config()
   local servers = {
     "bashls",
     "cssls",
+    "copilot",
     "docker_compose_language_service",
     "dockerls",
     "eslint",
