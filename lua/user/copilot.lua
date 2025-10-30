@@ -7,7 +7,7 @@ local M = {
 function M.config()
   require("copilot").setup {
     suggestion = {
-      auto_trigger = true,
+      auto_trigger = false,
       keymap = {
         accept = "<c-l>",
         accept_word = false,
