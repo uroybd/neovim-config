@@ -1,3 +1,4 @@
+local icons = require "user.icons"
 local M = {
   "folke/which-key.nvim",
 }
@@ -6,6 +7,12 @@ function M.config()
   local which_key = require "which-key"
   which_key.setup {
     preset = "helix",
+    icons = {
+      rules = {
+        { plugin = "nvim-tree.lua", icon = icons.ui.FolderOpen },
+        { pattern = "sidekick", icon = " " },
+      },
+    },
     plugins = {
       marks = true,
       registers = true,
@@ -46,6 +53,7 @@ function M.config()
   }
 
   local mappings = {
+    { "<leader>a", group = "Sidekick" },
     { "<leader>t", group = "Tab" },
     { "<leader>tN", "<cmd>tabnew %<cr>", desc = "New Tab" },
     { "<leader>th", "<cmd>-tabnext<cr>", desc = "Prev Tab" },
