@@ -283,11 +283,12 @@ local M = {
       desc = "API Docs",
     },
     {
-      "<tab>",
+      "<leader>m",
       function()
         Snacks.picker.marks()
       end,
       desc = "Bookmarks",
+      mode = { "n", "v" },
     },
   },
 }
