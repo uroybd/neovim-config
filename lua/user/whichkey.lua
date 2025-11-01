@@ -67,7 +67,14 @@ function M.config()
     { "<leader>h", "<cmd>nohlsearch<CR>", desc = "NOHL", icon = "󰷙" },
     { "<leader>l", group = "LSP", icon = "" },
     { "<leader>p", group = "Plugins" },
-    { "<leader>q", "<cmd>confirm q<CR>", desc = "Quit" },
+    { "<leader>q", group = "Quickfix" },
+    {
+      "<leader>qc",
+      function()
+        vim.fn.setqflist({}, "r")
+      end,
+      desc = "Clear Quickfix List",
+    },
     { "<leader>r", group = "Run", icon = "󱤵" },
     { "<leader>s", group = "Todo Comments" },
     { "<leader>t", group = "Test", icon = "" },

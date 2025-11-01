@@ -290,6 +290,13 @@ local M = {
       desc = "Bookmarks",
       mode = { "n", "v" },
     },
+    {
+      "<leader>qq",
+      function()
+        Snacks.picker.qflist()
+      end,
+      desc = "Quickfix List",
+    },
   },
 }
 
