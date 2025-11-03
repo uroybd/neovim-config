@@ -1,6 +1,6 @@
 local M = {
   "stevearc/overseer.nvim",
-  cmd = { "OverseerToggle", "OverseerRun" },
+  -- lazy = true,
 }
 
 function M.config()
@@ -9,6 +9,7 @@ function M.config()
   }
   local wk = require "which-key"
   wk.add {
+    { "<leader>T", group = "Tasks" },
     { "<leader>Tt", "<cmd>OverseerToggle<CR>", desc = "Toggle" },
     { "<leader>Tr", "<cmd>OverseerRun<CR>", desc = "Run" },
   }

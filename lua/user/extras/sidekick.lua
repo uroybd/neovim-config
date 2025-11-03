@@ -4,7 +4,7 @@ local M = {
   opts = {
     -- add any options here
     nes = {
-      enabled = true,
+      enabled = false,
     },
     cli = {
       mux = {

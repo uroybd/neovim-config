@@ -7,7 +7,7 @@ local M = {
 function M.config()
   require("copilot").setup {
     suggestion = {
-      auto_trigger = false,
+      auto_trigger = true,
       keymap = {
         accept = "<c-l>",
         accept_word = false,
@@ -20,7 +20,6 @@ function M.config()
     filetypes = {
       snacks_picker_input = false,
     },
-    copilot_model = "claude-3.5-sonnet",
   }
 end
 
