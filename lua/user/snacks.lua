@@ -297,6 +297,9 @@ local M = {
       end,
       desc = "Quickfix List",
     },
+    { "<leader>gi", function() Snacks.picker.gh_issue() end, desc = "GitHub Issues (open)" },
+    { "<leader>gI", function() Snacks.picker.gh_issue({ state = "all" }) end, desc = "GitHub Issues (all)" },
+    { "<leader>gP", function() Snacks.picker.gh_pr() end, desc = "GitHub Pull Requests (open)" },
   },
 }
 
