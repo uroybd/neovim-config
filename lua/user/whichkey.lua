@@ -3,6 +3,15 @@ local M = {
   "folke/which-key.nvim",
 }
 
+
+local del_qf_item = function()
+  local items = vim.fn.getqflist()
+  local line = vim.fn.line('.')
+  table.remove(items, line)
+  vim.fn.setqflist(items, "r")
+  vim.api.nvim_win_set_cursor(0, { line, 0 })
+end
+
 function M.config()
   local which_key = require "which-key"
   which_key.setup {
@@ -74,6 +83,7 @@ function M.config()
     { "<leader>gc", group = "Conflict", icon = "" },
     { "<leader>h", "<cmd>nohlsearch<CR>", desc = "NOHL", icon = "󰷙" },
     { "<leader>l", group = "LSP", icon = "" },
+    { "<leader>lc", group = "Call Hierarchy" },
     { "<leader>p", group = "Plugins" },
     { "<leader>q", group = "Quickfix" },
     {
@@ -82,6 +92,10 @@ function M.config()
         vim.fn.setqflist({}, "r")
       end,
       desc = "Clear Quickfix List",
+    },
+    {"qd",
+      del_qf_item,
+      desc = "Delete Quickfix Item",
     },
     { "<leader>r", group = "Run", icon = "󱤵" },
     { "<leader>s", group = "Todo Comments" },

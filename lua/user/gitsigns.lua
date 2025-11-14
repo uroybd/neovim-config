@@ -7,26 +7,6 @@ M.config = function()
   local icons = require "user.icons"
 
   local wk = require "which-key"
-  wk.add {
-    { "<leader>gR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer", icon = "󰣜" },
-    -- { "<leader>gd", "<cmd>Gitsigns diffthis HEAD<cr>", desc = "Git Diff", icon = "" },
-    {
-      "<leader>gj",
-      "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>",
-      desc = "Next Hunk",
-      icon = "󰮰",
-    },
-    {
-      "<leader>gk",
-      "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>",
-      desc = "Prev Hunk",
-      icon = "󰮲",
-    },
-    { "<leader>gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc = "Preview Hunk", icon = "" },
-    { "<leader>gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "Reset Hunk", icon = "" },
-    { "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc = "Stage Hunk", icon = "" },
-    { "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", desc = "Undo Stage Hunk", icon = "" },
-  }
   require("gitsigns").setup {
     signs = {
       add = {

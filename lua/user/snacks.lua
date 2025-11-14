@@ -1,5 +1,7 @@
 local apidocs_dir = vim.fn.stdpath "data" .. "/apidocs-data/"
 
+
+
 local M = {
   "folke/snacks.nvim",
   priority = 1000,
@@ -50,6 +52,16 @@ local M = {
             preview = false,
             preset = "dropdown",
           },
+        },
+        gh_diff = {
+            win = {
+                preview = {
+                    keys = {
+                        ["<tab>"] = { "list_down" },
+                        ["<s-tab>"] = { "list_up" },
+                    },
+                },
+            },
         },
       },
       actions = {
@@ -297,9 +309,15 @@ local M = {
       end,
       desc = "Quickfix List",
     },
+    { "<leader>lci", function() Snacks.picker.lsp_incoming_calls() end, desc = "Incoming Calls" },
+    { "<leader>lco", function() Snacks.picker.lsp_outgoing_calls() end, desc = "Outgoing Calls" },
+    { "<leader>lr", function () Snacks.picker.lsp_references() end, desc = "References" },
     { "<leader>gi", function() Snacks.picker.gh_issue() end, desc = "GitHub Issues (open)" },
     { "<leader>gI", function() Snacks.picker.gh_issue({ state = "all" }) end, desc = "GitHub Issues (all)" },
-    { "<leader>gP", function() Snacks.picker.gh_pr() end, desc = "GitHub Pull Requests (open)" },
+    { "<leader>gp", function() Snacks.picker.gh_pr() end, desc = "GitHub Pull Requests (open)" },
+    { "<leader>gP", function() Snacks.picker.gh_pr({ state = "all" }) end, desc = "GitHub Pull Requests (all)" },
+    { "<leader>dd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
+    { "<leader>dW", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
   },
 }
 
