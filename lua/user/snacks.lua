@@ -9,6 +9,7 @@ local M = {
   version = "v2.*",
   dependencies = {
     "nvim-tree/nvim-web-devicons",
+    "folke/trouble.nvim",
   },
   opts = {
     bigfile = {
@@ -67,6 +68,11 @@ local M = {
       actions = {
         sidekick_send = function(...)
           return require("sidekick.cli.picker.snacks").send(...)
+        end,
+        qflist = function(...)
+          require("snacks.picker.actions").qflist(...)
+          vim.cmd("cclose")
+          vim.cmd("Trouble qflist open focus=true")
         end,
       },
       win = {
@@ -316,8 +322,6 @@ local M = {
     { "<leader>gI", function() Snacks.picker.gh_issue({ state = "all" }) end, desc = "GitHub Issues (all)" },
     { "<leader>gp", function() Snacks.picker.gh_pr() end, desc = "GitHub Pull Requests (open)" },
     { "<leader>gP", function() Snacks.picker.gh_pr({ state = "all" }) end, desc = "GitHub Pull Requests (all)" },
-    { "<leader>dd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
-    { "<leader>dW", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
   },
 }
 

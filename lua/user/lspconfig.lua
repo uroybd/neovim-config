@@ -17,7 +17,6 @@ function M.config()
     },
     { "<leader>lh", "<cmd>lua require('user.lspconfig').toggle_inlay_hints()<cr>", desc = "Hints" },
     { "<leader>li", "<cmd>LspInfo<cr>", desc = "Info" },
-    { "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<cr>", desc = "Quickfix" },
   }
 
   local servers = {
