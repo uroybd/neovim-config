@@ -39,7 +39,6 @@ function M.config()
       flash = true,
       gitsigns = true,
       grug_far = true,
-      lsp_saga = true,
       noice = true,
       notify = true,
       nvimtree = true,
