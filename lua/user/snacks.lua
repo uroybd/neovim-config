@@ -55,6 +55,9 @@ local M = {
           },
         },
         gh_diff = {
+            layout = {
+                preset = "left",
+          },
             win = {
                 preview = {
                     keys = {
