@@ -54,19 +54,6 @@ local M = {
             preset = "dropdown",
           },
         },
-        gh_diff = {
-            layout = {
-                preset = "left",
-          },
-            win = {
-                preview = {
-                    keys = {
-                        ["<tab>"] = { "list_down" },
-                        ["<s-tab>"] = { "list_up" },
-                    },
-                },
-            },
-        },
       },
       actions = {
         sidekick_send = function(...)
@@ -321,10 +308,6 @@ local M = {
     { "<leader>lci", function() Snacks.picker.lsp_incoming_calls() end, desc = "Incoming Calls" },
     { "<leader>lco", function() Snacks.picker.lsp_outgoing_calls() end, desc = "Outgoing Calls" },
     { "<leader>lr", function () Snacks.picker.lsp_references() end, desc = "References" },
-    { "<leader>gi", function() Snacks.picker.gh_issue() end, desc = "GitHub Issues (open)" },
-    { "<leader>gI", function() Snacks.picker.gh_issue({ state = "all" }) end, desc = "GitHub Issues (all)" },
-    { "<leader>gp", function() Snacks.picker.gh_pr() end, desc = "GitHub Pull Requests (open)" },
-    { "<leader>gP", function() Snacks.picker.gh_pr({ state = "all" }) end, desc = "GitHub Pull Requests (all)" },
     {
       "gd",
       function()
