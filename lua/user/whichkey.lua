@@ -99,7 +99,6 @@ function M.config()
     },
     { "<leader>r", group = "Run", icon = "󱤵" },
     { "<leader>s", group = "Todo Comments" },
-    { "<leader>t", group = "Test", icon = "" },
     { "<leader>v", "<cmd>vsplit<CR>", desc = "Split", icon = "" },
     { "<leader>w", "<cmd>lua vim.wo.wrap = not vim.wo.wrap<CR>", desc = "Toggle Wrap" },
     { "<leader>n", group = "Swap parameters" },
