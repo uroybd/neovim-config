@@ -56,3 +56,10 @@ vim.opt.termguicolors = true
 vim.opt.shell = "/bin/bash"
 vim.opt.confirm = true
 vim.opt.exrc = true
+
+
+vim.filetype.add({
+  extension = {
+    njk = "html",
+  },
+})
