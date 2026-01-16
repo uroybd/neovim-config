@@ -44,7 +44,8 @@ function M.config()
     options = {
       component_separators = { left = "", right = "" },
       -- section_separators = { left = "", right = "" },
-      section_separators = { left = "", right = "" },
+      -- section_separators = { left = "", right = "" },
+      section_separators = { left = " ", right = " " },
 
       ignore_focus = { "NvimTree" },
       -- theme = "catppuccin",
