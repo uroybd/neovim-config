@@ -57,7 +57,6 @@ function M.config()
           function()
             return "󰓩"
           end,
-          color = { bg = blue },
         },
         { "tabs", mode = 2, symbols = { modified = "●" } },
       },
