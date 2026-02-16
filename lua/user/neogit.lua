@@ -5,6 +5,7 @@ local M = {
   branch = "master",
   dependencies = {
     "nvim-lua/plenary.nvim",
+    "esmuellert/codediff.nvim",      -- optional
   },
 }
 
@@ -20,6 +21,11 @@ function M.config()
     disable_builtin_notifications = false,
     use_magit_keybindings = false,
     graph_style = "kitty",
+    integrations = {
+      codediff = true,
+      snacks = true,
+    },
+    diff_viewer = "codediff",
     -- Change the default way of opening neogit
     kind = "tab",
     -- Change the default way of opening the commit popup
