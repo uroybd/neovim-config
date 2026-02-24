@@ -4,7 +4,11 @@ local M = {
 }
 
 function M.config()
-  require("codediff").setup({})
+  require("codediff").setup({
+    diff = {
+conflict_result_position = "center",
+    }
+  })
 end
 
 local wk = require "which-key"
