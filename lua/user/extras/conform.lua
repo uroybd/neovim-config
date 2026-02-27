@@ -16,6 +16,7 @@ function M.config()
       sql = { "sqlfmt" },
       terraform = { "terraform_fmt" },
       rust = { "rustfmt" },
+      http = { "kulala-fmt" }
     },
     default_format_opts = {
       lsp_format = "fallback",
