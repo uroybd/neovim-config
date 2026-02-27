@@ -31,6 +31,7 @@ function M.config()
     "harper_ls",
     "html",
     "jsonls",
+    "kulala_ls",
     "lua_ls",
     "nginx_language_server",
     "nushell",

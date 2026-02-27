@@ -6,7 +6,7 @@ local M = {
 function M.config()
   local gf = require "grug-far"
   gf.setup {
-    -- Options
+    windowCreationCommand = 'tab split',
   }
   local wk = require "which-key"
   wk.add {
