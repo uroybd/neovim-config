@@ -1,7 +1,5 @@
 local apidocs_dir = vim.fn.stdpath "data" .. "/apidocs-data/"
 
-
-
 local M = {
   "folke/snacks.nvim",
   priority = 1000,
@@ -218,79 +216,6 @@ local M = {
       desc = "Help",
     },
     {
-      "<leader>sad",
-      function()
-        Snacks.picker.files {
-          layout = {
-            preview = true,
-            preset = "telescope",
-          },
-          win = {
-            preview = {
-              wo = {
-                number = true,
-                relativenumber = false,
-                signcolumn = "no",
-                conceallevel = 2,
-                concealcursor = "n",
-                winfixbuf = true,
-                list = false,
-                wrap = false,
-              },
-            },
-          },
-          dirs = { apidocs_dir },
-          ft = { "markdown", "md" },
-          confirm = function(picker, item)
-            require("apidocs").open_doc_in_new_window(item.file)
-          end,
-          format = function(item, picker)
-            local parts = vim.split(item.file, "/")
-            -- take the last part and set it as the text
-            local folder = parts[#parts - 1]
-            local filename = parts[#parts]
-            local filetype = vim.split(folder, "~")[1]
-            local icon, hl = Snacks.util.icon(filetype, "filetype", {
-              fallback = picker.opts.icons.files,
-            })
-            icon = Snacks.picker.util.align(icon, picker.opts.formatters.file.icon_width or 2)
-            filename = filename:gsub("%.html%.md$", "")
-            local new_item = {
-              {
-                icon,
-                hl,
-                virtual = true,
-              },
-              {
-                folder .. " | ",
-                "SnacksPickerSpecial",
-                field = "file",
-              },
-            }
-            local fileNameParts = vim.split(filename, "#")
-            -- loop through the parts and add them to the new_item
-            for i = 1, #fileNameParts do
-              local part = fileNameParts[i]
-              new_item[#new_item + 1] = {
-                part,
-                "SnacksPickerFile",
-                field = "file",
-              }
-              if i < #fileNameParts then
-                new_item[#new_item + 1] = {
-                  " > ",
-                  "SnacksPickerDelim",
-                  field = "file",
-                }
-              end
-            end
-            return new_item
-          end,
-        }
-      end,
-      desc = "API Docs",
-    },
-    {
       "<leader>m",
       function()
         Snacks.picker.marks()
@@ -315,6 +240,13 @@ local M = {
       end,
       desc = "Go to Definition",
     },
+    {
+      "<leader>tt",
+      function()
+        require("user.extras.tabpicker").tabs_picker()
+      end,
+      desc = "Tabs",
+    }
   },
 }
 

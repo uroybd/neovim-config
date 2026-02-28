@@ -65,8 +65,6 @@ function M.config()
     { "<leader>a", group = "Sidekick" },
     { "<leader>t", group = "Tab" },
     { "<leader>tN", "<cmd>tabnew %<cr>", desc = "New Tab" },
-    { "<leader>th", "<cmd>-tabnext<cr>", desc = "Prev Tab" },
-    { "<leader>tl", "<cmd>+tabnext<cr>", desc = "Next Tab" },
     { "<leader>tn", "<cmd>$tabnew<cr>", desc = "New Empty Tab" },
     { "<leader>tc", "<cmd>tabclose<cr>", desc = "Close Tab" },
     { "<leader>to", "<cmd>tabonly<cr>", desc = "Only" },
