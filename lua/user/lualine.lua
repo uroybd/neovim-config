@@ -25,7 +25,7 @@ local mode_icons = {
   CONFIRM = "",
 }
 
-local custom_catppuccin = require "lualine.themes.catppuccin"
+local custom_catppuccin = require "lualine.themes.catppuccin-nvim"
 custom_catppuccin.normal.c.bg = "#2f3446"
 custom_catppuccin.normal.b.bg = "#414559"
 custom_catppuccin.insert.b.bg = "#414559"
