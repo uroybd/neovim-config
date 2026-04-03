@@ -34,7 +34,6 @@ require("catppuccin").setup {
       grug_far = true,
       noice = true,
       notify = true,
-      nvimtree = true,
       nvim_surround = true,
       mason = true,
       markdown = true,

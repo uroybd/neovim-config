@@ -7,6 +7,10 @@ require("oil").setup {
   float = {
     max_height = 20,
     max_width = 100,
+    border = "single",
+    win_options = {
+      winblend = 0,
+    },
   },
   delete_to_trash = true,
   keymaps = {
