@@ -145,3 +145,25 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "NeogitCommitMessage",
   command = "silent! set filetype=gitcommit",
 })
+
+-- Dynamic cursorline underline based on column position
+vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI", "BufEnter" }, {
+  callback = function()
+    local col = vim.fn.virtcol(".")
+    local colors = require("catppuccin.palettes").get_palette("frappe")
+    
+    if col >= 100 then
+      -- Red underline after limit
+      vim.api.nvim_set_hl(0, "CursorLine", { underline = true, sp = colors.red })
+      vim.api.nvim_set_hl(0, "CursorLineNr", { fg = colors.red, bold = true })
+    elseif col >= 90 then
+      -- Yellow underline at 90%
+      vim.api.nvim_set_hl(0, "CursorLine", { underline = true, sp = colors.yellow })
+      vim.api.nvim_set_hl(0, "CursorLineNr", { fg = colors.yellow, bold = true })
+    else
+      -- Normal cursorline (no underline)
+      vim.api.nvim_set_hl(0, "CursorLine", { bg = colors.surface0 })
+      vim.api.nvim_set_hl(0, "CursorLineNr", { fg = colors.lavender, bold = true })
+    end
+  end,
+})
