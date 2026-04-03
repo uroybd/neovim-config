@@ -7,7 +7,7 @@
     "blink.cmp": {
       "rev": "dcde5e7e32b6bae5a7ddf343c1587a8490dbd263",
       "src": "https://github.com/saghen/blink.cmp",
-      "version": "'v1'"
+      "version": "'v1.*'"
     },
     "codediff.nvim": {
       "rev": "832f1ecc5f8b15a44cf7537e31d3266d657775b1",
@@ -52,6 +52,10 @@
     "hardtime.nvim": {
       "rev": "b4e431934af1fe224a3a801f632c008278cb7628",
       "src": "https://github.com/m4xshen/hardtime.nvim"
+    },
+    "helpview.nvim": {
+      "rev": "518789535a0cb146224a428edf93a70f98b795db",
+      "src": "https://github.com/OXY2DEV/helpview.nvim"
     },
     "kulala.nvim": {
       "rev": "6656c9d332735ca6a27725e0fb45a1715c4372d9",
@@ -110,7 +114,7 @@
       "src": "https://github.com/kevinhwang91/nvim-hlslens"
     },
     "nvim-lspconfig": {
-      "rev": "8e2084bf5e40c79c1f42210a6ef96a0a4793a763",
+      "rev": "11afebab7ae8953c1db8f4c223e7742132d035f3",
       "src": "https://github.com/neovim/nvim-lspconfig",
       "version": "'master'"
     },

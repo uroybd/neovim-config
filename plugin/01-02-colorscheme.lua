@@ -22,6 +22,8 @@ require("catppuccin").setup {
         TablineFill = { bg = colors.base },
         ["@attribute.diff"] = { fg = colors.peach, style = { "underline", "bold" } },
         ["@module"] = { fg = colors.sapphire },
+        -- Subtle/thin colorcolumn
+        ColorColumn = { bg = colors.surface0 },
       }
     end,
     integrations = {

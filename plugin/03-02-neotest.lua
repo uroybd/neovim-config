@@ -5,13 +5,11 @@ vim.schedule(function()
     {src="https://github.com/nvim-lua/plenary.nvim"},
     {src="https://github.com/antoinemadec/FixCursorHold.nvim"},
     {src="https://github.com/mrcjkb/rustaceanvim"},
-    {src="https://github.com/fredrikaverpil/neotest-golang"},
     {src="https://github.com/rouge8/neotest-rust"}
   })
 
   require("neotest").setup {
     adapters = {
-      require "neotest-golang" {},
       require("neotest-rust"),
     },
   }
