@@ -35,7 +35,7 @@ vim.api.nvim_create_autocmd({
 
     local function on_attach(client, bufnr)
       lsp_keymaps(bufnr)
-      if client.supports_method "textDocument/inlayHint" then
+      if client.server_capabilities.inlayHintProvider then
         vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
       end
     end
