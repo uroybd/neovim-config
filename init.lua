@@ -1,8 +1,24 @@
 vim.loader.enable()
--- Add user directory to Lua package path
-vim.opt.runtimepath:append(vim.fn.stdpath("config"))
 
--- Add the user directory to the Lua package path
-local config_path = vim.fn.stdpath("config")
-package.path = package.path .. ";" .. config_path .. "/?.lua"
-package.path = package.path .. ";" .. config_path .. "/?/init.lua"
+-- Setup leader keys before zpack
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+-- Load core configs
+require("user.options")
+require("user.keymaps")
+require("user.autocmds")
+
+-- Bootstrap zpack.nvim
+vim.pack.add({ 'https://github.com/zuqini/zpack.nvim' })
+
+-- Setup zpack - automatically imports from lua/plugins/
+require('zpack').setup({
+  defaults = {
+    confirm = true,
+  },
+  performance = {
+    vim_loader = true,
+  },
+  cmd_prefix = 'Z',
+})
