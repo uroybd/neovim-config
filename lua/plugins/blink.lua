@@ -4,9 +4,6 @@ local M = {
   dependencies = { "rafamadriz/friendly-snippets" },
   event = "InsertEnter",
   opts = {
-    fuzzy = {
-      implementation = "prefer_rust",
-    },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
     },
@@ -50,10 +47,5 @@ local M = {
     },
   },
 }
-
-function M.build()
-  -- Auto-build Rust binary after install/update
-  vim.cmd("BlinkCmpBuild")
-end
 
 return M

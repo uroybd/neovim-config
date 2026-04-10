@@ -35,14 +35,14 @@ vim.opt.wrap = false -- display lines as one long line
 vim.opt.sidescrolloff = 8
 vim.opt.title = false
 vim.opt.fillchars = vim.opt.fillchars + "eob: "
-vim.opt.fillchars:append {
-  stl = " ",
-}
+vim.opt.fillchars:append({
+	stl = " ",
+})
 
-vim.opt.shortmess:append "c"
+vim.opt.shortmess:append("c")
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
+vim.cmd("set whichwrap+=<,>,[,],h,l")
+vim.cmd([[set iskeyword+=-]])
 
 vim.g.netrw_banner = 0
 vim.g.netrw_mouse = 2
@@ -54,9 +54,8 @@ vim.opt.shell = "/bin/bash"
 vim.opt.confirm = true
 vim.opt.exrc = true
 
-
 vim.filetype.add({
-  extension = {
-    njk = "html",
-  },
+	extension = {
+		njk = "html",
+	},
 })

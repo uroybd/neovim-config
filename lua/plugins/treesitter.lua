@@ -1,55 +1,19 @@
 local M = {
-  "nvim-treesitter/nvim-treesitter",
+  "arborist-ts/arborist.nvim",
 }
 
-function M.build()
-  vim.schedule(function()
-    require("nvim-treesitter").install({
-      "bash",
-      "comment",
-      "css",
-      "diff",
-      "dockerfile",
-      "gitcommit",
-      "gitignore",
-      "git_config",
-      "git_rebase",
-      "go",
-      "graphql",
-      "html",
-      "htmldjango",
-      "http",
-      "javascript",
-      "json",
-      "json5",
-      "jsonc",
-      "kdl",
-      "lua",
-      "make",
-      "markdown",
-      "markdown_inline",
-      "nginx",
-      "nu",
-      "prisma",
-      "python",
-      "regex",
-      "rust",
-      "scss",
-      "sql",
-      "ssh_config",
-      "svelte",
-      "terraform",
-      "toml",
-      "typescript",
-      "tsx",
-      "vue",
-      "xml",
-      "yaml",
-    })
-  end)
-end
-
 function M.config()
+  -- Skip auto-setup since we're configuring manually
+  vim.g.arborist_loaded = true
+  
+  -- Setup arborist - WASM-first treesitter parser manager
+  -- Parsers install automatically when you open files!
+  require("arborist").setup({
+    prefer_wasm = true,        -- Use WASM parsers (faster, no compilation)
+    update_cadence = "weekly", -- "daily", "weekly", or "manual"
+    compiler = "cc",           -- C compiler for native .so builds (fallback)
+  })
+
   -- Enable treesitter highlighting for all filetypes
   vim.api.nvim_create_autocmd("FileType", {
     callback = function()
