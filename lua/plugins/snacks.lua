@@ -37,7 +37,6 @@ local M = {
 		},
 		notifier = {
 			enabled = true,
-			style = "fancy",
 		},
 		picker = {
 			enabled = true,
