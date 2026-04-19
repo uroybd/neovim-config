@@ -157,10 +157,6 @@
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
-    "project.nvim": {
-      "rev": "ae479ec940a646e9067c6b2b0c1c3bb6bde8124e",
-      "src": "https://github.com/DrKJeff16/project.nvim"
-    },
     "promise-async": {
       "rev": "119e8961014c9bfaf1487bf3c2a393d254f337e2",
       "src": "https://github.com/kevinhwang91/promise-async"
