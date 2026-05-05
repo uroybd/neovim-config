@@ -5,7 +5,7 @@
       "src": "https://github.com/antoinemadec/FixCursorHold.nvim"
     },
     "arborist.nvim": {
-      "rev": "ffd4e836d38f16effe9971bda8b2c811055ed2ca",
+      "rev": "6cffbf419a495c84c56b918771a3d004e892e235",
       "src": "https://github.com/arborist-ts/arborist.nvim"
     },
     "blink.cmp": {
@@ -13,9 +13,14 @@
       "src": "https://github.com/saghen/blink.cmp",
       "version": "'v1'"
     },
+    "canola-collection": {
+      "rev": "8566c09080c3084db1ffba21dec53e2b4235daed",
+      "src": "https://github.com/barrettruth/canola-collection"
+    },
     "canola.nvim": {
-      "rev": "4e3a8cb55979f47483b3807c152aa6adf6814d49",
-      "src": "https://github.com/barrettruth/canola.nvim"
+      "rev": "3a2a1c8a9ce775e435c7d73f91e5df664b037878",
+      "src": "https://github.com/barrettruth/canola.nvim",
+      "version": "'canola'"
     },
     "catppuccin": {
       "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
@@ -184,7 +189,7 @@
       "version": "6.0.0 - 7.0.0"
     },
     "schemastore.nvim": {
-      "rev": "6db1246640e9e1bdf8a1d1f6d27a940fc0a572d5",
+      "rev": "c8982fcea21d0d8e928a367e0c1536e6ac7cf98e",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "sidekick.nvim": {
