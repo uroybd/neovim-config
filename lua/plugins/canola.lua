@@ -1,6 +1,9 @@
 local M = {
 	"barrettruth/canola.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons", "barrettruth/canola-collection" },
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+		"barrettruth/canola-collection",
+	},
 	keys = {
 		{ "-", "<CMD>Canola --float<CR>", desc = "Open parent directory" },
 	},
