@@ -11,7 +11,6 @@ local M = {
 	"folke/snacks.nvim",
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
-		"folke/trouble.nvim",
 	},
 	priority = 1000,
 	opts = {
@@ -63,11 +62,6 @@ local M = {
 			actions = {
 				sidekick_send = function(...)
 					return require("sidekick.cli.picker.snacks").send(...)
-				end,
-				qflist = function(...)
-					require("snacks.picker.actions").qflist(...)
-					vim.cmd("cclose")
-					vim.cmd("Trouble qflist open focus=true")
 				end,
 			},
 			win = {
@@ -253,6 +247,13 @@ function M.config(_, opts)
 				Snacks.picker.lsp_references()
 			end,
 			desc = "References",
+		},
+		{
+			"<leader>lo",
+			function()
+				Snacks.picker.lsp_symbols({ layout = "right" })
+			end,
+			desc = "Outline",
 		},
 		{
 			"gd",
