@@ -20,6 +20,13 @@ local M = {
 				TablineFill = { bg = colors.base },
 				["@attribute.diff"] = { fg = colors.peach, style = { "underline", "bold" } },
 				["@module"] = { fg = colors.sapphire },
+				Comment = { fg = colors.overlay2, italic = true },
+				["@comment"] = { fg = colors.overlay2, italic = true },
+				["@comment.error"] = { fg = colors.red, style = { "bold" } },
+				["@comment.warning"] = { fg = colors.yellow, style = { "bold" } },
+				["@comment.hint"] = { fg = colors.blue, style = { "bold" } },
+				["@comment.todo"] = { fg = colors.flamingo, style = { "bold" } },
+				["@comment.note"] = { fg = colors.rosewater, style = { "bold" } },
 			}
 		end,
 		integrations = {
@@ -52,6 +59,33 @@ local M = {
 function M.config(_, opts)
 	require("catppuccin").setup(opts)
 	vim.cmd.colorscheme("catppuccin-nvim")
+
+	-- Clear LSP semantic token comment highlights to let treesitter special comments show through
+	-- LSP has priority 125, which overrides treesitter (100), so we clear it entirely
+	vim.api.nvim_set_hl(0, "@lsp.type.comment", { link = "" })
+
+	-- Also set high-priority highlights for special comments
+	local colors = require("catppuccin.palettes").get_palette("frappe")
+	vim.api.nvim_set_hl(0, "@comment.error", { fg = colors.red, bold = true })
+	vim.api.nvim_set_hl(0, "@comment.warning", { fg = colors.yellow, bold = true })
+	vim.api.nvim_set_hl(0, "@comment.hint", { fg = colors.blue, bold = true })
+	vim.api.nvim_set_hl(0, "@comment.todo", { fg = colors.flamingo, bold = true })
+	vim.api.nvim_set_hl(0, "@comment.note", { fg = colors.rosewater, bold = true })
+
+	-- Add matchadd patterns for additional comment keywords not covered by treesitter
+	-- Skip TODO: and NOTE: as they're already handled by treesitter
+	vim.fn.matchadd("@comment.error", "\\(HACK:\\)")
+	vim.fn.matchadd("@comment.warning", "\\(WARN:\\)")
+	vim.fn.matchadd("@comment.warning", "\\(WARNING:\\)")
+	vim.fn.matchadd("@comment.error", "\\(XXX:\\)")
+	vim.fn.matchadd("@comment.hint", "\\(PERF:\\)")
+	vim.fn.matchadd("@comment.hint", "\\(PERFORMANCE:\\)")
+	vim.fn.matchadd("@comment.hint", "\\(OPTIM:\\)")
+	vim.fn.matchadd("@comment.hint", "\\(OPTIMIZE:\\)")
+	vim.fn.matchadd("@comment.todo", "\\(TEST:\\)")
+	vim.fn.matchadd("@comment.todo", "\\(TESTING:\\)")
+	vim.fn.matchadd("@comment.note", "\\(PASSED:\\)")
+	vim.fn.matchadd("@comment.error", "\\(FAILED:\\)")
 end
 
 return M
