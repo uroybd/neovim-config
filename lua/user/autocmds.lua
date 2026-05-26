@@ -146,14 +146,47 @@ vim.api.nvim_create_autocmd("FileType", {
 	command = "silent! set filetype=gitcommit",
 })
 
+local project_folders = { "~/.config" }
+
 -- Shamelessly copied from https://github.com/swaits/tiny-rooter.nvim
 local project_root_markers = { ".git", ".jj", "Cargo.toml", "pyproject.toml", "Makefile", "go.mod", "package.json" }
 vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 	group = vim.api.nvim_create_augroup("tiny-rooter", { clear = true }),
 	callback = function()
-		local root = vim.fs.root(0, project_root_markers)
+		local bufpath = vim.fn.expand("%:p:h")
+		local bufname = vim.fn.expand("%:p")
+		
+		-- Skip if it's not a real file
+		if bufname == "" or vim.bo.buftype ~= "" then
+			return
+		end
+		
+		-- Check project_folders FIRST before looking for root markers
+		for _, prefix in ipairs(project_folders) do
+			local expanded_prefix = vim.fn.expand(prefix)
+			if vim.startswith(bufpath, expanded_prefix) then
+				local relative_path = bufpath:sub(#expanded_prefix + 1)
+				local first_dir = relative_path:match("^/?([^/]+)")
+				if first_dir then
+					local new_root = expanded_prefix .. "/" .. first_dir
+					if vim.fn.isdirectory(new_root) == 1 then
+						vim.cmd.lcd(new_root)
+						return
+					end
+				else
+					vim.cmd.lcd(expanded_prefix)
+					return
+				end
+			end
+		end
+		
+		-- If not in a project_folder, then look for root markers
+		local root = vim.fs.root(bufpath, project_root_markers)
 		if root then
 			vim.cmd.lcd(root)
+		else
+			-- Fallback to buffer's directory if no match
+			vim.cmd.lcd(bufpath)
 		end
 	end,
 })
