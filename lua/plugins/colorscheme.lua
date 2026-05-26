@@ -27,6 +27,7 @@ local M = {
 				["@comment.hint"] = { fg = colors.blue, style = { "bold" } },
 				["@comment.todo"] = { fg = colors.flamingo, style = { "bold" } },
 				["@comment.note"] = { fg = colors.rosewater, style = { "bold" } },
+				NvimWindowFloat = { bg = colors.yellow, fg = colors.base, style = { "bold" } },
 			}
 		end,
 		integrations = {
