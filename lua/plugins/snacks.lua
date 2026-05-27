@@ -119,6 +119,62 @@ local M = {
 function M.config(_, opts)
 	require("snacks").setup(opts)
 
+	-- Peek definition in a floating window
+	local function peek_definition()
+		local params = vim.lsp.util.make_position_params()
+		vim.lsp.buf_request(0, "textDocument/definition", params, function(err, result, ctx, config)
+			if err or not result or vim.tbl_isempty(result) then
+				vim.notify("No definition found", vim.log.levels.WARN)
+				return
+			end
+
+			local location = result[1] or result
+			local uri = location.uri or location.targetUri
+			local range = location.range or location.targetSelectionRange
+
+			-- Get file path from URI
+			local filepath = vim.uri_to_fname(uri)
+			local bufnr = vim.fn.bufadd(filepath)
+			vim.fn.bufload(bufnr)
+
+			-- Get the lines to display (with context)
+			local start_line = range.start.line
+			local context_lines = 10
+			local from_line = math.max(0, start_line - context_lines)
+			local to_line = start_line + context_lines
+			local lines = vim.api.nvim_buf_get_lines(bufnr, from_line, to_line + 1, false)
+
+			-- Create a floating window with Snacks
+			local win = Snacks.win({
+				file = filepath,
+				width = 0.6,
+				height = 0.6,
+				border = "rounded",
+				title = " Definition: " .. vim.fn.fnamemodify(filepath, ":~:.") .. " ",
+				title_pos = "center",
+				wo = {
+					number = true,
+					relativenumber = false,
+					wrap = false,
+					cursorline = true,
+				},
+				keys = {
+					q = "close",
+					["<Esc>"] = "close",
+				},
+			})
+
+			-- Set cursor to the definition line
+			if win and win.win and vim.api.nvim_win_is_valid(win.win) then
+				vim.api.nvim_win_set_cursor(win.win, { start_line + 1, range.start.character })
+				-- Center the cursor line
+				vim.api.nvim_win_call(win.win, function()
+					vim.cmd("normal! zz")
+				end)
+			end
+		end)
+	end
+
 	local wk = require("which-key")
 	wk.add({
 		{
@@ -282,6 +338,11 @@ function M.config(_, opts)
 				Snacks.picker.diagnostics()
 			end,
 			desc = "Diagnostics (Workspace)",
+		},
+		{
+			"gD",
+			peek_definition,
+			desc = "Peek Definition",
 		},
 	})
 end
