@@ -147,20 +147,16 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 local project_folders = { "~/.config" }
-
--- Shamelessly copied from https://github.com/swaits/tiny-rooter.nvim
 local project_root_markers = { ".git", ".jj", "Cargo.toml", "pyproject.toml", "Makefile", "go.mod", "package.json" }
 vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 	group = vim.api.nvim_create_augroup("tiny-rooter", { clear = true }),
 	callback = function()
 		local bufpath = vim.fn.expand("%:p:h")
 		local bufname = vim.fn.expand("%:p")
-		
 		-- Skip if it's not a real file
 		if bufname == "" or vim.bo.buftype ~= "" then
 			return
 		end
-		
 		-- Check project_folders FIRST before looking for root markers
 		for _, prefix in ipairs(project_folders) do
 			local expanded_prefix = vim.fn.expand(prefix)
@@ -179,7 +175,6 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 				end
 			end
 		end
-		
 		-- If not in a project_folder, then look for root markers
 		local root = vim.fs.root(bufpath, project_root_markers)
 		if root then

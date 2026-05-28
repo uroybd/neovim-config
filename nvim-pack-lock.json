@@ -43,7 +43,7 @@
       "src": "https://github.com/AndreM222/copilot-lualine"
     },
     "copilot.lua": {
-      "rev": "7b89909d0647c89298de880255b287b01b7e5d34",
+      "rev": "e8b9be2e51c393bedc893cef3bd1c5555a4d45f5",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "dropbar.nvim": {
@@ -75,7 +75,7 @@
       "src": "https://github.com/OXY2DEV/helpview.nvim"
     },
     "kulala.nvim": {
-      "rev": "b92e6e962fc84a0e6b82d4c8e25c1f460f08289f",
+      "rev": "7d60be1f091cc40a64d5a14b926d060b205fc24b",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lazydev.nvim": {
@@ -127,7 +127,7 @@
       "src": "https://github.com/kevinhwang91/nvim-hlslens"
     },
     "nvim-lspconfig": {
-      "rev": "a4ed4e761c400849e8c9f8bda33e5083f890268c",
+      "rev": "9573948c38bfabeec353ae7dd7d3ffec4c506a6b",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -139,7 +139,7 @@
       "src": "https://github.com/kylechui/nvim-surround"
     },
     "nvim-web-devicons": {
-      "rev": "0d7d35fa946837b8738b17c18d1faa1ac351e7f9",
+      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "nvim-window": {
@@ -160,7 +160,7 @@
       "version": "6.0.0 - 7.0.0"
     },
     "schemastore.nvim": {
-      "rev": "5330d61a3b2f7ecf8bf6f9ab4ce12878497f2cee",
+      "rev": "e25e63f3b24fd6b8c2fc713107ad5d5594028eac",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "sidekick.nvim": {
@@ -180,7 +180,7 @@
       "src": "https://github.com/folke/which-key.nvim"
     },
     "zpack.nvim": {
-      "rev": "a815e941a180615942bf27d51f4834537b2e3c21",
+      "rev": "d52f0ddf85cf8fe74952f7825d3f9ea5f31b2968",
       "src": "https://github.com/zuqini/zpack.nvim"
     }
   }
