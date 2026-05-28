@@ -94,6 +94,11 @@
       "rev": "bb639d4bf385a4d89f478b83af4d770be05ab7eb",
       "src": "https://github.com/williamboman/mason.nvim"
     },
+    "mini.icons": {
+      "rev": "520995f1d75da0e4cc901ee95080b1ff2bc46b94",
+      "src": "https://github.com/echasnovski/mini.icons",
+      "version": "'main'"
+    },
     "modicator.nvim": {
       "rev": "7f867b4980946f115f4ccb922637d70d89a59cb4",
       "src": "https://github.com/mawkler/modicator.nvim"
@@ -133,10 +138,6 @@
     "nvim-surround": {
       "rev": "2e93e154de9ff326def6480a4358bfc149d5da2c",
       "src": "https://github.com/kylechui/nvim-surround"
-    },
-    "nvim-web-devicons": {
-      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
-      "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "nvim-window": {
       "rev": "48e44d492d2adaf9aac72a0f4ff21d6caae1b6a2",

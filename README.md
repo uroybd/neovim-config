@@ -1,24 +1,39 @@
 # Neovim Configuration
 
-<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugins?style=flat-square" /></a>
-<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/leaderkey?style=flat-square" /></a>
-<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugin-manager?style=flat-square" /></a>
+My neovim config for version >= 0.12
 
-My opinionated neovim config for version >= 0.12
+## Setup
 
-## Install Instructions
+1. Clone this repository to your Neovim config directory:
+   ```bash
+   git clone <repo-url> ~/.config/nvim
+   ```
 
- > Install requires Neovim 0.9+. Always review the code before installing a configuration.
+2. Ensure you have Neovim 0.12.0 or later:
+   ```bash
+   nvim --version
+   ```
 
-Clone the repository and install the plugins:
+3. Start Neovim - plugins will be automatically downloaded on first run:
+   ```bash
+   nvim
+   ```
 
-```sh
-git clone git@github.com:uroybd/neovim-config ~/.config/uroybd/neovim-config
+4. Mason will auto-install LSP servers and formatters
+
+## Directory Structure
+
 ```
-
-Open Neovim with this config:
-
-```sh
-NVIM_APPNAME=uroybd/neovim-config/ nvim
+nvim-pack/
+├── init.lua              # Main entry point, sets up Lua path
+├── plugin/               # Plugin configurations (auto-loaded)
+│   ├── 00-XX-*.lua      # Foundation (options, keymaps, autocmds)
+│   ├── 01-XX-*.lua      # UI plugins (snacks, colorscheme, statusline)
+│   ├── 02-XX-*.lua      # LSP & editing tools
+│   └── 03-XX-*.lua      # Advanced tools (copilot, neotest, etc.)
+├── ftplugin/             # Filetype-specific settings
+│   └── rust.lua         # Rust configuration with rustaceanvim
+└── user/                 # Custom user modules
+    ├── icons.lua        # Icon definitions
+    └── lspsettings/     # Per-LSP custom configurations
 ```
-

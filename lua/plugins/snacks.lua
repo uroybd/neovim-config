@@ -10,7 +10,7 @@ local diagnostics_source_config = {
 local M = {
 	"folke/snacks.nvim",
 	dependencies = {
-		"nvim-tree/nvim-web-devicons",
+		"echasnovski/mini.icons",
 	},
 	priority = 1000,
 	opts = {

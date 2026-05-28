@@ -1,7 +1,7 @@
 local M = {
 	"nvim-lualine/lualine.nvim",
 	dependencies = {
-		"nvim-tree/nvim-web-devicons",
+		"echasnovski/mini.icons",
 		"AndreM222/copilot-lualine",
 	},
 }

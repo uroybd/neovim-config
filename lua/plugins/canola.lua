@@ -1,7 +1,7 @@
 local M = {
 	"barrettruth/canola.nvim",
 	dependencies = {
-		"nvim-tree/nvim-web-devicons",
+		"echasnovski/mini.icons",
 		"barrettruth/canola-collection",
 	},
 	keys = {
