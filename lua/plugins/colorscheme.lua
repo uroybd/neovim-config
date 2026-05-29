@@ -3,7 +3,11 @@ local M = {
 	name = "catppuccin",
 	priority = 1000, -- Load colorscheme early
 	opts = {
-		flavour = "frappe",
+		flavour = "auto",
+		background = { -- :h background
+			light = "latte",
+			dark = "frappe",
+		},
 		styles = {
 			comments = { "italic" },
 			keywords = { "bold", "italic" },
@@ -28,6 +32,16 @@ local M = {
 				["@comment.todo"] = { fg = colors.flamingo, style = { "bold" } },
 				["@comment.note"] = { fg = colors.rosewater, style = { "bold" } },
 				NvimWindowFloat = { bg = colors.yellow, fg = colors.base, style = { "bold" } },
+				-- Mode Colors
+				NormalMode = { fg = colors.sapphire, style = { "bold" } },
+				LualineNormalA = { bg = colors.sapphire, fg = colors.text, style = { "bold" } },
+				InsertMode = { fg = colors.rosewater, bg = colors.mantle, style = { "bold" } },
+				VisualMode = { fg = colors.mauve, style = { "bold" } },
+				CommandMode = { fg = colors.peach, style = { "bold" } },
+				ReplaceMode = { fg = colors.red, style = { "bold" } },
+				SelectMode = { fg = colors.teal, style = { "bold" } },
+				TerminalMode = { fg = colors.blue, style = { "bold" } },
+				TerminalNormalMode = { fg = colors.sapphire, style = { "bold" } },
 			}
 		end,
 		integrations = {
@@ -53,6 +67,37 @@ local M = {
 			treesitter = true,
 			ufo = true,
 			which_key = true,
+			lualine = {
+				all = function(colors)
+					return {
+						-- Specifying a normal-mode status line override for section a's background and b's foreground to use lavender like the main Catppuccin theme
+						normal = {
+							a = { bg = colors.sapphire, gui = "italic" },
+							b = { fg = colors.sapphire },
+						},
+						insert = {
+							a = { bg = colors.rosewater, gui = "italic" },
+							b = { fg = colors.rosewater },
+						},
+						visual = {
+							a = { bg = colors.mauve, gui = "italic" },
+							b = { fg = colors.mauve },
+						},
+						command = {
+							a = { bg = colors.peach, gui = "italic" },
+							b = { fg = colors.peach },
+						},
+						replace = {
+							a = { bg = colors.red, gui = "italic" },
+							b = { fg = colors.red },
+						},
+						terminal = {
+							a = { bg = colors.blue, gui = "italic" },
+							b = { fg = colors.blue },
+						},
+					}
+				end,
+			},
 		},
 	},
 }

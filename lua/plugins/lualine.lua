@@ -27,26 +27,12 @@ function M.config()
 		CONFIRM = "",
 	}
 
-	local custom_catppuccin = require("lualine.themes.catppuccin-nvim")
-	custom_catppuccin.normal.c.bg = "#2f3446"
-	custom_catppuccin.normal.b.bg = "#414559"
-	custom_catppuccin.insert.b.bg = "#414559"
-	custom_catppuccin.visual.b.bg = "#414559"
-	custom_catppuccin.replace.b.bg = "#414559"
-	custom_catppuccin.command.b.bg = "#414559"
-	custom_catppuccin.terminal.b.bg = "#414559"
-	custom_catppuccin.inactive.a.bg = "#2f3446"
-	custom_catppuccin.inactive.b.bg = "#2f3446"
-	custom_catppuccin.inactive.a.bg = "#2f3446"
-
-	local blue = "#89b5f9"
-
 	require("lualine").setup({
 		options = {
 			component_separators = { left = "", right = "" },
 			section_separators = { left = " ", right = " " },
 			ignore_focus = { "NvimTree" },
-			theme = custom_catppuccin,
+			theme = "catppuccin-nvim",
 		},
 		tabline = {
 			lualine_a = {
@@ -55,15 +41,13 @@ function M.config()
 						return "󰓩"
 					end,
 				},
-				{ "tabs", mode = 2, symbols = { modified = "●" } },
+				{ "tabs", mode = 2, use_mode_colors = true, symbols = { modified = "●" } },
 			},
 			lualine_z = {
-				"buffers",
 				{
-					function()
-						return ""
-					end,
-					color = { bg = blue },
+					"buffers",
+					show_filename_only = true,
+					use_mode_colors = true,
 				},
 			},
 		},
