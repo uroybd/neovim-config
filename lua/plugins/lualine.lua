@@ -90,6 +90,13 @@ function M.config()
 		},
 		extensions = { "quickfix", "man", "fugitive" },
 	})
+
+	vim.api.nvim_create_autocmd({ "FocusGained", "UIEnter" }, {
+		callback = function()
+			vim.cmd("redraw")
+			require("lualine").refresh()
+		end,
+	})
 end
 
 return M
