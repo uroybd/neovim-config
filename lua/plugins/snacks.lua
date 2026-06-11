@@ -403,7 +403,33 @@ function M.config(_, opts)
 			end,
 			desc = "GitHub Pull Requests (all)",
 		},
+		{
+			"<leader>gc",
+			function()
+				require("snacks").picker.git_status({
+					win = {
+						list = {
+							keys = {
+								-- Override Enter inside git_status to launch CodeDiff's merge tool directly
+								["<CR>"] = {
+									function(picker, item)
+										picker:close()
+										if item and item.file then
+											-- Launches codediff's high-performance 3-way merge layout
+											vim.cmd("CodeDiffMerge " .. vim.fn.fnameescape(item.file))
+										end
+									end,
+									desc = "Launch CodeDiff Merge",
+								},
+							},
+						},
+					},
+				})
+			end,
+			desc = "Git Status",
+		},
 	})
+
 	local function pick_win()
 		local win = Snacks.picker.util.pick_win()
 		if win then
