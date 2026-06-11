@@ -123,10 +123,6 @@
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "https://github.com/folke/snacks.nvim"
     },
-    "theme-sync.nvim": {
-      "rev": "2a4fe89987e93eae1dfd1d46f07f71c6791ce143",
-      "src": "https://github.com/WantDead/theme-sync.nvim"
-    },
     "tiny-cmdline.nvim": {
       "rev": "b1db8607a78f0c23b3bae08e079b1b7f147619d7",
       "src": "https://github.com/rachartier/tiny-cmdline.nvim"

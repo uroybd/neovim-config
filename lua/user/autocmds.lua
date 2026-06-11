@@ -1,3 +1,33 @@
+local function sync_theme_on_focus()
+	local handle
+	if vim.fn.has("mac") == 1 then
+		handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")
+	elseif vim.fn.has("unix") == 1 then
+		handle = io.popen("gsettings get org.gnome.desktop.interface color-scheme 2>/dev/null")
+	end
+
+	if handle then
+		local result = handle:read("*a")
+		handle:close()
+
+		local system_mode = result:match("[Dd]ark") and "dark" or "light"
+
+		if vim.o.background ~= system_mode then
+			vim.o.background = system_mode
+			pcall(vim.cmd, "colorscheme " .. (vim.g.colors_name or "catppuccin"))
+		end
+	end
+end
+
+-- Create a single group for our workspace sync
+local sync_group = vim.api.nvim_create_augroup("ZellijGhosttySync", { clear = true })
+
+-- Handles both: Right after plugins load on startup, AND when switching windows mid-session
+vim.api.nvim_create_autocmd({ "VimEnter", "FocusGained" }, {
+	group = sync_group,
+	callback = sync_theme_on_focus,
+})
+
 -- Disable auto-comment on new line
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	callback = function()
