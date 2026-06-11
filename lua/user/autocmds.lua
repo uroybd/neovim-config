@@ -215,3 +215,12 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	group = vim.api.nvim_create_augroup("MarkdownConceal", { clear = true }),
+	pattern = { "markdown", "tex", "typst" },
+	callback = function()
+		vim.opt_local.conceallevel = 2
+		vim.opt_local.concealcursor = "nv"
+	end,
+})
