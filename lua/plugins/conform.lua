@@ -6,7 +6,7 @@ local M = {
 			lua = { "stylua" },
 			python = { "isort", "black" },
 			javascript = { "prettierd", "eslint_d", top_after_first = true },
-			go = { "goimports-reviser", "gofumpt" },
+			go = { "golangci-lint", "gofumpt", top_after_first = true },
 			sql = { "sqlfmt" },
 			terraform = { "terraform_fmt" },
 			rust = { "rustfmt" },
