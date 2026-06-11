@@ -58,6 +58,34 @@ local M = {
 				},
 				diagnostics = diagnostics_source_config,
 				diagnostics_buffer = diagnostics_source_config,
+				git_diff = {
+					auto_close = false,
+					layout = {
+						preset = "left",
+					},
+					win = {
+						preview = {
+							keys = {
+								["<tab>"] = { "list_down" },
+								["<s-tab>"] = { "list_up" },
+							},
+						},
+					},
+				},
+				gh_diff = {
+					auto_close = false,
+					layout = {
+						preset = "left",
+					},
+					win = {
+						preview = {
+							keys = {
+								["<tab>"] = { "list_down" },
+								["<s-tab>"] = { "list_up" },
+							},
+						},
+					},
+				},
 			},
 			actions = {
 				sidekick_send = function(...)
@@ -88,6 +116,9 @@ local M = {
 			enabled = true,
 		},
 		words = {
+			enabled = true,
+		},
+		gh = {
 			enabled = true,
 		},
 		dashboard = {
@@ -343,6 +374,34 @@ function M.config(_, opts)
 			"gD",
 			peek_definition,
 			desc = "Peek Definition",
+		},
+		{
+			"<leader>gi",
+			function()
+				Snacks.picker.gh_issue()
+			end,
+			desc = "GitHub Issues (open)",
+		},
+		{
+			"<leader>gI",
+			function()
+				Snacks.picker.gh_issue({ state = "all" })
+			end,
+			desc = "GitHub Issues (all)",
+		},
+		{
+			"<leader>gp",
+			function()
+				Snacks.picker.gh_pr()
+			end,
+			desc = "GitHub Pull Requests (open)",
+		},
+		{
+			"<leader>gP",
+			function()
+				Snacks.picker.gh_pr({ state = "all" })
+			end,
+			desc = "GitHub Pull Requests (all)",
 		},
 	})
 	local function pick_win()
