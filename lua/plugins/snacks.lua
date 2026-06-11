@@ -345,6 +345,20 @@ function M.config(_, opts)
 			desc = "Peek Definition",
 		},
 	})
+	local function pick_win()
+		local win = Snacks.picker.util.pick_win()
+		if win then
+			vim.api.nvim_set_current_win(win)
+		end
+	end
+
+	vim.keymap.set("n", "\\", pick_win, { desc = "Snacks Window Picker", noremap = true, silent = true })
+	vim.keymap.set(
+		{ "n", "i", "t" },
+		"<C-Bslash>",
+		pick_win,
+		{ desc = "Snacks Window Picker", noremap = true, silent = true }
+	)
 end
 
 return M

@@ -8,6 +8,11 @@ local M = {
 			light = "latte",
 			dark = "frappe",
 		},
+		dim_inactive = {
+			enabled = true,
+			shade = "dark",
+			percentage = 0.30,
+		},
 		styles = {
 			comments = { "italic" },
 			keywords = { "bold", "italic" },
@@ -42,6 +47,8 @@ local M = {
 				SelectMode = { fg = colors.teal, style = { "bold" } },
 				TerminalMode = { fg = colors.blue, style = { "bold" } },
 				TerminalNormalMode = { fg = colors.sapphire, style = { "bold" } },
+				WinSeparator = { fg = colors.lavender },
+				StatusLineNC = { fg = colors.surface1, bg = colors.mantle },
 			}
 		end,
 		integrations = {
