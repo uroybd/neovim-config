@@ -12,6 +12,8 @@ function M.config(_, opts)
     { "<leader>T", group = "Tasks" },
     { "<leader>Tt", "<cmd>OverseerToggle<CR>", desc = "Toggle" },
     { "<leader>Tr", "<cmd>OverseerRun<CR>", desc = "Run" },
+    { "<leader>Tn", "<cmd>OverseerRun TestNearest<CR>", desc = "Test Nearest" },
+    { "<leader>Tf", "<cmd>OverseerRun TestFile<CR>", desc = "Test File" },
   })
 end
 
