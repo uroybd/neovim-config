@@ -2,7 +2,6 @@ local M = {
 	"nvim-lualine/lualine.nvim",
 	dependencies = {
 		"echasnovski/mini.icons",
-		"AndreM222/copilot-lualine",
 	},
 }
 
@@ -80,7 +79,13 @@ function M.config()
 				"searchcount",
 			},
 			lualine_y = {
-				"copilot",
+				function()
+					local clients = vim.lsp.get_clients({ name = "copilot" })
+					if #clients == 0 then
+						return ""
+					end
+					return " " -- Simply pull the icon directly from mini.icons
+				end,
 				"filetype",
 			},
 			lualine_z = {
