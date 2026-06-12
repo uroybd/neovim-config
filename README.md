@@ -1,16 +1,16 @@
 # Neovim Configuration
 
-My neovim config for version >= 0.12
-
 <a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugins?style=for-the-badge" /></a>
 <a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/leaderkey?style=for-the-badge" /></a>
 <a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugin-manager?style=for-the-badge" /></a>
+
+My neovim config for version >= 0.12
 
 ## Setup
 
 1. Clone this repository to your Neovim config directory:
    ```bash
-   git clone <repo-url> ~/.config/nvim
+   git clone https://github.com/uroybd/neovim-config ~/.config/nvim
    ```
 
 2. Ensure you have Neovim 0.12.0 or later:
