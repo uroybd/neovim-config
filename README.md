@@ -2,6 +2,10 @@
 
 My neovim config for version >= 0.12
 
+<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugins?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/leaderkey?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/uroybd/neovim-config"><img src="https://dotfyle.com/uroybd/neovim-config/badges/plugin-manager?style=for-the-badge" /></a>
+
 ## Setup
 
 1. Clone this repository to your Neovim config directory:
@@ -19,21 +23,11 @@ My neovim config for version >= 0.12
    nvim
    ```
 
-4. Mason will auto-install LSP servers and formatters
+## Configuration Philosophy
+Let's just admit, I like eyecandies. So, I will not go ultra-minimal with UI tweaks. But, I will not go overboard also. That is why, instead of full-fledged `noice.nvim`, I used `tiny-cmdline` to bring command pane to the center, to my eye level. Yet, I couldn't do away with `modicator` which somehow helps me to recognize the active easily with it's synchronised per-mode color. It creates a vibe around the editor that I don't actively notice but I notice alright.
 
-## Directory Structure
+I chose `ZPack` as the middle ground between native `vim.pack` (It is a wrapper around that), and `lazy.nvim` (which is bulkier) to organize and manage my plugins.
 
-```
-nvim-pack/
-├── init.lua              # Main entry point, sets up Lua path
-├── plugin/               # Plugin configurations (auto-loaded)
-│   ├── 00-XX-*.lua      # Foundation (options, keymaps, autocmds)
-│   ├── 01-XX-*.lua      # UI plugins (snacks, colorscheme, statusline)
-│   ├── 02-XX-*.lua      # LSP & editing tools
-│   └── 03-XX-*.lua      # Advanced tools (copilot, neotest, etc.)
-├── ftplugin/             # Filetype-specific settings
-│   └── rust.lua         # Rust configuration with rustaceanvim
-└── user/                 # Custom user modules
-    ├── icons.lua        # Icon definitions
-    └── lspsettings/     # Per-LSP custom configurations
-```
+I try to keep deprecated plugins at bay. Currently, `arborist.nvim` manages the `treesitter` queries. `Canola.nvim` replaced `Oil.nvim`.
+
+Ergonomics, however, is the most important thing, and is mostly subjective. Hence, the particular choices of `flash.nvim` for jump and selection. single-key window picker powered by `snacks.nvim`. `Neogit`, `Canola/Oil` because I found them easier and predictable to use.

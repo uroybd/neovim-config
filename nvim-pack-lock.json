@@ -14,7 +14,7 @@
       "src": "https://github.com/barrettruth/canola-collection"
     },
     "canola.nvim": {
-      "rev": "3838f1380e9aeea0597a80beb6ab28da73e38525",
+      "rev": "99da9f9fefe01f9f051aa022a1fa6a154b148f19",
       "src": "https://github.com/barrettruth/canola.nvim",
       "version": "'canola'"
     },
@@ -55,7 +55,7 @@
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
     "kulala.nvim": {
-      "rev": "ba4df2dc0b6d4a4f8bba0a039e64adae32d3ecad",
+      "rev": "e483050a54eb9d70ef733b06e129a8da8b3f1780",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lazydev.nvim": {
