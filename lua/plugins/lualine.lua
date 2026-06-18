@@ -31,7 +31,7 @@ function M.config()
 			component_separators = { left = "", right = "" },
 			section_separators = { left = " ", right = " " },
 			ignore_focus = { "NvimTree" },
-			theme = "catppuccin-nvim",
+			theme = "kanso",
 		},
 		tabline = {
 			lualine_a = {

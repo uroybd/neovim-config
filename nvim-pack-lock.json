@@ -54,6 +54,10 @@
       "rev": "c995bbacf8229dc096ec1c3d60f8531059c86c1b",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
+    "kanso.nvim": {
+      "rev": "1afbbb449aa0254823dbe1932e3cbb51886ff9fe",
+      "src": "https://github.com/webhooked/kanso.nvim"
+    },
     "kulala.nvim": {
       "rev": "e483050a54eb9d70ef733b06e129a8da8b3f1780",
       "src": "https://github.com/mistweaverco/kulala.nvim"
