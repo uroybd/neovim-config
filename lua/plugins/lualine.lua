@@ -33,23 +33,6 @@ function M.config()
 			ignore_focus = { "NvimTree" },
 			theme = "kanso",
 		},
-		tabline = {
-			lualine_a = {
-				{
-					function()
-						return "󰓩"
-					end,
-				},
-				{ "tabs", mode = 2, use_mode_colors = true, symbols = { modified = "●" } },
-			},
-			lualine_z = {
-				{
-					"buffers",
-					show_filename_only = true,
-					use_mode_colors = true,
-				},
-			},
-		},
 		sections = {
 			lualine_a = {
 				{

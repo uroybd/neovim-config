@@ -206,6 +206,36 @@ function M.config(_, opts)
 		end)
 	end
 
+	-- Custom tab picker
+	local function pick_tab()
+		local tabs = {}
+		local items = {}
+
+		for i = 1, vim.fn.tabpagenr("$") do
+			local tabnr = i
+			local current = i == vim.fn.tabpagenr() and "●" or " "
+			local wins = vim.fn.tabpagewinnr(i, "$")
+
+			-- Get the buffer name from the current window in this tab
+			local bufnr = vim.fn.tabpagebuflist(i)[1]
+			local bufname = vim.fn.bufname(bufnr)
+			local name = bufname ~= "" and vim.fn.fnamemodify(bufname, ":t") or "[No Name]"
+
+			local display = string.format("%s Tab %d: %s (%d windows)", current, tabnr, name, wins)
+
+			tabs[display] = tabnr
+			table.insert(items, display)
+		end
+
+		vim.ui.select(items, {
+			prompt = "Select Tab:",
+		}, function(choice)
+			if choice and tabs[choice] then
+				vim.cmd("tabnext " .. tabs[choice])
+			end
+		end)
+	end
+
 	local wk = require("which-key")
 	wk.add({
 		{
@@ -249,6 +279,11 @@ function M.config(_, opts)
 				Snacks.picker.buffers()
 			end,
 			desc = "Buffers",
+		},
+		{
+			"<leader>tt",
+			pick_tab,
+			desc = "Tabs",
 		},
 		{
 			"<leader>ff",
