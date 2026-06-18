@@ -11,7 +11,7 @@ function M.config()
 			dark = "mist",
 			light = "pearl",
 		},
-		-- dimInactive = true,
+		dimInactive = true,
 	})
 	vim.cmd.colorscheme("kanso")
 end
