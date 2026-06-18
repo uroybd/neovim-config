@@ -6,11 +6,12 @@ local M = {
 
 function M.config()
 	require("kanso").setup({
+		compile = true,
 		background = {
-			dark = "ink",
+			dark = "mist",
 			light = "pearl",
 		},
-		dimInactive = true,
+		-- dimInactive = true,
 	})
 	vim.cmd.colorscheme("kanso")
 end
