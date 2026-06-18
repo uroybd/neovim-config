@@ -28,6 +28,7 @@ function M.config()
 
 	require("lualine").setup({
 		options = {
+			-- rounded separators
 			component_separators = { left = "", right = "" },
 			section_separators = { left = " ", right = " " },
 			ignore_focus = { "NvimTree" },

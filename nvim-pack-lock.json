@@ -18,10 +18,6 @@
       "src": "https://github.com/barrettruth/canola.nvim",
       "version": "'canola'"
     },
-    "catppuccin": {
-      "rev": "0303a7208dba448c459767486a38a6ec05c4216b",
-      "src": "https://github.com/catppuccin/nvim"
-    },
     "codediff.nvim": {
       "rev": "7608f3b436ce1f84a4888f75e53079caa981a2e9",
       "src": "https://github.com/esmuellert/codediff.nvim"
