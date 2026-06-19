@@ -2,7 +2,7 @@
 
 
 def generate_card [spec] {
-  return $'<a target="_blank" href="($spec.value.src)"><img src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://gh-card.dev').svg" alt="($spec.key)" /></a>'
+  return $'<a target="_blank" href="($spec.value.src)"><img src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://githubcard.com').svg" alt="($spec.key)" /></a>'
 }
 
 def generate_cards [data] {
