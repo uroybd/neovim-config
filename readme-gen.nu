@@ -2,7 +2,7 @@
 
 
 def generate_card [spec] {
-  return $'<a target="_blank" href="($spec.value.src)"><img width="400" src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://githubcard.com').svg?d=JUwMjTqY" alt="($spec.key)" /></a>'
+  return $'<a target="_blank" href="($spec.value.src)"><img width="100%" src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://githubcard.com').svg?d=JUwMjTqY" alt="($spec.key)" /></a>'
 }
 
 def generate_badges [plugin_count: int] {
@@ -14,16 +14,35 @@ def generate_badges [plugin_count: int] {
 }
 
 def generate_cards [data] {
-  let cards = ($data | each {|kv| 
-    let card = (generate_card $kv)
-    $'<div style="display: inline-block; width: 48%; min-width: 300px; vertical-align: top; margin-bottom: 10px;">
-($card)
-</div>'
+  let cards = ($data | each {|kv| generate_card $kv })
+  let rows = ($cards | chunks 2 | each {|chunk|
+    if ($chunk | length) == 2 {
+      $'<tr>
+<td width="50%" valign="top">
+
+($chunk | get 0)
+
+</td>
+<td width="50%" valign="top">
+
+($chunk | get 1)
+
+</td>
+</tr>'
+    } else {
+      $'<tr>
+<td colspan="2" valign="top">
+
+($chunk | get 0)
+
+</td>
+</tr>'
+    }
   } | str join "\n")
   
-  return $'<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-around;">
-($cards)
-</div>'
+  return $'<table>
+($rows)
+</table>'
 }
 
 
