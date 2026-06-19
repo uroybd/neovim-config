@@ -2,7 +2,7 @@
 
 
 def generate_card [spec] {
-  return $'<a target="_blank" href="($spec.value.src)"><img width="100%" src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://githubcard.com').svg?d=JUwMjTqY" alt="($spec.key)" /></a>'
+  return $'<img src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://githubcard.com').svg?d=JUwMjTqY" width="45%" alt="($spec.key)" />'
 }
 
 def generate_badges [plugin_count: int] {
@@ -14,35 +14,14 @@ def generate_badges [plugin_count: int] {
 }
 
 def generate_cards [data] {
-  let cards = ($data | each {|kv| generate_card $kv })
-  let rows = ($cards | chunks 2 | each {|chunk|
-    if ($chunk | length) == 2 {
-      $'<tr>
-<td width="50%" valign="top">
-
-($chunk | get 0)
-
-</td>
-<td width="50%" valign="top">
-
-($chunk | get 1)
-
-</td>
-</tr>'
-    } else {
-      $'<tr>
-<td colspan="2" valign="top">
-
-($chunk | get 0)
-
-</td>
-</tr>'
-    }
+  let cards = ($data | each {|kv| 
+    let card = (generate_card $kv)
+    $card
   } | str join "\n")
   
-  return $'<table>
-($rows)
-</table>'
+  return $'<p align="center">
+($cards)
+</p>'
 }
 
 
