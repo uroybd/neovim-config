@@ -14,7 +14,7 @@ def generate_badges [plugin_count: int] {
 }
 
 def generate_cards [data] {
-  return $'<p>($data | each {|kv| generate_card $kv} | str join "")</p>'
+  return $'<div style="display:flex; gap: 20px;>($data | each {|kv| generate_card $kv} | str join "")</div>'
 }
 
 
