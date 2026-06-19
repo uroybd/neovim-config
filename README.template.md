@@ -2,7 +2,7 @@
 
 <BADGES>
 
-My neovim config for version >= 0.12
+My neovim config for version `>= 0.12`
 
 ## Setup
 
