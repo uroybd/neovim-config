@@ -35,189 +35,127 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <table>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/arborist-ts/arborist.nvim"><img width="100%" src="https://githubcard.com/arborist-ts/arborist.nvim.svg?d=JUwMjTqY" alt="arborist.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/saghen/blink.cmp"><img width="100%" src="https://githubcard.com/saghen/blink.cmp.svg?d=JUwMjTqY" alt="blink.cmp" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/barrettruth/canola-collection"><img width="100%" src="https://githubcard.com/barrettruth/canola-collection.svg?d=JUwMjTqY" alt="canola-collection" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/barrettruth/canola.nvim"><img width="100%" src="https://githubcard.com/barrettruth/canola.nvim.svg?d=JUwMjTqY" alt="canola.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/esmuellert/codediff.nvim"><img width="100%" src="https://githubcard.com/esmuellert/codediff.nvim.svg?d=JUwMjTqY" alt="codediff.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/stevearc/conform.nvim"><img width="100%" src="https://githubcard.com/stevearc/conform.nvim.svg?d=JUwMjTqY" alt="conform.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/zbirenbaum/copilot.lua"><img width="100%" src="https://githubcard.com/zbirenbaum/copilot.lua.svg?d=JUwMjTqY" alt="copilot.lua" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/Bekaboo/dropbar.nvim"><img width="100%" src="https://githubcard.com/Bekaboo/dropbar.nvim.svg?d=JUwMjTqY" alt="dropbar.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/folke/flash.nvim"><img width="100%" src="https://githubcard.com/folke/flash.nvim.svg?d=JUwMjTqY" alt="flash.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/rafamadriz/friendly-snippets"><img width="100%" src="https://githubcard.com/rafamadriz/friendly-snippets.svg?d=JUwMjTqY" alt="friendly-snippets" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/lewis6991/gitsigns.nvim"><img width="100%" src="https://githubcard.com/lewis6991/gitsigns.nvim.svg?d=JUwMjTqY" alt="gitsigns.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/MagicDuck/grug-far.nvim"><img width="100%" src="https://githubcard.com/MagicDuck/grug-far.nvim.svg?d=JUwMjTqY" alt="grug-far.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/webhooked/kanso.nvim"><img width="100%" src="https://githubcard.com/webhooked/kanso.nvim.svg?d=JUwMjTqY" alt="kanso.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/mistweaverco/kulala.nvim"><img width="100%" src="https://githubcard.com/mistweaverco/kulala.nvim.svg?d=JUwMjTqY" alt="kulala.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/folke/lazydev.nvim"><img width="100%" src="https://githubcard.com/folke/lazydev.nvim.svg?d=JUwMjTqY" alt="lazydev.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/nvim-lualine/lualine.nvim"><img width="100%" src="https://githubcard.com/nvim-lualine/lualine.nvim.svg?d=JUwMjTqY" alt="lualine.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/williamboman/mason-lspconfig.nvim"><img width="100%" src="https://githubcard.com/williamboman/mason-lspconfig.nvim.svg?d=JUwMjTqY" alt="mason-lspconfig.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/williamboman/mason.nvim"><img width="100%" src="https://githubcard.com/williamboman/mason.nvim.svg?d=JUwMjTqY" alt="mason.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/echasnovski/mini.icons"><img width="100%" src="https://githubcard.com/echasnovski/mini.icons.svg?d=JUwMjTqY" alt="mini.icons" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/mawkler/modicator.nvim"><img width="100%" src="https://githubcard.com/mawkler/modicator.nvim.svg?d=JUwMjTqY" alt="modicator.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/neogitorg/neogit"><img width="100%" src="https://githubcard.com/neogitorg/neogit.svg?d=JUwMjTqY" alt="neogit" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/windwp/nvim-autopairs"><img width="100%" src="https://githubcard.com/windwp/nvim-autopairs.svg?d=JUwMjTqY" alt="nvim-autopairs" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/neovim/nvim-lspconfig"><img width="100%" src="https://githubcard.com/neovim/nvim-lspconfig.svg?d=JUwMjTqY" alt="nvim-lspconfig" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/kylechui/nvim-surround"><img width="100%" src="https://githubcard.com/kylechui/nvim-surround.svg?d=JUwMjTqY" alt="nvim-surround" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/stevearc/overseer.nvim"><img width="100%" src="https://githubcard.com/stevearc/overseer.nvim.svg?d=JUwMjTqY" alt="overseer.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/b0o/schemastore.nvim"><img width="100%" src="https://githubcard.com/b0o/schemastore.nvim.svg?d=JUwMjTqY" alt="schemastore.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/folke/sidekick.nvim"><img width="100%" src="https://githubcard.com/folke/sidekick.nvim.svg?d=JUwMjTqY" alt="sidekick.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/folke/snacks.nvim"><img width="100%" src="https://githubcard.com/folke/snacks.nvim.svg?d=JUwMjTqY" alt="snacks.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/rachartier/tiny-cmdline.nvim"><img width="100%" src="https://githubcard.com/rachartier/tiny-cmdline.nvim.svg?d=JUwMjTqY" alt="tiny-cmdline.nvim" /></a>
-
 </td>
 <td width="50%" valign="top">
-
 <a target="_blank" href="https://github.com/folke/which-key.nvim"><img width="100%" src="https://githubcard.com/folke/which-key.nvim.svg?d=JUwMjTqY" alt="which-key.nvim" /></a>
-
 </td>
 </tr>
 <tr>
 <td colspan="2" valign="top">
-
 <a target="_blank" href="https://github.com/zuqini/zpack.nvim"><img width="100%" src="https://githubcard.com/zuqini/zpack.nvim.svg?d=JUwMjTqY" alt="zpack.nvim" /></a>
-
 </td>
 </tr>
 </table>
