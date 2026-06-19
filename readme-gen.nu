@@ -18,23 +18,29 @@ def generate_cards [data] {
   let rows = ($cards | chunks 2 | each {|chunk|
     if ($chunk | length) == 2 {
       $'<tr>
-<td width="50%" valign="top" align="center">
+<td width="50%" valign="top">
+
 ($chunk | get 0)
+
 </td>
-<td width="50%" valign="top" align="center">
+<td width="50%" valign="top">
+
 ($chunk | get 1)
+
 </td>
 </tr>'
     } else {
       $'<tr>
-<td colspan="2" valign="top" align="center">
+<td colspan="2" valign="top">
+
 ($chunk | get 0)
+
 </td>
 </tr>'
     }
   } | str join "\n")
   
-  return $'<table cellspacing="0" cellpadding="10">
+  return $'<table>
 ($rows)
 </table>'
 }
