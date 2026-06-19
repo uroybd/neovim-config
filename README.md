@@ -36,41 +36,41 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <tr>
 <td valign="top" width="50%">
 
-<a target="_blank" href="https://github.com/arborist-ts/arborist.nvim"><img src="https://githubcard.com/arborist-ts/arborist.nvim" alt="arborist.nvim" /></a>
-<a target="_blank" href="https://github.com/saghen/blink.cmp"><img src="https://githubcard.com/saghen/blink.cmp" alt="blink.cmp" /></a>
-<a target="_blank" href="https://github.com/barrettruth/canola-collection"><img src="https://githubcard.com/barrettruth/canola-collection" alt="canola-collection" /></a>
-<a target="_blank" href="https://github.com/barrettruth/canola.nvim"><img src="https://githubcard.com/barrettruth/canola.nvim" alt="canola.nvim" /></a>
-<a target="_blank" href="https://github.com/esmuellert/codediff.nvim"><img src="https://githubcard.com/esmuellert/codediff.nvim" alt="codediff.nvim" /></a>
-<a target="_blank" href="https://github.com/stevearc/conform.nvim"><img src="https://githubcard.com/stevearc/conform.nvim" alt="conform.nvim" /></a>
-<a target="_blank" href="https://github.com/zbirenbaum/copilot.lua"><img src="https://githubcard.com/zbirenbaum/copilot.lua" alt="copilot.lua" /></a>
-<a target="_blank" href="https://github.com/Bekaboo/dropbar.nvim"><img src="https://githubcard.com/Bekaboo/dropbar.nvim" alt="dropbar.nvim" /></a>
-<a target="_blank" href="https://github.com/folke/flash.nvim"><img src="https://githubcard.com/folke/flash.nvim" alt="flash.nvim" /></a>
-<a target="_blank" href="https://github.com/rafamadriz/friendly-snippets"><img src="https://githubcard.com/rafamadriz/friendly-snippets" alt="friendly-snippets" /></a>
-<a target="_blank" href="https://github.com/lewis6991/gitsigns.nvim"><img src="https://githubcard.com/lewis6991/gitsigns.nvim" alt="gitsigns.nvim" /></a>
-<a target="_blank" href="https://github.com/MagicDuck/grug-far.nvim"><img src="https://githubcard.com/MagicDuck/grug-far.nvim" alt="grug-far.nvim" /></a>
-<a target="_blank" href="https://github.com/webhooked/kanso.nvim"><img src="https://githubcard.com/webhooked/kanso.nvim" alt="kanso.nvim" /></a>
-<a target="_blank" href="https://github.com/mistweaverco/kulala.nvim"><img src="https://githubcard.com/mistweaverco/kulala.nvim" alt="kulala.nvim" /></a>
-<a target="_blank" href="https://github.com/folke/lazydev.nvim"><img src="https://githubcard.com/folke/lazydev.nvim" alt="lazydev.nvim" /></a>
-<a target="_blank" href="https://github.com/nvim-lualine/lualine.nvim"><img src="https://githubcard.com/nvim-lualine/lualine.nvim" alt="lualine.nvim" /></a>
+<a target="_blank" href="https://github.com/arborist-ts/arborist.nvim"><img src="https://gh-card.dev/arborist-ts/arborist.nvim.svg" alt="arborist.nvim" /></a>
+<a target="_blank" href="https://github.com/saghen/blink.cmp"><img src="https://gh-card.dev/saghen/blink.cmp.svg" alt="blink.cmp" /></a>
+<a target="_blank" href="https://github.com/barrettruth/canola-collection"><img src="https://gh-card.dev/barrettruth/canola-collection.svg" alt="canola-collection" /></a>
+<a target="_blank" href="https://github.com/barrettruth/canola.nvim"><img src="https://gh-card.dev/barrettruth/canola.nvim.svg" alt="canola.nvim" /></a>
+<a target="_blank" href="https://github.com/esmuellert/codediff.nvim"><img src="https://gh-card.dev/esmuellert/codediff.nvim.svg" alt="codediff.nvim" /></a>
+<a target="_blank" href="https://github.com/stevearc/conform.nvim"><img src="https://gh-card.dev/stevearc/conform.nvim.svg" alt="conform.nvim" /></a>
+<a target="_blank" href="https://github.com/zbirenbaum/copilot.lua"><img src="https://gh-card.dev/zbirenbaum/copilot.lua.svg" alt="copilot.lua" /></a>
+<a target="_blank" href="https://github.com/Bekaboo/dropbar.nvim"><img src="https://gh-card.dev/Bekaboo/dropbar.nvim.svg" alt="dropbar.nvim" /></a>
+<a target="_blank" href="https://github.com/folke/flash.nvim"><img src="https://gh-card.dev/folke/flash.nvim.svg" alt="flash.nvim" /></a>
+<a target="_blank" href="https://github.com/rafamadriz/friendly-snippets"><img src="https://gh-card.dev/rafamadriz/friendly-snippets.svg" alt="friendly-snippets" /></a>
+<a target="_blank" href="https://github.com/lewis6991/gitsigns.nvim"><img src="https://gh-card.dev/lewis6991/gitsigns.nvim.svg" alt="gitsigns.nvim" /></a>
+<a target="_blank" href="https://github.com/MagicDuck/grug-far.nvim"><img src="https://gh-card.dev/MagicDuck/grug-far.nvim.svg" alt="grug-far.nvim" /></a>
+<a target="_blank" href="https://github.com/webhooked/kanso.nvim"><img src="https://gh-card.dev/webhooked/kanso.nvim.svg" alt="kanso.nvim" /></a>
+<a target="_blank" href="https://github.com/mistweaverco/kulala.nvim"><img src="https://gh-card.dev/mistweaverco/kulala.nvim.svg" alt="kulala.nvim" /></a>
+<a target="_blank" href="https://github.com/folke/lazydev.nvim"><img src="https://gh-card.dev/folke/lazydev.nvim.svg" alt="lazydev.nvim" /></a>
+<a target="_blank" href="https://github.com/nvim-lualine/lualine.nvim"><img src="https://gh-card.dev/nvim-lualine/lualine.nvim.svg" alt="lualine.nvim" /></a>
 
 </td>
 <td valign="top" width="50%">
 
-<a target="_blank" href="https://github.com/williamboman/mason-lspconfig.nvim"><img src="https://githubcard.com/williamboman/mason-lspconfig.nvim" alt="mason-lspconfig.nvim" /></a>
-<a target="_blank" href="https://github.com/williamboman/mason.nvim"><img src="https://githubcard.com/williamboman/mason.nvim" alt="mason.nvim" /></a>
-<a target="_blank" href="https://github.com/echasnovski/mini.icons"><img src="https://githubcard.com/echasnovski/mini.icons" alt="mini.icons" /></a>
-<a target="_blank" href="https://github.com/mawkler/modicator.nvim"><img src="https://githubcard.com/mawkler/modicator.nvim" alt="modicator.nvim" /></a>
-<a target="_blank" href="https://github.com/neogitorg/neogit"><img src="https://githubcard.com/neogitorg/neogit" alt="neogit" /></a>
-<a target="_blank" href="https://github.com/windwp/nvim-autopairs"><img src="https://githubcard.com/windwp/nvim-autopairs" alt="nvim-autopairs" /></a>
-<a target="_blank" href="https://github.com/neovim/nvim-lspconfig"><img src="https://githubcard.com/neovim/nvim-lspconfig" alt="nvim-lspconfig" /></a>
-<a target="_blank" href="https://github.com/kylechui/nvim-surround"><img src="https://githubcard.com/kylechui/nvim-surround" alt="nvim-surround" /></a>
-<a target="_blank" href="https://github.com/stevearc/overseer.nvim"><img src="https://githubcard.com/stevearc/overseer.nvim" alt="overseer.nvim" /></a>
-<a target="_blank" href="https://github.com/b0o/schemastore.nvim"><img src="https://githubcard.com/b0o/schemastore.nvim" alt="schemastore.nvim" /></a>
-<a target="_blank" href="https://github.com/folke/sidekick.nvim"><img src="https://githubcard.com/folke/sidekick.nvim" alt="sidekick.nvim" /></a>
-<a target="_blank" href="https://github.com/folke/snacks.nvim"><img src="https://githubcard.com/folke/snacks.nvim" alt="snacks.nvim" /></a>
-<a target="_blank" href="https://github.com/rachartier/tiny-cmdline.nvim"><img src="https://githubcard.com/rachartier/tiny-cmdline.nvim" alt="tiny-cmdline.nvim" /></a>
-<a target="_blank" href="https://github.com/folke/which-key.nvim"><img src="https://githubcard.com/folke/which-key.nvim" alt="which-key.nvim" /></a>
-<a target="_blank" href="https://github.com/zuqini/zpack.nvim"><img src="https://githubcard.com/zuqini/zpack.nvim" alt="zpack.nvim" /></a>
+<a target="_blank" href="https://github.com/williamboman/mason-lspconfig.nvim"><img src="https://gh-card.dev/williamboman/mason-lspconfig.nvim.svg" alt="mason-lspconfig.nvim" /></a>
+<a target="_blank" href="https://github.com/williamboman/mason.nvim"><img src="https://gh-card.dev/williamboman/mason.nvim.svg" alt="mason.nvim" /></a>
+<a target="_blank" href="https://github.com/echasnovski/mini.icons"><img src="https://gh-card.dev/echasnovski/mini.icons.svg" alt="mini.icons" /></a>
+<a target="_blank" href="https://github.com/mawkler/modicator.nvim"><img src="https://gh-card.dev/mawkler/modicator.nvim.svg" alt="modicator.nvim" /></a>
+<a target="_blank" href="https://github.com/neogitorg/neogit"><img src="https://gh-card.dev/neogitorg/neogit.svg" alt="neogit" /></a>
+<a target="_blank" href="https://github.com/windwp/nvim-autopairs"><img src="https://gh-card.dev/windwp/nvim-autopairs.svg" alt="nvim-autopairs" /></a>
+<a target="_blank" href="https://github.com/neovim/nvim-lspconfig"><img src="https://gh-card.dev/neovim/nvim-lspconfig.svg" alt="nvim-lspconfig" /></a>
+<a target="_blank" href="https://github.com/kylechui/nvim-surround"><img src="https://gh-card.dev/kylechui/nvim-surround.svg" alt="nvim-surround" /></a>
+<a target="_blank" href="https://github.com/stevearc/overseer.nvim"><img src="https://gh-card.dev/stevearc/overseer.nvim.svg" alt="overseer.nvim" /></a>
+<a target="_blank" href="https://github.com/b0o/schemastore.nvim"><img src="https://gh-card.dev/b0o/schemastore.nvim.svg" alt="schemastore.nvim" /></a>
+<a target="_blank" href="https://github.com/folke/sidekick.nvim"><img src="https://gh-card.dev/folke/sidekick.nvim.svg" alt="sidekick.nvim" /></a>
+<a target="_blank" href="https://github.com/folke/snacks.nvim"><img src="https://gh-card.dev/folke/snacks.nvim.svg" alt="snacks.nvim" /></a>
+<a target="_blank" href="https://github.com/rachartier/tiny-cmdline.nvim"><img src="https://gh-card.dev/rachartier/tiny-cmdline.nvim.svg" alt="tiny-cmdline.nvim" /></a>
+<a target="_blank" href="https://github.com/folke/which-key.nvim"><img src="https://gh-card.dev/folke/which-key.nvim.svg" alt="which-key.nvim" /></a>
+<a target="_blank" href="https://github.com/zuqini/zpack.nvim"><img src="https://gh-card.dev/zuqini/zpack.nvim.svg" alt="zpack.nvim" /></a>
 
 </td>
 </tr>
