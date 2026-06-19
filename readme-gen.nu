@@ -2,7 +2,7 @@
 
 
 def generate_card [spec] {
-  return $'<a target="_blank" href="($spec.value.src)"><img width="400" hspace="20" vspace="10" src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://githubcard.com').svg?d=JUwMjTqY" alt="($spec.key)" /></a>'
+  return $'<a target="_blank" href="($spec.value.src)"><img width="400" src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://githubcard.com').svg?d=JUwMjTqY" alt="($spec.key)" /></a>'
 }
 
 def generate_badges [plugin_count: int] {
