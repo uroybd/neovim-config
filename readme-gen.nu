@@ -14,7 +14,16 @@ def generate_badges [plugin_count: int] {
 }
 
 def generate_cards [data] {
-  return $'<p>($data | each {|kv| generate_card $kv} | str join "")</p>'
+  let cards = ($data | each {|kv| 
+    let card = (generate_card $kv)
+    $'<div style="display: inline-block; width: 48%; min-width: 300px; vertical-align: top; margin-bottom: 10px;">
+($card)
+</div>'
+  } | str join "\n")
+  
+  return $'<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-around;">
+($cards)
+</div>'
 }
 
 
