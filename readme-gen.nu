@@ -2,7 +2,7 @@
 
 
 def generate_card [spec] {
-  return $'<a target="_blank" href="($spec.value.src)"><img width="400" src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://githubcard.com').svg?d=JUwMjTqY" alt="($spec.key)" /></a>'
+  return $'<a target="_blank" href="($spec.value.src)"><img width="400" style="margin: 5px;" src="($spec.value.src | str replace -r '^https:\/\/github\.com' 'https://githubcard.com').svg?d=JUwMjTqY" alt="($spec.key)" /></a>'
 }
 
 def generate_badges [plugin_count: int] {
@@ -14,7 +14,7 @@ def generate_badges [plugin_count: int] {
 }
 
 def generate_cards [data] {
-  return $'<div style="display:flex; gap: 20px;>($data | each {|kv| generate_card $kv} | str join "")</div>'
+  return $'<p>($data | each {|kv| generate_card $kv} | str join "")</p>'
 }
 
 
