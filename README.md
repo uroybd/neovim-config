@@ -1,6 +1,6 @@
 # Neovim Configuration
 
-![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=flat-square) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=flat-square) ![Plugins](https://img.shields.io/badge/Plugins-31-blue?style=flat-square)
+![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-31-blue?style=for-the-badge&logo=neovim)
 
 My neovim config for version >= 0.12
 

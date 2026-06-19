@@ -10,9 +10,9 @@ def generate_cards [data] {
 }
 
 def generate_badges [plugin_count: int] {
-  let package_manager = "![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=flat-square)"
-  let leader_key = "![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=flat-square)"
-  let plugins = $"![Plugins]\(https://img.shields.io/badge/Plugins-($plugin_count)-blue?style=flat-square\)"
+  let package_manager = "![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim)"
+  let leader_key = "![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim)"
+  let plugins = $"![Plugins]\(https://img.shields.io/badge/Plugins-($plugin_count)-blue?style=for-the-badge&logo=neovim\)"
   
   return $"($package_manager) ($leader_key) ($plugins)"
 }
