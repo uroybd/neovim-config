@@ -224,3 +224,57 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.concealcursor = "nv"
 	end,
 })
+
+-- Line num switching
+
+local ln_toggle = vim.api.nvim_create_augroup("LineNumberToggle", { clear = true })
+local ln_toggle_exclude = {
+	"TelescopePrompt",
+	"lazy",
+	"mason",
+	"checkhealth",
+	"help",
+	"Trouble",
+	"fzf",
+	"toggleterm",
+	"startify",
+	"undotree",
+	"dashboard",
+	"snacks_dashboard",
+	"aerial",
+}
+
+local function has_value(tab, val)
+	for _, value in ipairs(tab) do
+		if value == val then
+			return true
+		end
+	end
+	return false
+end
+
+-- Enable relative numbers when entering a window or gaining focus
+vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter" }, {
+	group = ln_toggle,
+	callback = function()
+		if has_value(ln_toggle_exclude, vim.bo.filetype) then
+			return
+		end
+		if vim.opt.number:get() and vim.api.nvim_get_mode().mode ~= "i" then
+			vim.opt.relativenumber = true
+		end
+	end,
+})
+
+-- Disable relative numbers (fall back to absolute) when leaving a window or losing focus
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave" }, {
+	group = ln_toggle,
+	callback = function()
+		if has_value(ln_toggle_exclude, vim.bo.filetype) then
+			return
+		end
+		if vim.opt.number:get() then
+			vim.opt.relativenumber = false
+		end
+	end,
+})
