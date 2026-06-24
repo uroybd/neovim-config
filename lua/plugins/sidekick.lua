@@ -32,11 +32,11 @@ function M.config(_, _)
 			desc = "Sidekick Toggle Copilot",
 		},
 		{
-			"<leader>aa",
+			"<leader>ac",
 			function()
 				require("sidekick.cli").toggle({ name = "claude", focus = true })
 			end,
-			desc = "Sidekick Toggle Copilot",
+			desc = "Sidekick Toggle Claude",
 		},
 		{
 			"<c-.>",
