@@ -9,11 +9,6 @@ function M.config(_, _)
 			enabled = true,
 		},
 		cli = {
-			tools = {
-				kilo = {
-					cmd = { "kilo" },
-				},
-			},
 			mux = {
 				backend = "zellij",
 				enabled = true,
@@ -33,6 +28,13 @@ function M.config(_, _)
 			"<leader>aa",
 			function()
 				require("sidekick.cli").toggle({ name = "copilot", focus = true })
+			end,
+			desc = "Sidekick Toggle Copilot",
+		},
+		{
+			"<leader>aa",
+			function()
+				require("sidekick.cli").toggle({ name = "claude", focus = true })
 			end,
 			desc = "Sidekick Toggle Copilot",
 		},
