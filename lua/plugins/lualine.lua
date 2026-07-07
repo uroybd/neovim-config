@@ -48,10 +48,11 @@ function M.config()
 				"branch",
 				{
 					"diff",
+					colored = true,
 					symbols = {
-						added = " ",
-						modified = " ",
-						removed = " ",
+						added = " ",
+						modified = " ",
+						removed = " ",
 					},
 				},
 				"diagnostics",
