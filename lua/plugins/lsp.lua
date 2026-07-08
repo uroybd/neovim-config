@@ -44,6 +44,7 @@ return {
 				"terraformls",
 				"ts_ls",
 				"yamlls",
+				"taplo",
 			}
 
 			vim.lsp.enable(servers, true)
