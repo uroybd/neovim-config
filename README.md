@@ -1,6 +1,6 @@
 # Neovim Configuration
 
-![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-31-blue?style=for-the-badge&logo=neovim)
+![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-32-blue?style=for-the-badge&logo=neovim)
 
 My neovim config for version `>= 0.12`
 
@@ -52,6 +52,7 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <a target="_blank" src="https://github.com/williamboman/mason-lspconfig.nvim"><img src="https://githubcard.com/williamboman/mason-lspconfig.nvim.svg?d=V24f0SDc" width="45%" alt="mason-lspconfig.nvim" /></a>
 <a target="_blank" src="https://github.com/williamboman/mason.nvim"><img src="https://githubcard.com/williamboman/mason.nvim.svg?d=V24f0SDc" width="45%" alt="mason.nvim" /></a>
 <a target="_blank" src="https://github.com/echasnovski/mini.icons"><img src="https://githubcard.com/echasnovski/mini.icons.svg?d=V24f0SDc" width="45%" alt="mini.icons" /></a>
+<a target="_blank" src="https://github.com/echasnovski/mini.pairs"><img src="https://githubcard.com/echasnovski/mini.pairs.svg?d=V24f0SDc" width="45%" alt="mini.pairs" /></a>
 <a target="_blank" src="https://github.com/mawkler/modicator.nvim"><img src="https://githubcard.com/mawkler/modicator.nvim.svg?d=V24f0SDc" width="45%" alt="modicator.nvim" /></a>
 <a target="_blank" src="https://github.com/neogitorg/neogit"><img src="https://githubcard.com/neogitorg/neogit.svg?d=V24f0SDc" width="45%" alt="neogit" /></a>
 <a target="_blank" src="https://github.com/windwp/nvim-autopairs"><img src="https://githubcard.com/windwp/nvim-autopairs.svg?d=V24f0SDc" width="45%" alt="nvim-autopairs" /></a>

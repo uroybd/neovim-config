@@ -79,6 +79,10 @@
       "src": "https://github.com/echasnovski/mini.icons",
       "version": "'main'"
     },
+    "mini.pairs": {
+      "rev": "b1fd9df3bb4a41c8f45778a3859ee80ef6b367e3",
+      "src": "https://github.com/echasnovski/mini.pairs"
+    },
     "modicator.nvim": {
       "rev": "7f867b4980946f115f4ccb922637d70d89a59cb4",
       "src": "https://github.com/mawkler/modicator.nvim"
