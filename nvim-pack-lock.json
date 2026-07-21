@@ -55,7 +55,7 @@
       "src": "https://github.com/webhooked/kanso.nvim"
     },
     "kulala.nvim": {
-      "rev": "a9e17ae0236e886371671a7a9f01f070201a9cc1",
+      "rev": "6ca180be842e4470c51226e6720b2b2b68275d58",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lazydev.nvim": {
@@ -67,7 +67,7 @@
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "916c29ee62699457a3ec57962781c67c6c6772f2",
+      "rev": "7adc933dabcc7c86ae6b07aff7ee68eac398491f",
       "src": "https://github.com/williamboman/mason-lspconfig.nvim"
     },
     "mason.nvim": {
@@ -96,7 +96,7 @@
       "src": "https://github.com/windwp/nvim-autopairs"
     },
     "nvim-lspconfig": {
-      "rev": "e7ca2c95ba316a8b846d3f3546d407908c5c4ccb",
+      "rev": "7f87dbb4707f54117e98ab8f15d6a2975b3f13f0",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-surround": {
@@ -108,7 +108,7 @@
       "src": "https://github.com/stevearc/overseer.nvim"
     },
     "schemastore.nvim": {
-      "rev": "0df41ab13b54151fcb6ab023cc2a761482070f76",
+      "rev": "e520902f405da5f5ad392d32babad5b5dd5ffa44",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "sidekick.nvim": {
