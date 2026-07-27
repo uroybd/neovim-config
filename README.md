@@ -1,6 +1,6 @@
 # Neovim Configuration
 
-![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-32-blue?style=for-the-badge&logo=neovim)
+![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-34-blue?style=for-the-badge&logo=neovim)
 
 My neovim config for version `>= 0.12`
 
@@ -34,6 +34,7 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 
 <p align="center">
 <a target="_blank" src="https://github.com/arborist-ts/arborist.nvim"><img src="https://githubcard.com/arborist-ts/arborist.nvim.svg?d=V24f0SDc" width="45%" alt="arborist.nvim" /></a>
+<a target="_blank" src="https://github.com/lewis6991/async.nvim"><img src="https://githubcard.com/lewis6991/async.nvim.svg?d=V24f0SDc" width="45%" alt="async.nvim" /></a>
 <a target="_blank" src="https://github.com/saghen/blink.cmp"><img src="https://githubcard.com/saghen/blink.cmp.svg?d=V24f0SDc" width="45%" alt="blink.cmp" /></a>
 <a target="_blank" src="https://github.com/barrettruth/canola-collection"><img src="https://githubcard.com/barrettruth/canola-collection.svg?d=V24f0SDc" width="45%" alt="canola-collection" /></a>
 <a target="_blank" src="https://github.com/barrettruth/canola.nvim"><img src="https://githubcard.com/barrettruth/canola.nvim.svg?d=V24f0SDc" width="45%" alt="canola.nvim" /></a>
@@ -43,6 +44,7 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <a target="_blank" src="https://github.com/Bekaboo/dropbar.nvim"><img src="https://githubcard.com/Bekaboo/dropbar.nvim.svg?d=V24f0SDc" width="45%" alt="dropbar.nvim" /></a>
 <a target="_blank" src="https://github.com/folke/flash.nvim"><img src="https://githubcard.com/folke/flash.nvim.svg?d=V24f0SDc" width="45%" alt="flash.nvim" /></a>
 <a target="_blank" src="https://github.com/rafamadriz/friendly-snippets"><img src="https://githubcard.com/rafamadriz/friendly-snippets.svg?d=V24f0SDc" width="45%" alt="friendly-snippets" /></a>
+<a target="_blank" src="https://github.com/daliusd/ghlite.nvim"><img src="https://githubcard.com/daliusd/ghlite.nvim.svg?d=V24f0SDc" width="45%" alt="ghlite.nvim" /></a>
 <a target="_blank" src="https://github.com/lewis6991/gitsigns.nvim"><img src="https://githubcard.com/lewis6991/gitsigns.nvim.svg?d=V24f0SDc" width="45%" alt="gitsigns.nvim" /></a>
 <a target="_blank" src="https://github.com/MagicDuck/grug-far.nvim"><img src="https://githubcard.com/MagicDuck/grug-far.nvim.svg?d=V24f0SDc" width="45%" alt="grug-far.nvim" /></a>
 <a target="_blank" src="https://github.com/webhooked/kanso.nvim"><img src="https://githubcard.com/webhooked/kanso.nvim.svg?d=V24f0SDc" width="45%" alt="kanso.nvim" /></a>
