@@ -23,7 +23,7 @@
       "version": "'canola'"
     },
     "codediff.nvim": {
-      "rev": "7608f3b436ce1f84a4888f75e53079caa981a2e9",
+      "rev": "d3eb933df1de9e246186b33f61e40eb7752a92b2",
       "src": "https://github.com/esmuellert/codediff.nvim"
     },
     "conform.nvim": {
@@ -47,15 +47,16 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "ghlite.nvim": {
-      "rev": "dc3af8cb7304dfe6959ede75a0bfc63a52cf704f",
-      "src": "https://github.com/daliusd/ghlite.nvim"
+      "rev": "4b5b9b079df04bd68c69482fac80ac7af1a39a3b",
+      "src": "https://github.com/daliusd/ghlite.nvim",
+      "version": "'4b5b9b079df04bd68c69482fac80ac7af1a39a3b'"
     },
     "gitsigns.nvim": {
       "rev": "31d6fb2d618bca1482b9f274751ead5f03461408",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "grug-far.nvim": {
-      "rev": "1cc080f55706b38aabfa97d40acb6adf59ac4a5a",
+      "rev": "6e05398cf6cad05b3fb46569db96b1ccfcbbd402",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
     "kanso.nvim": {
@@ -63,7 +64,7 @@
       "src": "https://github.com/webhooked/kanso.nvim"
     },
     "kulala.nvim": {
-      "rev": "6ca180be842e4470c51226e6720b2b2b68275d58",
+      "rev": "e4e8615dc07d9423f3dd52ad5af962db09d26a52",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lazydev.nvim": {
@@ -96,7 +97,7 @@
       "src": "https://github.com/mawkler/modicator.nvim"
     },
     "neogit": {
-      "rev": "f8674ec894315c02449b61c9de9a116c5aafeb90",
+      "rev": "37e0f22a2345bad1bffe01b31970885882f46275",
       "src": "https://github.com/neogitorg/neogit"
     },
     "nvim-autopairs": {
@@ -116,7 +117,7 @@
       "src": "https://github.com/stevearc/overseer.nvim"
     },
     "schemastore.nvim": {
-      "rev": "e520902f405da5f5ad392d32babad5b5dd5ffa44",
+      "rev": "19e40cef03a380bfb578793a08222826118664dd",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "sidekick.nvim": {
