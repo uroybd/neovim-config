@@ -10,15 +10,15 @@ require("user.keymaps")
 require("user.autocmds")
 
 -- Bootstrap zpack.nvim
-vim.pack.add({ 'https://github.com/zuqini/zpack.nvim' })
+vim.pack.add({ "https://github.com/zuqini/zpack.nvim" })
 
 -- Setup zpack - automatically imports from lua/plugins/
-require('zpack').setup({
-  defaults = {
-    confirm = true,
-  },
-  performance = {
-    vim_loader = true,
-  },
-  cmd_prefix = 'Z',
+require("zpack").setup({
+	defaults = {
+		confirm = true,
+	},
+	performance = {
+		vim_loader = true,
+	},
+	cmd_prefix = "Z",
 })
