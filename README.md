@@ -1,6 +1,6 @@
 # Neovim Configuration
 
-![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-32-blue?style=for-the-badge&logo=neovim)
+![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-34-blue?style=for-the-badge&logo=neovim)
 
 My neovim config for version `>= 0.12`
 
@@ -34,6 +34,7 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 
 <p align="center">
 <a target="_blank" src="https://github.com/arborist-ts/arborist.nvim"><img src="https://githubcard.com/arborist-ts/arborist.nvim.svg?d=V24f0SDc" width="45%" alt="arborist.nvim" /></a>
+<a target="_blank" src="https://github.com/lewis6991/async.nvim"><img src="https://githubcard.com/lewis6991/async.nvim.svg?d=V24f0SDc" width="45%" alt="async.nvim" /></a>
 <a target="_blank" src="https://github.com/saghen/blink.cmp"><img src="https://githubcard.com/saghen/blink.cmp.svg?d=V24f0SDc" width="45%" alt="blink.cmp" /></a>
 <a target="_blank" src="https://github.com/barrettruth/canola-collection"><img src="https://githubcard.com/barrettruth/canola-collection.svg?d=V24f0SDc" width="45%" alt="canola-collection" /></a>
 <a target="_blank" src="https://github.com/barrettruth/canola.nvim"><img src="https://githubcard.com/barrettruth/canola.nvim.svg?d=V24f0SDc" width="45%" alt="canola.nvim" /></a>
@@ -56,6 +57,7 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <a target="_blank" src="https://github.com/echasnovski/mini.pairs"><img src="https://githubcard.com/echasnovski/mini.pairs.svg?d=V24f0SDc" width="45%" alt="mini.pairs" /></a>
 <a target="_blank" src="https://github.com/mawkler/modicator.nvim"><img src="https://githubcard.com/mawkler/modicator.nvim.svg?d=V24f0SDc" width="45%" alt="modicator.nvim" /></a>
 <a target="_blank" src="https://github.com/neogitorg/neogit"><img src="https://githubcard.com/neogitorg/neogit.svg?d=V24f0SDc" width="45%" alt="neogit" /></a>
+<a target="_blank" src="https://github.com/nacro90/numb.nvim"><img src="https://githubcard.com/nacro90/numb.nvim.svg?d=V24f0SDc" width="45%" alt="numb.nvim" /></a>
 <a target="_blank" src="https://github.com/neovim/nvim-lspconfig"><img src="https://githubcard.com/neovim/nvim-lspconfig.svg?d=V24f0SDc" width="45%" alt="nvim-lspconfig" /></a>
 <a target="_blank" src="https://github.com/kylechui/nvim-surround"><img src="https://githubcard.com/kylechui/nvim-surround.svg?d=V24f0SDc" width="45%" alt="nvim-surround" /></a>
 <a target="_blank" src="https://github.com/stevearc/overseer.nvim"><img src="https://githubcard.com/stevearc/overseer.nvim.svg?d=V24f0SDc" width="45%" alt="overseer.nvim" /></a>

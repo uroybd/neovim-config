@@ -1,8 +1,7 @@
 local M = {
 	"daliusd/ghlite.nvim",
-	commit = "4b5b9b079df04bd68c69482fac80ac7af1a39a3b",
 	dependencies = {
-		-- "lewis6991/async.nvim",
+		"lewis6991/async.nvim",
 		"esmuellert/codediff.nvim",
 	},
 	keys = {
