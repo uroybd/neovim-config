@@ -14,7 +14,7 @@ local function sync_theme_on_focus()
 
 		if vim.o.background ~= system_mode then
 			vim.o.background = system_mode
-			pcall(vim.cmd, "colorscheme " .. (vim.g.colors_name or "kanso"))
+			pcall(vim.cmd, "colorscheme " .. (vim.g.colors_name or "rose-pine"))
 		end
 	end
 end

@@ -99,6 +99,10 @@
       "rev": "37e0f22a2345bad1bffe01b31970885882f46275",
       "src": "https://github.com/neogitorg/neogit"
     },
+    "neovim": {
+      "rev": "ff483051a47e27d84bdef47703538df1ed9f4a47",
+      "src": "https://github.com/rose-pine/neovim"
+    },
     "numb.nvim": {
       "rev": "36260c446465b1303b0b1922c722904791bdb03f",
       "src": "https://github.com/nacro90/numb.nvim"
@@ -114,6 +118,10 @@
     "overseer.nvim": {
       "rev": "a93d9f6d6defdac4bcd6d2c8ba988650e42e0a0e",
       "src": "https://github.com/stevearc/overseer.nvim"
+    },
+    "rose-pine": {
+      "rev": "ff483051a47e27d84bdef47703538df1ed9f4a47",
+      "src": "https://github.com/rose-pine/neovim"
     },
     "schemastore.nvim": {
       "rev": "885ecf4fa0ffcd20d052b14701540a451898fb34",
