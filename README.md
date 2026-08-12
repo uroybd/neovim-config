@@ -1,6 +1,6 @@
 # Neovim Configuration
 
-![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-36-blue?style=for-the-badge&logo=neovim)
+![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-35-blue?style=for-the-badge&logo=neovim)
 
 My neovim config for version `>= 0.12`
 
@@ -47,7 +47,6 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <a target="_blank" src="https://github.com/daliusd/ghlite.nvim"><img src="https://githubcard.com/daliusd/ghlite.nvim.svg?d=V24f0SDc" width="45%" alt="ghlite.nvim" /></a>
 <a target="_blank" src="https://github.com/lewis6991/gitsigns.nvim"><img src="https://githubcard.com/lewis6991/gitsigns.nvim.svg?d=V24f0SDc" width="45%" alt="gitsigns.nvim" /></a>
 <a target="_blank" src="https://github.com/MagicDuck/grug-far.nvim"><img src="https://githubcard.com/MagicDuck/grug-far.nvim.svg?d=V24f0SDc" width="45%" alt="grug-far.nvim" /></a>
-<a target="_blank" src="https://github.com/webhooked/kanso.nvim"><img src="https://githubcard.com/webhooked/kanso.nvim.svg?d=V24f0SDc" width="45%" alt="kanso.nvim" /></a>
 <a target="_blank" src="https://github.com/mistweaverco/kulala.nvim"><img src="https://githubcard.com/mistweaverco/kulala.nvim.svg?d=V24f0SDc" width="45%" alt="kulala.nvim" /></a>
 <a target="_blank" src="https://github.com/folke/lazydev.nvim"><img src="https://githubcard.com/folke/lazydev.nvim.svg?d=V24f0SDc" width="45%" alt="lazydev.nvim" /></a>
 <a target="_blank" src="https://github.com/nvim-lualine/lualine.nvim"><img src="https://githubcard.com/nvim-lualine/lualine.nvim.svg?d=V24f0SDc" width="45%" alt="lualine.nvim" /></a>
