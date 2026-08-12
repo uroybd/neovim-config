@@ -51,9 +51,9 @@ function M.config()
 			-- linking a known Diagnostic* group when the palette color isn't available.
 			local function badge(color, fallback)
 				if color then
-					return { bg = color, fg = colors.theme.ui.bg, bold = true }
+					return { bg = color, fg = colors.theme.ui.bg, bold = true, italic = false }
 				end
-				return { link = fallback, bold = true }
+				return { link = fallback }
 			end
 
 			return {
