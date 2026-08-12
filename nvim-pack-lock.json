@@ -58,6 +58,10 @@
       "rev": "6e05398cf6cad05b3fb46569db96b1ccfcbbd402",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
+    "kanso.nvim": {
+      "rev": "1afbbb449aa0254823dbe1932e3cbb51886ff9fe",
+      "src": "https://github.com/webhooked/kanso.nvim"
+    },
     "kulala.nvim": {
       "rev": "b1c1cd9430d1f506e9b7add09cc2f2aac067565f",
       "src": "https://github.com/mistweaverco/kulala.nvim"
@@ -95,16 +99,12 @@
       "rev": "37e0f22a2345bad1bffe01b31970885882f46275",
       "src": "https://github.com/neogitorg/neogit"
     },
-    "neovim": {
-      "rev": "ff483051a47e27d84bdef47703538df1ed9f4a47",
-      "src": "https://github.com/rose-pine/neovim"
-    },
     "numb.nvim": {
       "rev": "36260c446465b1303b0b1922c722904791bdb03f",
       "src": "https://github.com/nacro90/numb.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "4267d26e60323a45e18f8e7a63a964cc8f53ca4e",
+      "rev": "d2011e1dd0c27569c551f16b688d86029ae015c9",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-surround": {
@@ -114,10 +114,6 @@
     "overseer.nvim": {
       "rev": "a93d9f6d6defdac4bcd6d2c8ba988650e42e0a0e",
       "src": "https://github.com/stevearc/overseer.nvim"
-    },
-    "rose-pine": {
-      "rev": "ff483051a47e27d84bdef47703538df1ed9f4a47",
-      "src": "https://github.com/rose-pine/neovim"
     },
     "schemastore.nvim": {
       "rev": "c8170f9628265f5a01510182703bab9125ef15d8",

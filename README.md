@@ -1,6 +1,6 @@
 # Neovim Configuration
 
-![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-35-blue?style=for-the-badge&logo=neovim)
+![Package Manager](https://img.shields.io/badge/Package_Manager-zpack.nvim-blue?style=for-the-badge&logo=neovim) ![Leader Key](https://img.shields.io/badge/Leader_Key-Space-blue?style=for-the-badge&logo=neovim) ![Plugins](https://img.shields.io/badge/Plugins-34-blue?style=for-the-badge&logo=neovim)
 
 My neovim config for version `>= 0.12`
 
@@ -47,6 +47,7 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <a target="_blank" src="https://github.com/daliusd/ghlite.nvim"><img src="https://githubcard.com/daliusd/ghlite.nvim.svg?d=V24f0SDc" width="45%" alt="ghlite.nvim" /></a>
 <a target="_blank" src="https://github.com/lewis6991/gitsigns.nvim"><img src="https://githubcard.com/lewis6991/gitsigns.nvim.svg?d=V24f0SDc" width="45%" alt="gitsigns.nvim" /></a>
 <a target="_blank" src="https://github.com/MagicDuck/grug-far.nvim"><img src="https://githubcard.com/MagicDuck/grug-far.nvim.svg?d=V24f0SDc" width="45%" alt="grug-far.nvim" /></a>
+<a target="_blank" src="https://github.com/webhooked/kanso.nvim"><img src="https://githubcard.com/webhooked/kanso.nvim.svg?d=V24f0SDc" width="45%" alt="kanso.nvim" /></a>
 <a target="_blank" src="https://github.com/mistweaverco/kulala.nvim"><img src="https://githubcard.com/mistweaverco/kulala.nvim.svg?d=V24f0SDc" width="45%" alt="kulala.nvim" /></a>
 <a target="_blank" src="https://github.com/folke/lazydev.nvim"><img src="https://githubcard.com/folke/lazydev.nvim.svg?d=V24f0SDc" width="45%" alt="lazydev.nvim" /></a>
 <a target="_blank" src="https://github.com/nvim-lualine/lualine.nvim"><img src="https://githubcard.com/nvim-lualine/lualine.nvim.svg?d=V24f0SDc" width="45%" alt="lualine.nvim" /></a>
@@ -56,12 +57,10 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <a target="_blank" src="https://github.com/echasnovski/mini.pairs"><img src="https://githubcard.com/echasnovski/mini.pairs.svg?d=V24f0SDc" width="45%" alt="mini.pairs" /></a>
 <a target="_blank" src="https://github.com/mawkler/modicator.nvim"><img src="https://githubcard.com/mawkler/modicator.nvim.svg?d=V24f0SDc" width="45%" alt="modicator.nvim" /></a>
 <a target="_blank" src="https://github.com/neogitorg/neogit"><img src="https://githubcard.com/neogitorg/neogit.svg?d=V24f0SDc" width="45%" alt="neogit" /></a>
-<a target="_blank" src="https://github.com/rose-pine/neovim"><img src="https://githubcard.com/rose-pine/neovim.svg?d=V24f0SDc" width="45%" alt="neovim" /></a>
 <a target="_blank" src="https://github.com/nacro90/numb.nvim"><img src="https://githubcard.com/nacro90/numb.nvim.svg?d=V24f0SDc" width="45%" alt="numb.nvim" /></a>
 <a target="_blank" src="https://github.com/neovim/nvim-lspconfig"><img src="https://githubcard.com/neovim/nvim-lspconfig.svg?d=V24f0SDc" width="45%" alt="nvim-lspconfig" /></a>
 <a target="_blank" src="https://github.com/kylechui/nvim-surround"><img src="https://githubcard.com/kylechui/nvim-surround.svg?d=V24f0SDc" width="45%" alt="nvim-surround" /></a>
 <a target="_blank" src="https://github.com/stevearc/overseer.nvim"><img src="https://githubcard.com/stevearc/overseer.nvim.svg?d=V24f0SDc" width="45%" alt="overseer.nvim" /></a>
-<a target="_blank" src="https://github.com/rose-pine/neovim"><img src="https://githubcard.com/rose-pine/neovim.svg?d=V24f0SDc" width="45%" alt="rose-pine" /></a>
 <a target="_blank" src="https://github.com/b0o/schemastore.nvim"><img src="https://githubcard.com/b0o/schemastore.nvim.svg?d=V24f0SDc" width="45%" alt="schemastore.nvim" /></a>
 <a target="_blank" src="https://github.com/folke/sidekick.nvim"><img src="https://githubcard.com/folke/sidekick.nvim.svg?d=V24f0SDc" width="45%" alt="sidekick.nvim" /></a>
 <a target="_blank" src="https://github.com/folke/snacks.nvim"><img src="https://githubcard.com/folke/snacks.nvim.svg?d=V24f0SDc" width="45%" alt="snacks.nvim" /></a>
