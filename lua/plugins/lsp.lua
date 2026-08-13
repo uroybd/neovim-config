@@ -30,7 +30,6 @@ return {
 				"eslint",
 				"gopls",
 				"graphql",
-				"harper_ls",
 				"html",
 				"jsonls",
 				"lua_ls",
