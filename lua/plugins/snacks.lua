@@ -335,14 +335,6 @@ function M.config(_, opts)
 			desc = "Help",
 		},
 		{
-			"<leader>m",
-			function()
-				Snacks.picker.marks()
-			end,
-			desc = "Bookmarks",
-			mode = { "n", "v" },
-		},
-		{
 			"<leader>qq",
 			function()
 				Snacks.picker.qflist()
