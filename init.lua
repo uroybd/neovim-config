@@ -8,6 +8,7 @@ vim.g.maplocalleader = "\\"
 require("user.options")
 require("user.keymaps")
 require("user.autocmds")
+require("user.inyourface")
 
 -- Bootstrap zpack.nvim
 vim.pack.add({ "https://github.com/zuqini/zpack.nvim" })

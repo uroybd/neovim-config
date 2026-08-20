@@ -17,6 +17,9 @@ local M = {
 		bigfile = {
 			enabled = true,
 		},
+		image = {
+			enabled = true,
+		},
 		input = {
 			enabled = true,
 		},
