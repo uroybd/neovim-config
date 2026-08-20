@@ -6,6 +6,8 @@ local FACES = { "doom0.png", "doom1.png", "doom2.png", "doom3.png" }
 
 local FACE_WIDTH = 18
 local FACE_HEIGHT = 9
+-- Lift the face up a bit so it doesn't sit on top of / get clipped by the statusbar.
+local BOTTOM_OFFSET = 1
 -- Don't draw the face in a window too small to comfortably fit it.
 local MIN_WIN_WIDTH = 60
 local MIN_WIN_HEIGHT = 20
@@ -68,7 +70,7 @@ local function show_face(host_win, level)
 		win = host_win,
 		width = FACE_WIDTH,
 		height = FACE_HEIGHT,
-		row = vim.api.nvim_win_get_height(host_win),
+		row = vim.api.nvim_win_get_height(host_win) - BOTTOM_OFFSET,
 		col = vim.api.nvim_win_get_width(host_win),
 		anchor = "SE",
 		border = "rounded",
