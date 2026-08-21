@@ -96,7 +96,7 @@
       "src": "https://github.com/mawkler/modicator.nvim"
     },
     "neogit": {
-      "rev": "37e0f22a2345bad1bffe01b31970885882f46275",
+      "rev": "e43a7e83158fc98cd41b732dcb5e1721abb9f164",
       "src": "https://github.com/neogitorg/neogit"
     },
     "numb.nvim": {
@@ -116,7 +116,7 @@
       "src": "https://github.com/stevearc/overseer.nvim"
     },
     "schemastore.nvim": {
-      "rev": "cef8d093b63c9be7e8b49f7dc341e8447fc4c300",
+      "rev": "73e89eb3e536a4dd8f991c963bd37189520c9919",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "sidekick.nvim": {
@@ -136,7 +136,7 @@
       "src": "https://github.com/folke/which-key.nvim"
     },
     "zpack.nvim": {
-      "rev": "f1af873a894a3c1a433daad110500603387fa721",
+      "rev": "b9146b11e0485eb60e0bd76d70c6bb273d635915",
       "src": "https://github.com/zuqini/zpack.nvim"
     }
   }

@@ -19,6 +19,11 @@ local M = {
 		},
 		image = {
 			enabled = true,
+			force = true,
+			doc = {
+				inline = true,
+				math = true,
+			},
 		},
 		input = {
 			enabled = true,
