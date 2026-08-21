@@ -1,26 +1,25 @@
 -- Doom "In Your Face" diagnostics nag: a small floating face pinned to the
--- bottom-right of the current window, getting angrier as workspace errors pile up.
+-- top-right of the editor, getting angrier as workspace errors pile up.
 
 local IMAGE_DIR = vim.fn.stdpath("config") .. "/assets/images/inyourface/"
 local FACES = { "doom0.png", "doom1.png", "doom2.png", "doom3.png" }
 
 local FACE_WIDTH = 18
 local FACE_HEIGHT = 9
--- Lift the face up a bit so it doesn't sit on top of / get clipped by the statusbar.
-local BOTTOM_OFFSET = 1
--- Don't draw the face in a window too small to comfortably fit it.
-local MIN_WIN_WIDTH = 60
-local MIN_WIN_HEIGHT = 20
+-- Drop the face down a bit so it doesn't sit on top of / get clipped by the tabline.
+local TOP_OFFSET = 1
+-- Don't draw the face if the editor is too small to comfortably fit it.
+local MIN_COLUMNS = 60
+local MIN_LINES = 20
 
 local state = {
 	enabled = false,
-	host_win = nil,
 	face_win = nil,
 	placement = nil,
 	visible = false,
 	level = nil,
-	last_width = nil,
-	last_height = nil,
+	last_columns = nil,
+	last_lines = nil,
 }
 
 local function compute_level()
@@ -38,11 +37,8 @@ local function compute_level()
 	end
 end
 
-local function fits(win)
-	if not win or not vim.api.nvim_win_is_valid(win) then
-		return false
-	end
-	return vim.api.nvim_win_get_width(win) >= MIN_WIN_WIDTH and vim.api.nvim_win_get_height(win) >= MIN_WIN_HEIGHT
+local function fits()
+	return vim.o.columns >= MIN_COLUMNS and vim.o.lines >= MIN_LINES
 end
 
 local function close_face()
@@ -62,17 +58,16 @@ local function close_face()
 	state.level = nil
 end
 
-local function show_face(host_win, level)
+local function show_face(level)
 	close_face()
 
 	local win = Snacks.win({
-		relative = "win",
-		win = host_win,
+		relative = "editor",
 		width = FACE_WIDTH,
 		height = FACE_HEIGHT,
-		row = vim.api.nvim_win_get_height(host_win) - BOTTOM_OFFSET,
-		col = vim.api.nvim_win_get_width(host_win),
-		anchor = "SE",
+		row = TOP_OFFSET,
+		col = vim.o.columns,
+		anchor = "NE",
 		border = "rounded",
 		focusable = false,
 		backdrop = false,
@@ -98,14 +93,7 @@ local function refresh()
 		return
 	end
 
-	if not state.host_win or not vim.api.nvim_win_is_valid(state.host_win) then
-		close_face()
-		state.enabled = false
-		state.host_win = nil
-		return
-	end
-
-	if not fits(state.host_win) then
+	if not fits() then
 		if state.visible then
 			close_face()
 		end
@@ -113,27 +101,24 @@ local function refresh()
 	end
 
 	local level = compute_level()
-	local width = vim.api.nvim_win_get_width(state.host_win)
-	local height = vim.api.nvim_win_get_height(state.host_win)
-	local size_changed = width ~= state.last_width or height ~= state.last_height
+	local columns, lines = vim.o.columns, vim.o.lines
+	local size_changed = columns ~= state.last_columns or lines ~= state.last_lines
 
 	if not state.visible or state.level ~= level or size_changed then
-		show_face(state.host_win, level)
-		state.last_width, state.last_height = width, height
+		show_face(level)
+		state.last_columns, state.last_lines = columns, lines
 	end
 end
 
 local function toggle()
 	if state.enabled then
 		state.enabled = false
-		state.host_win = nil
 		close_face()
 		return
 	end
 
 	state.enabled = true
-	state.host_win = vim.api.nvim_get_current_win()
-	state.last_width, state.last_height = nil, nil
+	state.last_columns, state.last_lines = nil, nil
 	refresh()
 end
 
@@ -144,20 +129,9 @@ vim.api.nvim_create_autocmd("DiagnosticChanged", {
 	callback = refresh,
 })
 
-vim.api.nvim_create_autocmd({ "VimResized", "WinResized" }, {
+vim.api.nvim_create_autocmd("VimResized", {
 	group = group,
 	callback = refresh,
-})
-
-vim.api.nvim_create_autocmd("WinClosed", {
-	group = group,
-	callback = function(args)
-		if state.host_win and tonumber(args.match) == state.host_win then
-			state.enabled = false
-			state.host_win = nil
-			close_face()
-		end
-	end,
 })
 
 vim.keymap.set("n", "<leader>uf", toggle, { desc = "Toggle In-Your-Face", noremap = true, silent = true })
