@@ -123,6 +123,9 @@ local M = {
 		statuscolumn = {
 			enabled = true,
 		},
+		scroll = {
+			enabled = true,
+		},
 		words = {
 			enabled = true,
 		},
