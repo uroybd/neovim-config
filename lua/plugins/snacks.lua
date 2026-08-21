@@ -151,8 +151,29 @@ local M = {
 					height = 7,
 					padding = 1,
 				},
-				{ icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
-				{ icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+				{
+					section = "terminal",
+					cmd = "nu -e 'jira me issues top'",
+					title = "Jira Issues",
+					height = 5,
+					padding = 1,
+					icon = "",
+				},
+				{
+					icon = "",
+					title = "Projects",
+					section = "projects",
+					indent = 2,
+					padding = 1,
+					action = function(dir)
+						-- Create new tab in current Zellij session with the specified directory and launch nvim
+						local cmd = string.format("zellij action new-tab --cwd %s -- nvim", vim.fn.shellescape(dir))
+
+						-- Fire and forget the shell command asynchronously
+						vim.fn.jobstart(cmd, { detach = true })
+					end,
+				},
+				{ icon = "", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
 			},
 		},
 	},
