@@ -1,11 +1,20 @@
 local M = {
-	"kylechui/nvim-surround",
+	"nvim-mini/mini.surround",
 	event = "VeryLazy",
 	opts = {},
 }
 
-function M.config(_, opts)
-	require("nvim-surround").setup(opts)
+function M.config()
+	require("mini.surround").setup({
+		mappings = {
+			add = "gsa",
+			delete = "gsd",
+			find = "gsf",
+			find_left = "gsF",
+			highlight = "gsh",
+			replace = "gsr",
+		},
+	})
 end
 
 return M

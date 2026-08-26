@@ -55,11 +55,11 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <a src="https://github.com/williamboman/mason.nvim"><img src="https://githubcard.com/williamboman/mason.nvim.svg?d=V24f0SDc" width="45%" alt="mason.nvim" /></a>
 <a src="https://github.com/echasnovski/mini.icons"><img src="https://githubcard.com/echasnovski/mini.icons.svg?d=V24f0SDc" width="45%" alt="mini.icons" /></a>
 <a src="https://github.com/echasnovski/mini.pairs"><img src="https://githubcard.com/echasnovski/mini.pairs.svg?d=V24f0SDc" width="45%" alt="mini.pairs" /></a>
+<a src="https://github.com/nvim-mini/mini.surround"><img src="https://githubcard.com/nvim-mini/mini.surround.svg?d=V24f0SDc" width="45%" alt="mini.surround" /></a>
 <a src="https://github.com/mawkler/modicator.nvim"><img src="https://githubcard.com/mawkler/modicator.nvim.svg?d=V24f0SDc" width="45%" alt="modicator.nvim" /></a>
 <a src="https://github.com/neogitorg/neogit"><img src="https://githubcard.com/neogitorg/neogit.svg?d=V24f0SDc" width="45%" alt="neogit" /></a>
 <a src="https://github.com/nacro90/numb.nvim"><img src="https://githubcard.com/nacro90/numb.nvim.svg?d=V24f0SDc" width="45%" alt="numb.nvim" /></a>
 <a src="https://github.com/neovim/nvim-lspconfig"><img src="https://githubcard.com/neovim/nvim-lspconfig.svg?d=V24f0SDc" width="45%" alt="nvim-lspconfig" /></a>
-<a src="https://github.com/kylechui/nvim-surround"><img src="https://githubcard.com/kylechui/nvim-surround.svg?d=V24f0SDc" width="45%" alt="nvim-surround" /></a>
 <a src="https://github.com/stevearc/overseer.nvim"><img src="https://githubcard.com/stevearc/overseer.nvim.svg?d=V24f0SDc" width="45%" alt="overseer.nvim" /></a>
 <a src="https://github.com/b0o/schemastore.nvim"><img src="https://githubcard.com/b0o/schemastore.nvim.svg?d=V24f0SDc" width="45%" alt="schemastore.nvim" /></a>
 <a src="https://github.com/folke/sidekick.nvim"><img src="https://githubcard.com/folke/sidekick.nvim.svg?d=V24f0SDc" width="45%" alt="sidekick.nvim" /></a>
