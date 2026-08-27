@@ -182,6 +182,26 @@ local M = {
 function M.config(_, opts)
 	require("snacks").setup(opts)
 
+	-- ghlite.nvim runs vim.ui.select through async.nvim, which treats any value
+	-- the select fn returns as an owned closable and tries to close it (passing a
+	-- callback it waits on) before resuming the task. snacks' vim.ui.select
+	-- returns its picker object, whose :close() ignores that callback, so the
+	-- async task hangs forever and GHLitePRSelect / GHLitePRCheckout silently do
+	-- nothing. Wrap snacks' handler so it returns nothing.
+	do
+		local ok, picker = pcall(require, "snacks.picker")
+		local function wrap_ui_select()
+			if ok and vim.ui.select == picker.select then
+				local snacks_ui_select = vim.ui.select
+				vim.ui.select = function(items, select_opts, on_choice)
+					snacks_ui_select(items, select_opts, on_choice)
+				end
+			end
+		end
+		wrap_ui_select() -- snacks already ran its UIEnter hook (vim_did_enter)
+		vim.api.nvim_create_autocmd("UIEnter", { once = true, callback = vim.schedule_wrap(wrap_ui_select) })
+	end
+
 	-- Peek definition in a floating window
 	local function peek_definition()
 		local params = vim.lsp.util.make_position_params()
