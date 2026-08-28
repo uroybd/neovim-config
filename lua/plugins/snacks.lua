@@ -153,11 +153,20 @@ local M = {
 				},
 				{
 					section = "terminal",
-					cmd = "nu -e 'jira me issues top'",
-					title = "Jira Issues",
+					cmd = "nu --interactive --login -c 'tuxedo queue'",
+					title = "Tasks",
 					height = 5,
 					padding = 1,
 					icon = "",
+					ttl = 60, -- refresh every 60 seconds
+				},
+				{
+					section = "terminal",
+					cmd = "nu --interactive --login -c 'jira me issues top'",
+					title = "Jira Issues",
+					height = 5,
+					padding = 1,
+					icon = "",
 				},
 				{
 					icon = "",
