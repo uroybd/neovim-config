@@ -3,9 +3,7 @@ local M = {
 	branch = "v1",
 	dependencies = { "rafamadriz/friendly-snippets" },
 	event = "InsertEnter",
-}
-function M.config()
-	require("blink.cmp").setup({
+	opts = {
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 		},
@@ -24,7 +22,7 @@ function M.config()
 			list = {
 				selection = {
 					auto_insert = true,
-					preselect = function()
+					preselect = function(ctx)
 						return not require("blink.cmp").snippet_active({ direction = 1 })
 					end,
 				},
@@ -47,7 +45,7 @@ function M.config()
 				"fallback",
 			},
 		},
-	})
-end
+	},
+}
 
 return M
