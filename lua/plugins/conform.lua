@@ -11,6 +11,7 @@ local M = {
 			terraform = { "terraform_fmt" },
 			rust = { "rustfmt" },
 			http = { "kulala-fmt" },
+			nu = { "nufmt" },
 		},
 		default_format_opts = {
 			lsp_format = "fallback",

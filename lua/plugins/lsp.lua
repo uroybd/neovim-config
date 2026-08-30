@@ -44,6 +44,7 @@ return {
 				"ts_ls",
 				"yamlls",
 				"taplo",
+				"nushell",
 			}
 
 			vim.lsp.enable(servers, true)
