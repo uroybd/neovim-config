@@ -23,7 +23,7 @@
       "version": "'canola'"
     },
     "codediff.nvim": {
-      "rev": "e08a35a56a52c290398ebfaec33c34cfcf2d0f3c",
+      "rev": "0abad4aa022a34fab0deb90dd9379d5de1c9c329",
       "src": "https://github.com/esmuellert/codediff.nvim"
     },
     "conform.nvim": {
@@ -112,7 +112,7 @@
       "src": "https://github.com/nacro90/numb.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "3928e638fdedf195b23ae5a18f024afa487982bc",
+      "rev": "684cb45c2faa24ce463b4fe9aaf011bfe1e0fb26",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "overseer.nvim": {
@@ -120,7 +120,7 @@
       "src": "https://github.com/stevearc/overseer.nvim"
     },
     "schemastore.nvim": {
-      "rev": "debb5f886d1f5648c0026a6bb18e17672fbcde48",
+      "rev": "f9031ec5f5b30d99ac43013685236bf65ff801a7",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "sidekick.nvim": {
