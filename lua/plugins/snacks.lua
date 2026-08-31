@@ -153,6 +153,12 @@ local M = {
 				},
 				{
 					section = "terminal",
+					height = 2,
+					padding = 1,
+					cmd = "nu --interactive --login -c 'commitart repo --cols=20 --offset=5 --block=\"⣿⣿\"'",
+				},
+				{
+					section = "terminal",
 					cmd = "nu --interactive --login -c 'tuxedo queue 5 --pad'",
 					title = "Tasks",
 					height = 5,
