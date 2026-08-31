@@ -155,7 +155,7 @@ local M = {
 					section = "terminal",
 					height = 2,
 					padding = 1,
-					cmd = "nu --interactive --login -c 'commitart repo --cols=20 --offset=5 --block=\"⣿⣿\"'",
+					cmd = "nu --interactive --login -c 'commitart repo --cols=20 --offset=10 --block=\"  ,▖▖,▗▗,▄▄,▌▌,▐▐,▛▘,▜▝,▙▖,▟▗,▚▚,▞▞,▊▊,▋▋,▉▉,██\"'",
 				},
 				{
 					section = "terminal",
@@ -164,7 +164,7 @@ local M = {
 					height = 5,
 					padding = 1,
 					icon = "",
-					ttl = 60, -- refresh every 60 seconds
+					ttl = 60, -- refresh every 60 second
 				},
 				{
 					section = "terminal",
