@@ -147,15 +147,9 @@ local M = {
 			sections = {
 				{
 					section = "terminal",
-					cmd = "gh skyline -a | sed -r 's/\\.//g' | sed -e 's/^/   /'",
-					height = 7,
+					height = 6,
 					padding = 1,
-				},
-				{
-					section = "terminal",
-					height = 2,
-					padding = 1,
-					cmd = "nu --interactive --login -c 'commitart repo --cols=20 --offset=10 --block=\"  ,▖▖,▗▗,▄▄,▌▌,▐▐,▛▘,▜▝,▙▖,▟▗,▚▚,▞▞,▊▊,▋▋,▉▉,██\"'",
+					cmd = "nu --interactive --login -c 'commitart repo --even --centered-in=60 --block=\"══,║║,╠╣,╦╩,╬╬,╔╗,╚╝,╫╫,╪╪,▪▪,██,══,║║,╬╬,▪▪,██\"'",
 				},
 				{
 					section = "terminal",
