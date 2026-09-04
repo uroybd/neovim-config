@@ -149,7 +149,7 @@ local M = {
 					section = "terminal",
 					height = 6,
 					padding = 1,
-					cmd = "nu --interactive --login -c 'commitart repo --even --centered-in=60 --block=\"══,║║,╠╣,╦╩,╬╬,╔╗,╚╝,╫╫,╪╪,▪▪,██,══,║║,╬╬,▪▪,██\"'",
+					cmd = "nu --interactive --login -c 'commitart repo --even --centered-in=60 --block=\"══,║║,╠╣,╦╩,╬╬,╔╗,╚╝,╫╫,╪╪,▪▪,██,══,║║,╬╬,▪▪,██\"'; echo '\n\n\n'",
 				},
 				{
 					section = "terminal",
