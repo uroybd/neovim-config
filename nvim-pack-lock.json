@@ -23,7 +23,7 @@
       "version": "'canola'"
     },
     "codediff.nvim": {
-      "rev": "0abad4aa022a34fab0deb90dd9379d5de1c9c329",
+      "rev": "61521381445aab22d5f988e7d99c2d7a76ccc1a1",
       "src": "https://github.com/esmuellert/codediff.nvim"
     },
     "conform.nvim": {
@@ -31,7 +31,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "copilot.lua": {
-      "rev": "7e6723aabea044519462958ffcea68d7985c5ed0",
+      "rev": "bd8c2159660faccb40fb845b746cc9aad5881e76",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "dropbar.nvim": {
@@ -43,7 +43,7 @@
       "src": "https://github.com/folke/flash.nvim"
     },
     "friendly-snippets": {
-      "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
+      "rev": "bb548e5ae4550a5e318b7e398a93b9af456b65e1",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "ghlite.nvim": {
@@ -63,7 +63,7 @@
       "src": "https://github.com/webhooked/kanso.nvim"
     },
     "kulala.nvim": {
-      "rev": "232a9939919fe9bc88d573bce92de50f2f160c60",
+      "rev": "dcad056448773ae5b54cadbfdbd188a599cfebd3",
       "src": "https://github.com/mistweaverco/kulala.nvim"
     },
     "lazydev.nvim": {
@@ -79,7 +79,7 @@
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "40276c4df7e6bdce6801d6c035c6227f9115a855",
+      "rev": "5d32a9b8de9f90466797a740edb0fb4b3c27e423",
       "src": "https://github.com/williamboman/mason-lspconfig.nvim"
     },
     "mason.nvim": {
@@ -112,7 +112,7 @@
       "src": "https://github.com/nacro90/numb.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "684cb45c2faa24ce463b4fe9aaf011bfe1e0fb26",
+      "rev": "da1aff0332774a0f60d52bf972e815dfc226f276",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "overseer.nvim": {
@@ -120,11 +120,11 @@
       "src": "https://github.com/stevearc/overseer.nvim"
     },
     "schemastore.nvim": {
-      "rev": "f9031ec5f5b30d99ac43013685236bf65ff801a7",
+      "rev": "077872be5d1c7ef47fb667df84ab49ea1dfcb1bc",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "sidekick.nvim": {
-      "rev": "208e1c5b8170c01fd1d07df0139322a76479b235",
+      "rev": "3d80a47e6375f6d647c9695d3afea6fa1b3275df",
       "src": "https://github.com/folke/sidekick.nvim"
     },
     "snacks.nvim": {
