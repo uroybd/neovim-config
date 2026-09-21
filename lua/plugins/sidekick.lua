@@ -9,6 +9,14 @@ function M.config(_, _)
 			enabled = true,
 		},
 		cli = {
+			win = {
+				float = {
+					width = 0.4, -- Takes up 40% of the screen width
+					height = 0.8, -- Takes up 80% of the screen height
+					row = 2, -- Centers or offsets it nicely
+					col = vim.o.columns, -- Aligns towards the right side of the screen
+				},
+			},
 			mux = {
 				backend = "zellij",
 				enabled = true,

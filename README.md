@@ -38,9 +38,9 @@ Ergonomics, however, is the most important thing, and is mostly subjective. Henc
 <a src="https://github.com/saghen/blink.cmp"><img src="https://githubcard.com/saghen/blink.cmp.svg?d=V24f0SDc" width="45%" alt="blink.cmp" /></a>
 <a src="https://github.com/barrettruth/canola-collection"><img src="https://githubcard.com/barrettruth/canola-collection.svg?d=V24f0SDc" width="45%" alt="canola-collection" /></a>
 <a src="https://github.com/barrettruth/canola.nvim"><img src="https://githubcard.com/barrettruth/canola.nvim.svg?d=V24f0SDc" width="45%" alt="canola.nvim" /></a>
-<a src="https://github.com/esmuellert/codediff.nvim"><img src="https://githubcard.com/esmuellert/codediff.nvim.svg?d=V24f0SDc" width="45%" alt="codediff.nvim" /></a>
 <a src="https://github.com/stevearc/conform.nvim"><img src="https://githubcard.com/stevearc/conform.nvim.svg?d=V24f0SDc" width="45%" alt="conform.nvim" /></a>
 <a src="https://github.com/zbirenbaum/copilot.lua"><img src="https://githubcard.com/zbirenbaum/copilot.lua.svg?d=V24f0SDc" width="45%" alt="copilot.lua" /></a>
+<a src="https://github.com/sindrets/diffview.nvim"><img src="https://githubcard.com/sindrets/diffview.nvim.svg?d=V24f0SDc" width="45%" alt="diffview.nvim" /></a>
 <a src="https://github.com/Bekaboo/dropbar.nvim"><img src="https://githubcard.com/Bekaboo/dropbar.nvim.svg?d=V24f0SDc" width="45%" alt="dropbar.nvim" /></a>
 <a src="https://github.com/folke/flash.nvim"><img src="https://githubcard.com/folke/flash.nvim.svg?d=V24f0SDc" width="45%" alt="flash.nvim" /></a>
 <a src="https://github.com/rafamadriz/friendly-snippets"><img src="https://githubcard.com/rafamadriz/friendly-snippets.svg?d=V24f0SDc" width="45%" alt="friendly-snippets" /></a>

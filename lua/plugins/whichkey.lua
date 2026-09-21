@@ -96,6 +96,7 @@ function M.config()
 		{ "<leader>v", "<cmd>vsplit<CR>", desc = "Split", icon = "" },
 		{ "<leader>w", "<cmd>lua vim.wo.wrap = not vim.wo.wrap<CR>", desc = "Toggle Wrap" },
 		{ "<leader>n", group = "Swap parameters" },
+		{ "<leader>gd", group = "Diff" },
 	}
 
 	which_key.add(mappings, opts)

@@ -1,7 +1,7 @@
 local M = {
 	"neogitorg/neogit",
 	dependencies = {
-		"esmuellert/codediff.nvim",
+		"sindrets/diffview.nvim",
 	},
 	cmd = "Neogit",
 	keys = {
@@ -24,10 +24,10 @@ function M.config()
 		use_magit_keybindings = false,
 		graph_style = "kitty",
 		integrations = {
-			codediff = true,
+			diffview = true,
 			snacks = true,
 		},
-		diff_viewer = "codediff",
+		diff_viewer = "diffview",
 		kind = "tab",
 		commit_popup = {
 			kind = "split",

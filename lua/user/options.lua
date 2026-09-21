@@ -38,7 +38,7 @@ vim.opt.fillchars = vim.opt.fillchars + "eob: "
 vim.opt.fillchars:append({
 	stl = " ",
 })
-
+vim.opt.diffopt:append("inline:char")
 vim.opt.shortmess:append("c")
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")

@@ -2,7 +2,7 @@ local M = {
 	"daliusd/ghlite.nvim",
 	dependencies = {
 		"lewis6991/async.nvim",
-		"esmuellert/codediff.nvim",
+		"sindrets/diffview.nvim",
 	},
 	keys = {
 		{ "<leader>us", ":GHLitePRSelect<cr>", silent = true, desc = "PR Select" },
@@ -26,7 +26,7 @@ local M = {
 
 function M.config()
 	require("ghlite").setup({
-		diff_tool = "codediff",
+		diff_tool = "diffview",
 	})
 
 	local wk = require("which-key")
