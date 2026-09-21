@@ -12,6 +12,10 @@ function M.config()
 	require("diffview").setup({
 		enhanced_diff_hl = true,
 		use_icons = true,
+		merge_tool = {
+			layout = "diff3_mixed",
+			disable_diagnostics = true,
+		},
 		hooks = {
 			view_opened = function(view)
 				-- When a diff view opens, create an autocmd that resizes windows on Sidekick events
