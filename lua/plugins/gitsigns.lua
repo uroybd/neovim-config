@@ -25,11 +25,9 @@ function M.config()
 			},
 		},
 		watch_gitdir = {
+			enable = true,
 			interval = 1000,
 			follow_files = true,
-		},
-		watch_index = {
-			interval = 1000,
 		},
 		attach_to_untracked = true,
 		current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>",
