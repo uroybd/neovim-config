@@ -4,6 +4,7 @@ local M = {
 	keys = {
 		{ "<leader>gdo", "<cmd>DiffviewOpen<cr>", desc = "Open Diffview" },
 		{ "<leader>gdc", "<cmd>DiffviewClose<cr>", desc = "Close Diffview" },
+		{ "<leader>gdm", "<cmd>DiffviewOpen main<cr>", desc = "Open Diffview Main" },
 		{ "<leader>gdh", "<cmd>DiffviewFileHistory %<cr>", desc = "File History" },
 	},
 }
