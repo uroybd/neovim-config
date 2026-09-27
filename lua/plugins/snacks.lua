@@ -153,7 +153,7 @@ local M = {
 				},
 				{
 					section = "terminal",
-					cmd = "nu --interactive --login -c 'tuxedo queue 5 --pad'",
+					cmd = "nu --interactive --login -c 'tn queue'",
 					title = "Tasks",
 					height = 5,
 					padding = 1,
