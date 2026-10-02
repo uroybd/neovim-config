@@ -253,34 +253,207 @@ function M.config(_, opts)
 		end)
 	end
 
-	-- Custom tab picker
-	local function pick_tab()
-		local tabs = {}
-		local items = {}
+	-- Tab layout preview: draws a miniature of vim.fn.winlayout() with box characters
+	local U, D, L, R = 1, 2, 4, 8
+	local box_chars = {
+		[0] = " ", "│", "│", "│", "─", "┘", "┐", "┤", "─", "└", "┌", "├", "─", "┴", "┬", "┼",
+	}
 
-		for i = 1, vim.fn.tabpagenr("$") do
-			local tabnr = i
-			local current = i == vim.fn.tabpagenr() and "●" or " "
-			local wins = vim.fn.tabpagewinnr(i, "$")
+	local node_size
+	node_size = function(node)
+		local kind, data = node[1], node[2]
+		if kind == "leaf" then
+			return vim.api.nvim_win_get_width(data), vim.api.nvim_win_get_height(data)
+		end
+		local w, h = 0, 0
+		for _, child in ipairs(data) do
+			local cw, ch = node_size(child)
+			if kind == "row" then
+				w, h = w + cw + 1, math.max(h, ch)
+			else
+				w, h = math.max(w, cw), h + ch + 1
+			end
+		end
+		if kind == "row" then
+			w = w - 1
+		else
+			h = h - 1
+		end
+		return w, h
+	end
 
-			-- Get the buffer name from the current window in this tab
-			local bufnr = vim.fn.tabpagebuflist(i)[1]
-			local bufname = vim.fn.bufname(bufnr)
-			local name = bufname ~= "" and vim.fn.fnamemodify(bufname, ":t") or "[No Name]"
+	local function win_label(win, active)
+		local buf = vim.api.nvim_win_get_buf(win)
+		local name = vim.api.nvim_buf_get_name(buf)
+		local bt = vim.bo[buf].buftype
+		if bt == "terminal" then
+			name = "[term]"
+		elseif name == "" then
+			name = bt ~= "" and ("[" .. bt .. "]") or "[No Name]"
+		else
+			name = vim.fn.fnamemodify(name, ":t")
+		end
+		return (active and "● " or "") .. name
+	end
 
-			local display = string.format("%s Tab %d: %s (%d windows)", current, tabnr, name, wins)
+	-- cv.mask[y][x] holds line-segment bits, cv.text[y][x] holds label characters
+	local function canvas_add(cv, x, y, mask)
+		cv.mask[y][x] = bit.bor(cv.mask[y][x] or 0, mask)
+	end
 
-			tabs[display] = tabnr
-			table.insert(items, display)
+	local function draw_box(cv, x, y, w, h)
+		for cx = x, x + w - 1 do
+			local m = (cx > x and L or 0) + (cx < x + w - 1 and R or 0)
+			canvas_add(cv, cx, y, m)
+			canvas_add(cv, cx, y + h - 1, m)
+		end
+		for cy = y, y + h - 1 do
+			local m = (cy > y and U or 0) + (cy < y + h - 1 and D or 0)
+			canvas_add(cv, x, cy, m)
+			canvas_add(cv, x + w - 1, cy, m)
+		end
+	end
+
+	local function render_node(cv, node, x, y, w, h, active_win)
+		local kind, data = node[1], node[2]
+		if kind == "leaf" then
+			draw_box(cv, x, y, w, h)
+			if w >= 5 and h >= 3 then
+				local chars = vim.fn.split(win_label(data, data == active_win), "\\zs")
+				local room = w - 2
+				if #chars > room then
+					chars = vim.list_slice(chars, 1, room - 1)
+					table.insert(chars, "…")
+				end
+				local ly = y + math.floor((h - 1) / 2)
+				local lx = x + 1 + math.floor((room - #chars) / 2)
+				for i, ch in ipairs(chars) do
+					cv.text[ly][lx + i - 1] = ch
+				end
+			end
+			return
 		end
 
-		vim.ui.select(items, {
-			prompt = "Select Tab:",
-		}, function(choice)
-			if choice and tabs[choice] then
-				vim.cmd("tabnext " .. tabs[choice])
+		-- children share their border line with the neighbour, hence span = size - 1
+		local horiz = kind == "row"
+		local weights, total = {}, 0
+		for i, child in ipairs(data) do
+			local cw, ch = node_size(child)
+			weights[i] = horiz and cw or ch
+			total = total + weights[i]
+		end
+		local span = (horiz and w or h) - 1
+		local pos, acc = 0, 0
+		for i, child in ipairs(data) do
+			acc = acc + weights[i]
+			local stop = span
+			if i < #data then
+				stop = math.min(span, math.max(pos + 2, math.floor(span * acc / total + 0.5)))
 			end
-		end)
+			if horiz then
+				render_node(cv, child, x + pos, y, stop - pos + 1, h, active_win)
+			else
+				render_node(cv, child, x, y + pos, w, stop - pos + 1, active_win)
+			end
+			pos = stop
+		end
+	end
+
+	local function render_tab_layout(tabnr, max_w, max_h)
+		local layout = vim.fn.winlayout(tabnr)
+		local tabpage = vim.api.nvim_list_tabpages()[tabnr]
+		local active_win = vim.api.nvim_tabpage_get_win(tabpage)
+
+		-- terminal cells are ~twice as tall as wide, so halve the height ratio
+		local tw, th = vim.o.columns, vim.o.lines - vim.o.cmdheight
+		local w = math.max(10, max_w)
+		local h = math.floor(w * th / tw / 2 + 0.5)
+		if h > max_h then
+			h = max_h
+			w = math.floor(h * 2 * tw / th + 0.5)
+		end
+		w, h = math.max(w, 10), math.max(h, 3)
+
+		local cv = { mask = {}, text = {} }
+		for y = 1, h do
+			cv.mask[y], cv.text[y] = {}, {}
+		end
+		render_node(cv, layout, 1, 1, w, h, active_win)
+
+		local lines = {}
+		local indent = string.rep(" ", math.max(0, math.floor((max_w - w) / 2)))
+		for y = 1, h do
+			local row = {}
+			for x = 1, w do
+				row[x] = cv.text[y][x] or box_chars[cv.mask[y][x] or 0]
+			end
+			lines[y] = indent .. table.concat(row)
+		end
+		return lines
+	end
+
+	-- Custom tab picker
+	local function pick_tab()
+		local items = {}
+		local current_tab = vim.fn.tabpagenr()
+
+		for i = 1, vim.fn.tabpagenr("$") do
+			local wins = vim.fn.tabpagewinnr(i, "$")
+			local bufnr = vim.fn.tabpagebuflist(i)[vim.fn.tabpagewinnr(i)]
+			local bufname = vim.fn.bufname(bufnr)
+			local name = bufname ~= "" and vim.fn.fnamemodify(bufname, ":t") or "[No Name]"
+			table.insert(items, {
+				idx = i,
+				tabnr = i,
+				text = string.format("Tab %d: %s (%d windows)", i, name, wins),
+				current = i == current_tab,
+			})
+		end
+
+		Snacks.picker({
+			title = "Tabs",
+			items = items,
+			format = function(item)
+				return { { item.current and "● " or "  ", "SnacksPickerSpecial" }, { item.text } }
+			end,
+			preview = function(ctx)
+				ctx.preview:reset()
+				vim.wo[ctx.win].number = false
+				vim.wo[ctx.win].relativenumber = false
+				vim.wo[ctx.win].signcolumn = "no"
+				ctx.preview:set_title("Tab " .. ctx.item.tabnr)
+				local lines = render_tab_layout(
+					ctx.item.tabnr,
+					vim.api.nvim_win_get_width(ctx.win) - 2,
+					vim.api.nvim_win_get_height(ctx.win) - 2
+				)
+				ctx.preview:set_lines(lines)
+			end,
+			layout = {
+				layout = {
+					box = "vertical",
+					width = 64,
+					height = math.min(#items, 8) + 12,
+					border = "rounded",
+					title = "{title}",
+					title_pos = "center",
+					{ win = "input", height = 1, border = "bottom" },
+					{ win = "list", height = math.min(#items, 8), border = "none" },
+					{ win = "preview", title = "{preview}", height = 8, border = "top" },
+				},
+			},
+			win = {
+				preview = {
+					wo = { number = false, relativenumber = false, signcolumn = "no" },
+				},
+			},
+			confirm = function(picker, item)
+				picker:close()
+				if item then
+					vim.cmd("tabnext " .. item.tabnr)
+				end
+			end,
+		})
 	end
 
 	local wk = require("which-key")
