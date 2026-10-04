@@ -153,15 +153,6 @@ local M = {
 				},
 				{
 					section = "terminal",
-					cmd = "nu --interactive --login -c 'tn queue'",
-					title = "Tasks",
-					height = 5,
-					padding = 1,
-					icon = "",
-					ttl = 60, -- refresh every 60 second
-				},
-				{
-					section = "terminal",
 					cmd = "nu --interactive --login -c 'jira me issues top'",
 					title = "Jira Issues",
 					height = 5,
@@ -256,7 +247,22 @@ function M.config(_, opts)
 	-- Tab layout preview: draws a miniature of vim.fn.winlayout() with box characters
 	local U, D, L, R = 1, 2, 4, 8
 	local box_chars = {
-		[0] = " ", "│", "│", "│", "─", "┘", "┐", "┤", "─", "└", "┌", "├", "─", "┴", "┬", "┼",
+		[0] = " ",
+		"│",
+		"│",
+		"│",
+		"─",
+		"┘",
+		"┐",
+		"┤",
+		"─",
+		"└",
+		"┌",
+		"├",
+		"─",
+		"┴",
+		"┬",
+		"┼",
 	}
 
 	local node_size
