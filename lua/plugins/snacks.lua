@@ -153,9 +153,9 @@ local M = {
 				},
 				{
 					section = "terminal",
-					cmd = "nu --interactive --login -c 'jira me issues top'",
-					title = "Jira Issues",
-					height = 5,
+					cmd = "nu --interactive --login -c 'task neovim -personal'",
+					title = "TODO",
+					height = 6,
 					padding = 1,
 					icon = "",
 				},
