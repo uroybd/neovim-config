@@ -9,6 +9,15 @@ function M.config(_, _)
 			enabled = true,
 		},
 		cli = {
+			tools = {
+				claude_fulflld = {
+					cmd = { "claude" }, -- Invokes the same underlying binary
+					is_proc = "\\<claude\\>", -- Process matching rules for sidekick's tracker
+					env = {
+						CLAUDE_CONFIG_DIR = vim.fn.expand("~/.claude-fulflld"), -- Isolate its data here!
+					},
+				},
+			},
 			win = {
 				float = {
 					width = 0.4, -- Takes up 40% of the screen width
@@ -35,9 +44,9 @@ function M.config(_, _)
 		{
 			"<leader>aa",
 			function()
-				require("sidekick.cli").toggle({ name = "copilot", focus = true })
+				require("sidekick.cli").toggle({ name = "claude_fulflld", focus = true })
 			end,
-			desc = "Sidekick Toggle Copilot",
+			desc = "Sidekick Toggle Claude [FULFLLD]",
 		},
 		{
 			"<leader>ac",
