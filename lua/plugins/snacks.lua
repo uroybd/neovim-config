@@ -153,7 +153,7 @@ local M = {
 				},
 				{
 					section = "terminal",
-					cmd = "nu --interactive --login -c 'task neovim project.not:P'",
+					cmd = "nu --interactive --login -c 'task neovim project.not:P limit:5'",
 					title = "TODO",
 					height = 6,
 					padding = 1,
